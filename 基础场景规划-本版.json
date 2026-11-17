@@ -1,0 +1,5653 @@
+{
+  "meta": {
+    "title": "树木清理与木材利用-场景搭建规划",
+    "generated_at": "2026-11-17T10:18:11+08:00",
+    "keyword_export": "2026-11-04",
+    "feishu_archive": "2026-11-12；主文档 rev32、工作簿 rev36；使用归档，未实时刷新",
+    "feishu_url": "https://starmerx.feishu.cn/wiki/PvAXwh0rciVUbckjjJkcnipKndf?table=tbl16gZBaAZLmNjb&view=vewKecDsBf",
+    "scope": "本轮为有限代表支持集；全量摄取不等于全量语义分析。只据本机关键词、AI主题和提示词规划场景与页面；商品只用目录身份、功能和参数。",
+    "units": [
+      "关键词 Volume：US 估算月搜索量；同词跨文件不加。",
+      "主题 volume：US 主题量估值；文件未明示月单位，同名主题跨文件不加。",
+      "提示词 topic_volume：该记录附带的主题/模型估值，不是该问句访问量；与主题表总体 volume 分列。",
+      "Peec：20 个配置问法 × 27 次监测 = 540 行、3 个模型；未提供流量估值，不按重复次数排需求。"
+    ],
+    "limits": [
+      "关键词、AI主题和监测问法不是同一单位，均不相加。",
+      "没有排名、CTR 或品牌份额，不生成本站访问预测。",
+      "三条主路并列；导出方向宽度不同，不按估值比较总体市场名次。",
+      "13 张工作表有归档读取记录：8 张不重复有效表、4 张重复、1 张空表。原 URL 的 table/view 参数未独立解析。",
+      "前置报告的另嵌工作簿、评论与视频全文不在本轮完整读取范围。",
+      "商品尺寸与含件按归档或目录列示，接口、手册和适配缺口逐项标记。",
+      "场景与页面建议为需求线索到任务的设计推断，不是消费者占比或效果验证。"
+    ],
+    "counts": {
+      "keyword": 86,
+      "semrush_prompt": 44,
+      "semrush_topic": 32,
+      "peec": 20
+    },
+    "ingestion": {
+      "keyword": 651570,
+      "peec": 540,
+      "semrush_prompt": 6000,
+      "semrush_topic": 6000
+    },
+    "edition": "详解版：重新挖掘原始资料",
+    "reanalysis_generated_at": "2026-11-17T12:23:49.421024+08:00",
+    "previous_support_counts": {
+      "keyword": 59,
+      "semrush_prompt": 26,
+      "semrush_topic": 28,
+      "peec": 20
+    },
+    "evidence_counts": {
+      "keyword": 86,
+      "semrush_prompt": 44,
+      "semrush_topic": 32,
+      "peec": 20
+    },
+    "additional_source_records": 49,
+    "source_scope": "沿用本机原始导出与飞书归档；新增的是复查和语义解释，不是刷新外部数据。",
+    "product_match_edition": "基础19个重点候选保留；当前商品补查与商机以商品匹配与商机.json为准。"
+  },
+  "evidence": [
+    {
+      "id": "K001",
+      "type": "keyword",
+      "group": "清场",
+      "text": "fallen tree cleanup",
+      "value": "170",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "fallen tree cleanup",
+        "Volume": "170",
+        "Keyword Difficulty": "0",
+        "Intent": "Informational"
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/fallen-tree-cleanup_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "fallen tree cleanup",
+      "row": 2,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "K002",
+      "type": "keyword",
+      "group": "清场",
+      "text": "storm damage tree cleanup",
+      "value": "320",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "storm damage tree cleanup",
+        "Volume": "320",
+        "Keyword Difficulty": "9",
+        "Intent": "Informational"
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/fallen-tree-cleanup_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "fallen tree cleanup",
+      "row": 10,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "K003",
+      "type": "keyword",
+      "group": "清场",
+      "text": "tree debris removal near me",
+      "value": "1900",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "tree debris removal near me",
+        "Volume": "1900",
+        "Keyword Difficulty": "12",
+        "Intent": ""
+      },
+      "intent_scope": "服务意图",
+      "file": "SEMRUSH场景词拓展/tree-debris-cleanup_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "tree debris cleanup",
+      "row": 627,
+      "uses": [
+        "处置去处与专业帮助边界"
+      ]
+    },
+    {
+      "id": "K004",
+      "type": "keyword",
+      "group": "清场",
+      "text": "brush clearing equipment",
+      "value": "1000",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "brush clearing equipment",
+        "Volume": "1000",
+        "Keyword Difficulty": "8",
+        "Intent": "Informational"
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/brush-clearing_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "brush clearing",
+      "row": 305,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "K005",
+      "type": "keyword",
+      "group": "清场",
+      "text": "brush clearing tools",
+      "value": "390",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "brush clearing tools",
+        "Volume": "390",
+        "Keyword Difficulty": "7",
+        "Intent": "Informational, Commercial"
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/brush-clearing_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "brush clearing",
+      "row": 314,
+      "uses": [
+        "无主机：人工清枝与碎料补扫",
+        "相关指南：地面可达小枝修剪"
+      ]
+    },
+    {
+      "id": "K006",
+      "type": "keyword",
+      "group": "清场",
+      "text": "clamp on debris forks",
+      "value": "110",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "clamp on debris forks",
+        "Volume": "110",
+        "Keyword Difficulty": "9",
+        "Intent": "Informational, Commercial"
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/Forklift-Safety-Cage_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "Forklift Safety Cage",
+      "row": 5113,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "K007",
+      "type": "keyword",
+      "group": "清场",
+      "text": "tractor debris forks",
+      "value": "70",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "tractor debris forks",
+        "Volume": "70",
+        "Keyword Difficulty": "11",
+        "Intent": "Informational"
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/Forklift-Safety-Cage_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "Forklift Safety Cage",
+      "row": 12442,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "K008",
+      "type": "keyword",
+      "group": "翻动与截段",
+      "text": "cant hook vs peavey",
+      "value": "260",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "cant hook vs peavey",
+        "Volume": "260",
+        "Keyword Difficulty": "3",
+        "Intent": "Informational, Commercial"
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/cant-hook_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "cant hook",
+      "row": 1129,
+      "uses": [
+        "地面翻动、定位与截段支撑"
+      ]
+    },
+    {
+      "id": "K009",
+      "type": "keyword",
+      "group": "翻动与截段",
+      "text": "log jack",
+      "value": "590",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "log jack",
+        "Volume": "590",
+        "Keyword Difficulty": "14",
+        "Intent": "Commercial"
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/firewood-processing_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood processing",
+      "row": 24849,
+      "uses": [
+        "地面翻动、定位与截段支撑"
+      ]
+    },
+    {
+      "id": "K010",
+      "type": "keyword",
+      "group": "翻动与截段",
+      "text": "log tongs for tractor",
+      "value": "90",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "log tongs for tractor",
+        "Volume": "90",
+        "Keyword Difficulty": "13",
+        "Intent": "Commercial"
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/clamp-on-debris-forks_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "clamp on debris forks",
+      "row": 5449,
+      "uses": [
+        "机械吊移：独立的条件路径"
+      ]
+    },
+    {
+      "id": "K011",
+      "type": "keyword",
+      "group": "翻动与截段",
+      "text": "log lifting tongs",
+      "value": "170",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "log lifting tongs",
+        "Volume": "170",
+        "Keyword Difficulty": "6",
+        "Intent": "Commercial"
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/clamp-on-debris-forks_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "clamp on debris forks",
+      "row": 4067,
+      "uses": [
+        "机械吊移：独立的条件路径"
+      ]
+    },
+    {
+      "id": "K012",
+      "type": "keyword",
+      "group": "翻动与截段",
+      "text": "log roller tool",
+      "value": "480",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "log roller tool",
+        "Volume": "480",
+        "Keyword Difficulty": "22",
+        "Intent": "Informational, Transactional"
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/cant-hook_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "cant hook",
+      "row": 3700,
+      "uses": [
+        "地面翻动、定位与截段支撑"
+      ]
+    },
+    {
+      "id": "K013",
+      "type": "keyword",
+      "group": "翻动与截段",
+      "text": "how to move large logs",
+      "value": "20",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "how to move large logs",
+        "Volume": "20",
+        "Keyword Difficulty": "",
+        "Intent": ""
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH场景词拓展/log-moving-tool_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "log moving tool",
+      "row": 16233,
+      "uses": [
+        "机械吊移：独立的条件路径"
+      ]
+    },
+    {
+      "id": "K014",
+      "type": "keyword",
+      "group": "排除噪声",
+      "text": "salsa timberjack",
+      "value": "2900",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "salsa timberjack",
+        "Volume": "2900",
+        "Keyword Difficulty": "13",
+        "Intent": "Commercial"
+      },
+      "intent_scope": "同名噪声",
+      "file": "SEMRUSH产品词拓展/timberjack_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "timberjack",
+      "row": 1661,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "K015",
+      "type": "keyword",
+      "group": "薪柴",
+      "text": "manual log splitter",
+      "value": "2900",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "manual log splitter",
+        "Volume": "2900",
+        "Keyword Difficulty": "30",
+        "Intent": "Commercial"
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/firewood-processing_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood processing",
+      "row": 18776,
+      "uses": [
+        "已截木段：选择劈柴方式"
+      ]
+    },
+    {
+      "id": "K016",
+      "type": "keyword",
+      "group": "薪柴",
+      "text": "manual hydraulic log splitter",
+      "value": "390",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "manual hydraulic log splitter",
+        "Volume": "390",
+        "Keyword Difficulty": "24",
+        "Intent": "Informational"
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/firewood-processing_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood processing",
+      "row": 18794,
+      "uses": [
+        "已截木段：选择劈柴方式"
+      ]
+    },
+    {
+      "id": "K017",
+      "type": "keyword",
+      "group": "薪柴",
+      "text": "electric log splitter",
+      "value": "8100",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "electric log splitter",
+        "Volume": "8100",
+        "Keyword Difficulty": "28",
+        "Intent": "Informational, Commercial"
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/firewood-processing_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood processing",
+      "row": 24046,
+      "uses": [
+        "已截木段：选择劈柴方式"
+      ]
+    },
+    {
+      "id": "K018",
+      "type": "keyword",
+      "group": "薪柴",
+      "text": "firewood processor",
+      "value": "4400",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "firewood processor",
+        "Volume": "4400",
+        "Keyword Difficulty": "30",
+        "Intent": "Commercial"
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/firewood-processing_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood processing",
+      "row": 14,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "K019",
+      "type": "keyword",
+      "group": "薪柴",
+      "text": "firewood storage",
+      "value": "2900",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "firewood storage",
+        "Volume": "2900",
+        "Keyword Difficulty": "38",
+        "Intent": "Informational"
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH场景词拓展/firewood-storage_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood storage",
+      "row": 2,
+      "uses": [
+        "已劈好薪柴：直接进入干燥与储存"
+      ]
+    },
+    {
+      "id": "K020",
+      "type": "keyword",
+      "group": "薪柴",
+      "text": "firewood rack",
+      "value": "9900",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "firewood rack",
+        "Volume": "9900",
+        "Keyword Difficulty": "44",
+        "Intent": "Informational"
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH场景词拓展/firewood-storage_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood storage",
+      "row": 1199,
+      "uses": [
+        "已劈好薪柴：直接进入干燥与储存"
+      ]
+    },
+    {
+      "id": "K021",
+      "type": "keyword",
+      "group": "薪柴",
+      "text": "outdoor firewood rack",
+      "value": "4400",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "outdoor firewood rack",
+        "Volume": "4400",
+        "Keyword Difficulty": "23",
+        "Intent": ""
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH场景词拓展/firewood-storage_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood storage",
+      "row": 1221,
+      "uses": [
+        "已劈好薪柴：直接进入干燥与储存"
+      ]
+    },
+    {
+      "id": "K022",
+      "type": "keyword",
+      "group": "薪柴",
+      "text": "how to store firewood",
+      "value": "480",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "how to store firewood",
+        "Volume": "480",
+        "Keyword Difficulty": "10",
+        "Intent": "Informational"
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH场景词拓展/firewood-storage_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood storage",
+      "row": 3404,
+      "uses": [
+        "已劈好薪柴：直接进入干燥与储存"
+      ]
+    },
+    {
+      "id": "K023",
+      "type": "keyword",
+      "group": "薪柴",
+      "text": "what size log splitter do i need",
+      "value": "140",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "what size log splitter do i need",
+        "Volume": "140",
+        "Keyword Difficulty": "4",
+        "Intent": "Informational"
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/manual-hydraulic-log-splitter_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "manual hydraulic log splitter",
+      "row": 19430,
+      "uses": [
+        "已截木段：选择劈柴方式"
+      ]
+    },
+    {
+      "id": "K024",
+      "type": "keyword",
+      "group": "进阶制材",
+      "text": "chainsaw mill",
+      "value": "4400",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "chainsaw mill",
+        "Volume": "4400",
+        "Keyword Difficulty": "31",
+        "Intent": "Informational, Commercial"
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/chainsaw-mill-guide-rails_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "chainsaw mill guide rails",
+      "row": 627,
+      "uses": [
+        "原木做板材：完整制材系统"
+      ]
+    },
+    {
+      "id": "K025",
+      "type": "keyword",
+      "group": "进阶制材",
+      "text": "chainsaw mill guide rails",
+      "value": "20",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "chainsaw mill guide rails",
+        "Volume": "20",
+        "Keyword Difficulty": "",
+        "Intent": ""
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/chainsaw-mill-guide-rails_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "chainsaw mill guide rails",
+      "row": 2,
+      "uses": [
+        "原木做板材：完整制材系统",
+        "已有设备：维护资料与单件补购"
+      ]
+    },
+    {
+      "id": "K026",
+      "type": "keyword",
+      "group": "进阶制材",
+      "text": "chainsaw mill attachment",
+      "value": "880",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "chainsaw mill attachment",
+        "Volume": "880",
+        "Keyword Difficulty": "13",
+        "Intent": "Commercial"
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/chainsaw-mill-guide-rails_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "chainsaw mill guide rails",
+      "row": 4170,
+      "uses": [
+        "原木做板材：完整制材系统"
+      ]
+    },
+    {
+      "id": "K027",
+      "type": "keyword",
+      "group": "进阶制材",
+      "text": "how to use a chainsaw mill",
+      "value": "30",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "how to use a chainsaw mill",
+        "Volume": "30",
+        "Keyword Difficulty": "",
+        "Intent": ""
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/chainsaw-mill-guide-rails_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "chainsaw mill guide rails",
+      "row": 1610,
+      "uses": [
+        "原木做板材：完整制材系统"
+      ]
+    },
+    {
+      "id": "K028",
+      "type": "keyword",
+      "group": "修剪相关入口",
+      "text": "tree trimming near me",
+      "value": "22200",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "tree trimming near me",
+        "Volume": "22200",
+        "Keyword Difficulty": "34",
+        "Intent": "Transactional"
+      },
+      "intent_scope": "服务意图",
+      "file": "SEMRUSH场景词拓展/tree-debris-cleanup_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "tree debris cleanup",
+      "row": 17585,
+      "uses": [
+        "处置去处与专业帮助边界"
+      ]
+    },
+    {
+      "id": "K029",
+      "type": "keyword",
+      "group": "修剪相关入口",
+      "text": "tree trimming service",
+      "value": "9900",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "tree trimming service",
+        "Volume": "9900",
+        "Keyword Difficulty": "28",
+        "Intent": "Commercial"
+      },
+      "intent_scope": "服务意图",
+      "file": "SEMRUSH场景词拓展/tree-debris-cleanup_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "tree debris cleanup",
+      "row": 17588,
+      "uses": [
+        "处置去处与专业帮助边界"
+      ]
+    },
+    {
+      "id": "K030",
+      "type": "keyword",
+      "group": "修剪相关入口",
+      "text": "forklift safety cage",
+      "value": "480",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "forklift safety cage",
+        "Volume": "480",
+        "Keyword Difficulty": "4",
+        "Intent": "Informational"
+      },
+      "intent_scope": "设备类目，非用途证明",
+      "file": "SEMRUSH产品词拓展/Forklift-Safety-Cage_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "Forklift Safety Cage",
+      "row": 2,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "K031",
+      "type": "keyword",
+      "group": "清场",
+      "text": "debris forks for tractor bucket",
+      "value": "140",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "debris forks for tractor bucket",
+        "Volume": "140",
+        "Keyword Difficulty": "2",
+        "Intent": "Commercial"
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/Forklift-Safety-Cage_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "Forklift Safety Cage",
+      "row": 2398,
+      "uses": [
+        "有主机：把散枝送到集中点"
+      ]
+    },
+    {
+      "id": "K032",
+      "type": "keyword",
+      "group": "清场",
+      "text": "clamp on debris forks for tractor bucket",
+      "value": "90",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "clamp on debris forks for tractor bucket",
+        "Volume": "90",
+        "Keyword Difficulty": "4",
+        "Intent": "Commercial"
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/Forklift-Safety-Cage_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "Forklift Safety Cage",
+      "row": 3027,
+      "uses": [
+        "有主机：把散枝送到集中点"
+      ]
+    },
+    {
+      "id": "K033",
+      "type": "keyword",
+      "group": "清场",
+      "text": "best brush clearing tools",
+      "value": "70",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "best brush clearing tools",
+        "Volume": "70",
+        "Keyword Difficulty": "9",
+        "Intent": "Commercial"
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/brush-clearing_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "brush clearing",
+      "row": 1672,
+      "uses": [
+        "无主机：人工清枝与碎料补扫"
+      ]
+    },
+    {
+      "id": "K034",
+      "type": "keyword",
+      "group": "清场",
+      "text": "best skid-steer attachments for brush clearing",
+      "value": "50",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "best skid-steer attachments for brush clearing",
+        "Volume": "50",
+        "Keyword Difficulty": "6",
+        "Intent": "Commercial"
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/brush-clearing_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "brush clearing",
+      "row": 4843,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "K035",
+      "type": "keyword",
+      "group": "清场",
+      "text": "how to cut fallen tree",
+      "value": "30",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "how to cut fallen tree",
+        "Volume": "30",
+        "Keyword Difficulty": "",
+        "Intent": ""
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/fallen-tree-cleanup_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "fallen tree cleanup",
+      "row": 19,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "K036",
+      "type": "keyword",
+      "group": "清场",
+      "text": "how much does brush clearing cost",
+      "value": "20",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "how much does brush clearing cost",
+        "Volume": "20",
+        "Keyword Difficulty": "",
+        "Intent": ""
+      },
+      "intent_scope": "服务意图",
+      "file": "SEMRUSH产品词拓展/brush-clearing_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "brush clearing",
+      "row": 2102,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "K037",
+      "type": "keyword",
+      "group": "清场",
+      "text": "how much to charge for brush clearing",
+      "value": "20",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "how much to charge for brush clearing",
+        "Volume": "20",
+        "Keyword Difficulty": "",
+        "Intent": ""
+      },
+      "intent_scope": "服务意图",
+      "file": "SEMRUSH产品词拓展/brush-clearing_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "brush clearing",
+      "row": 2163,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "K038",
+      "type": "keyword",
+      "group": "翻动与截段",
+      "text": "how to use a cant hook",
+      "value": "20",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "how to use a cant hook",
+        "Volume": "20",
+        "Keyword Difficulty": "",
+        "Intent": ""
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/cant-hook_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "cant hook",
+      "row": 537,
+      "uses": [
+        "地面翻动、定位与截段支撑"
+      ]
+    },
+    {
+      "id": "K039",
+      "type": "keyword",
+      "group": "翻动与截段",
+      "text": "best way to move logs with tractor",
+      "value": "20",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "best way to move logs with tractor",
+        "Volume": "20",
+        "Keyword Difficulty": "",
+        "Intent": ""
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/log-lifting-tongs_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "log lifting tongs",
+      "row": 1330,
+      "uses": [
+        "机械吊移：独立的条件路径"
+      ]
+    },
+    {
+      "id": "K040",
+      "type": "keyword",
+      "group": "翻动与截段",
+      "text": "best cant hook for cutting wood",
+      "value": "0",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "best cant hook for cutting wood",
+        "Volume": "0",
+        "Keyword Difficulty": "",
+        "Intent": ""
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/cant-hook_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "cant hook",
+      "row": 59,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "K041",
+      "type": "keyword",
+      "group": "薪柴",
+      "text": "how to store firewood outside",
+      "value": "390",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "how to store firewood outside",
+        "Volume": "390",
+        "Keyword Difficulty": "17",
+        "Intent": "Informational"
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH场景词拓展/firewood-storage_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood storage",
+      "row": 5186,
+      "uses": [
+        "已劈好薪柴：直接进入干燥与储存"
+      ]
+    },
+    {
+      "id": "K042",
+      "type": "keyword",
+      "group": "薪柴",
+      "text": "how to store firewood outside in winter",
+      "value": "70",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "how to store firewood outside in winter",
+        "Volume": "70",
+        "Keyword Difficulty": "0",
+        "Intent": "Informational"
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH场景词拓展/firewood-storage_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood storage",
+      "row": 12886,
+      "uses": [
+        "已劈好薪柴：直接进入干燥与储存"
+      ]
+    },
+    {
+      "id": "K043",
+      "type": "keyword",
+      "group": "薪柴",
+      "text": "how many ton log splitter do i need",
+      "value": "40",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "how many ton log splitter do i need",
+        "Volume": "40",
+        "Keyword Difficulty": "0",
+        "Intent": "Informational"
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/manual-hydraulic-log-splitter_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "manual hydraulic log splitter",
+      "row": 13327,
+      "uses": [
+        "已截木段：选择劈柴方式"
+      ]
+    },
+    {
+      "id": "K044",
+      "type": "keyword",
+      "group": "薪柴",
+      "text": "how long should you season firewood",
+      "value": "30",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "how long should you season firewood",
+        "Volume": "30",
+        "Keyword Difficulty": "",
+        "Intent": ""
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH场景词拓展/firewood-storage_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood storage",
+      "row": 27744,
+      "uses": [
+        "已劈好薪柴：直接进入干燥与储存"
+      ]
+    },
+    {
+      "id": "K045",
+      "type": "keyword",
+      "group": "薪柴",
+      "text": "what does it mean to season firewood",
+      "value": "30",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "what does it mean to season firewood",
+        "Volume": "30",
+        "Keyword Difficulty": "",
+        "Intent": ""
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH场景词拓展/firewood-storage_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood storage",
+      "row": 27871,
+      "uses": [
+        "已劈好薪柴：直接进入干燥与储存"
+      ]
+    },
+    {
+      "id": "K046",
+      "type": "keyword",
+      "group": "进阶制材",
+      "text": "chainsaw milling chain",
+      "value": "110",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "chainsaw milling chain",
+        "Volume": "110",
+        "Keyword Difficulty": "4",
+        "Intent": "Commercial"
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/chainsaw-mill-guide-rails_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "chainsaw mill guide rails",
+      "row": 649,
+      "uses": [
+        "原木做板材：完整制材系统"
+      ]
+    },
+    {
+      "id": "K047",
+      "type": "keyword",
+      "group": "进阶制材",
+      "text": "how to make a chainsaw mill",
+      "value": "70",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "how to make a chainsaw mill",
+        "Volume": "70",
+        "Keyword Difficulty": "32",
+        "Intent": "Informational"
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/chainsaw-mill-guide-rails_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "chainsaw mill guide rails",
+      "row": 15860,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "K048",
+      "type": "keyword",
+      "group": "进阶制材",
+      "text": "best saw for chainsaw mill",
+      "value": "30",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "best saw for chainsaw mill",
+        "Volume": "30",
+        "Keyword Difficulty": "",
+        "Intent": ""
+      },
+      "intent_scope": "相关工具/内容",
+      "file": "SEMRUSH产品词拓展/chainsaw-mill-guide-rails_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "chainsaw mill guide rails",
+      "row": 5805,
+      "uses": [
+        "原木做板材：完整制材系统"
+      ]
+    },
+    {
+      "id": "K049",
+      "type": "keyword",
+      "group": "清场",
+      "text": "debris forks",
+      "value": "140",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "debris forks",
+        "Volume": "140",
+        "Keyword Difficulty": "3",
+        "Intent": "Commercial"
+      },
+      "intent_scope": "相关工具/内容；同名词须结合上下文",
+      "file": "SEMRUSH产品词拓展/Forklift-Safety-Cage_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "Forklift Safety Cage",
+      "row": 5105,
+      "uses": [
+        "有主机：把散枝送到集中点"
+      ]
+    },
+    {
+      "id": "K050",
+      "type": "keyword",
+      "group": "翻动与截段",
+      "text": "cant hook",
+      "value": "2400",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "cant hook",
+        "Volume": "2400",
+        "Keyword Difficulty": "12",
+        "Intent": "Informational, Commercial"
+      },
+      "intent_scope": "相关工具/内容；同名词须结合上下文",
+      "file": "SEMRUSH产品词拓展/cant-hook_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "cant hook",
+      "row": 2,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "K051",
+      "type": "keyword",
+      "group": "翻动与截段",
+      "text": "timberjack",
+      "value": "1600",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "timberjack",
+        "Volume": "1600",
+        "Keyword Difficulty": "11",
+        "Intent": "Informational"
+      },
+      "intent_scope": "相关工具/内容；同名词须结合上下文",
+      "file": "SEMRUSH产品词拓展/firewood-processing_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood processing",
+      "row": 24464,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "K052",
+      "type": "keyword",
+      "group": "薪柴",
+      "text": "gas log splitter",
+      "value": "1600",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "gas log splitter",
+        "Volume": "1600",
+        "Keyword Difficulty": "24",
+        "Intent": "Commercial"
+      },
+      "intent_scope": "相关工具/内容；同名词须结合上下文",
+      "file": "SEMRUSH产品词拓展/firewood-processing_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood processing",
+      "row": 24047,
+      "uses": [
+        "已截木段：选择劈柴方式"
+      ]
+    },
+    {
+      "id": "K053",
+      "type": "keyword",
+      "group": "已有拖拉机",
+      "text": "3 point log splitter",
+      "value": "1000",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "3 point log splitter",
+        "Volume": "1000",
+        "Keyword Difficulty": "6",
+        "Intent": "Informational"
+      },
+      "intent_scope": "相关工具/内容；同名词须结合上下文",
+      "file": "SEMRUSH产品词拓展/clamp-on-debris-forks_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "clamp on debris forks",
+      "row": 8740,
+      "uses": [
+        "已有拖拉机：三点悬挂与 PTO 分开"
+      ]
+    },
+    {
+      "id": "K054",
+      "type": "keyword",
+      "group": "已有拖拉机",
+      "text": "pto log splitter",
+      "value": "880",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "pto log splitter",
+        "Volume": "880",
+        "Keyword Difficulty": "6",
+        "Intent": "Commercial"
+      },
+      "intent_scope": "相关工具/内容；同名词须结合上下文",
+      "file": "SEMRUSH产品词拓展/clamp-on-debris-forks_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "clamp on debris forks",
+      "row": 16802,
+      "uses": [
+        "已有拖拉机：三点悬挂与 PTO 分开"
+      ]
+    },
+    {
+      "id": "K055",
+      "type": "keyword",
+      "group": "薪柴",
+      "text": "kindling splitter",
+      "value": "3600",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "kindling splitter",
+        "Volume": "3600",
+        "Keyword Difficulty": "32",
+        "Intent": "Informational, Commercial"
+      },
+      "intent_scope": "相关工具/内容；同名词须结合上下文",
+      "file": "SEMRUSH产品词拓展/firewood-processing_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood processing",
+      "row": 24848,
+      "uses": [
+        "已截木段：选择劈柴方式"
+      ]
+    },
+    {
+      "id": "K056",
+      "type": "keyword",
+      "group": "转运",
+      "text": "firewood cart",
+      "value": "480",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "firewood cart",
+        "Volume": "480",
+        "Keyword Difficulty": "22",
+        "Intent": "Informational"
+      },
+      "intent_scope": "相关工具/内容；同名词须结合上下文",
+      "file": "SEMRUSH场景词拓展/firewood-storage_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood storage",
+      "row": 3437,
+      "uses": [
+        "短距离转运：木段到储存区"
+      ]
+    },
+    {
+      "id": "K057",
+      "type": "keyword",
+      "group": "储存",
+      "text": "firewood cover",
+      "value": "880",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "firewood cover",
+        "Volume": "880",
+        "Keyword Difficulty": "9",
+        "Intent": "Informational"
+      },
+      "intent_scope": "相关工具/内容；同名词须结合上下文",
+      "file": "SEMRUSH场景词拓展/firewood-storage_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood storage",
+      "row": 3926,
+      "uses": [
+        "已劈好薪柴：直接进入干燥与储存"
+      ]
+    },
+    {
+      "id": "K058",
+      "type": "keyword",
+      "group": "维护",
+      "text": "log splitter parts",
+      "value": "880",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "log splitter parts",
+        "Volume": "880",
+        "Keyword Difficulty": "11",
+        "Intent": "Informational, Commercial"
+      },
+      "intent_scope": "相关工具/内容；同名词须结合上下文",
+      "file": "SEMRUSH产品词拓展/manual-hydraulic-log-splitter_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "manual hydraulic log splitter",
+      "row": 28032,
+      "uses": [
+        "已有设备：维护资料与单件补购"
+      ]
+    },
+    {
+      "id": "K059",
+      "type": "keyword",
+      "group": "制材",
+      "text": "chainsaw milling",
+      "value": "170",
+      "unit": "US 估算月搜索量",
+      "raw": {
+        "Keyword": "chainsaw milling",
+        "Volume": "170",
+        "Keyword Difficulty": "10",
+        "Intent": "Commercial"
+      },
+      "intent_scope": "相关工具/内容；同名词须结合上下文",
+      "file": "SEMRUSH产品词拓展/chainsaw-mill-guide-rails_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "chainsaw mill guide rails",
+      "row": 648,
+      "uses": [
+        "原木做板材：完整制材系统"
+      ]
+    },
+    {
+      "id": "Q001",
+      "type": "semrush_prompt",
+      "group": "清场",
+      "text": "brush and branch removal",
+      "value": "12220",
+      "unit": "本条提示词记录所附主题/模型估值；不是单问句访问量",
+      "raw": {
+        "prompt": "brush and branch removal",
+        "llm": "google_ai_overview",
+        "topic_name": "Tree and Brush Debris Removal",
+        "topic_volume": "12220"
+      },
+      "file": "semrush提示词数据/prompts_by_topic_fts_branch___debris_cleanup_us.csv",
+      "sheet": "CSV",
+      "row": 2,
+      "overall_topic_id": "A001",
+      "overall_topic_volume": "16738",
+      "uses": [
+        "有主机：把散枝送到集中点"
+      ]
+    },
+    {
+      "id": "Q002",
+      "type": "semrush_prompt",
+      "group": "清场",
+      "text": "where to dispose of tree branches near me",
+      "value": "12220",
+      "unit": "本条提示词记录所附主题/模型估值；不是单问句访问量",
+      "raw": {
+        "prompt": "where to dispose of tree branches near me",
+        "llm": "google_ai_overview",
+        "topic_name": "Tree and Brush Debris Removal",
+        "topic_volume": "12220"
+      },
+      "file": "semrush提示词数据/prompts_by_topic_fts_branch___debris_cleanup_us.csv",
+      "sheet": "CSV",
+      "row": 15,
+      "overall_topic_id": "A001",
+      "overall_topic_volume": "16738",
+      "uses": [
+        "处置去处与专业帮助边界"
+      ]
+    },
+    {
+      "id": "Q003",
+      "type": "semrush_prompt",
+      "group": "清场",
+      "text": "What are the most cost-effective methods for tree debris removal?",
+      "value": "3019",
+      "unit": "本条提示词记录所附主题/模型估值；不是单问句访问量",
+      "raw": {
+        "prompt": "What are the most cost-effective methods for tree debris removal?",
+        "llm": "google_ai_mode",
+        "topic_name": "Tree and Brush Debris Removal",
+        "topic_volume": "3019"
+      },
+      "file": "semrush提示词数据/prompts_by_topic_fts_branch___debris_cleanup_us.csv",
+      "sheet": "CSV",
+      "row": 33,
+      "overall_topic_id": "A001",
+      "overall_topic_volume": "16738",
+      "uses": [
+        "无主机：人工清枝与碎料补扫"
+      ]
+    },
+    {
+      "id": "Q004",
+      "type": "semrush_prompt",
+      "group": "清场",
+      "text": "How often should I clear underbrush to maintain a healthy landscape?",
+      "value": "4",
+      "unit": "本条提示词记录所附主题/模型估值；不是单问句访问量",
+      "raw": {
+        "prompt": "How often should I clear underbrush to maintain a healthy landscape?",
+        "llm": "gemini",
+        "topic_name": "Underbrush Clearing and Maintenance",
+        "topic_volume": "4"
+      },
+      "file": "semrush提示词数据/prompts_by_topic_fts_branch___debris_cleanup_us.csv",
+      "sheet": "CSV",
+      "row": 538,
+      "overall_topic_id": "A015",
+      "overall_topic_volume": "418",
+      "uses": [
+        "无主机：人工清枝与碎料补扫"
+      ]
+    },
+    {
+      "id": "Q005",
+      "type": "semrush_prompt",
+      "group": "清场",
+      "text": "What are the best brush grubbers for tractor use?",
+      "value": "364",
+      "unit": "本条提示词记录所附主题/模型估值；不是单问句访问量",
+      "raw": {
+        "prompt": "What are the best brush grubbers for tractor use?",
+        "llm": "google_ai_mode",
+        "topic_name": "Tree and Brush Clearing Tools",
+        "topic_volume": "364"
+      },
+      "file": "semrush提示词数据/prompts_by_topic_fts_branch___debris_cleanup_us.csv",
+      "sheet": "CSV",
+      "row": 853,
+      "overall_topic_id": "A016",
+      "overall_topic_volume": "2869",
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "Q006",
+      "type": "semrush_prompt",
+      "group": "薪柴",
+      "text": "What are the best tools for splitting large logs?",
+      "value": "5",
+      "unit": "本条提示词记录所附主题/模型估值；不是单问句访问量",
+      "raw": {
+        "prompt": "What are the best tools for splitting large logs?",
+        "llm": "gemini",
+        "topic_name": "Firewood Splitting and Wood Handling",
+        "topic_volume": "5"
+      },
+      "file": "semrush提示词数据/prompts_by_topic_fts_firewood_processing_us.csv",
+      "sheet": "CSV",
+      "row": 126,
+      "overall_topic_id": "A017",
+      "overall_topic_volume": "499",
+      "uses": [
+        "已截木段：选择劈柴方式"
+      ]
+    },
+    {
+      "id": "Q007",
+      "type": "semrush_prompt",
+      "group": "储存",
+      "text": "how long does it take to season firewood",
+      "value": "34570",
+      "unit": "本条提示词记录所附主题/模型估值；不是单问句访问量",
+      "raw": {
+        "prompt": "how long does it take to season firewood",
+        "llm": "google_ai_overview",
+        "topic_name": "Seasoned Firewood and Drying Techniques",
+        "topic_volume": "34570"
+      },
+      "file": "semrush提示词数据/prompts_by_topic_fts_firewood_processing_us.csv",
+      "sheet": "CSV",
+      "row": 236,
+      "overall_topic_id": "A002",
+      "overall_topic_volume": "39693",
+      "uses": [
+        "已劈好薪柴：直接进入干燥与储存"
+      ]
+    },
+    {
+      "id": "Q008",
+      "type": "semrush_prompt",
+      "group": "储存",
+      "text": "firewood moisture",
+      "value": "34570",
+      "unit": "本条提示词记录所附主题/模型估值；不是单问句访问量",
+      "raw": {
+        "prompt": "firewood moisture",
+        "llm": "google_ai_overview",
+        "topic_name": "Seasoned Firewood and Drying Techniques",
+        "topic_volume": "34570"
+      },
+      "file": "semrush提示词数据/prompts_by_topic_fts_firewood_processing_us.csv",
+      "sheet": "CSV",
+      "row": 241,
+      "overall_topic_id": "A002",
+      "overall_topic_volume": "39693",
+      "uses": [
+        "已劈好薪柴：直接进入干燥与储存"
+      ]
+    },
+    {
+      "id": "Q009",
+      "type": "semrush_prompt",
+      "group": "储存",
+      "text": "how long to season firewood after splitting",
+      "value": "34570",
+      "unit": "本条提示词记录所附主题/模型估值；不是单问句访问量",
+      "raw": {
+        "prompt": "how long to season firewood after splitting",
+        "llm": "google_ai_overview",
+        "topic_name": "Seasoned Firewood and Drying Techniques",
+        "topic_volume": "34570"
+      },
+      "file": "semrush提示词数据/prompts_by_topic_fts_firewood_processing_us.csv",
+      "sheet": "CSV",
+      "row": 372,
+      "overall_topic_id": "A002",
+      "overall_topic_volume": "39693",
+      "uses": [
+        "已劈好薪柴：直接进入干燥与储存"
+      ]
+    },
+    {
+      "id": "Q010",
+      "type": "semrush_prompt",
+      "group": "制材",
+      "text": "What are the best tools and equipment for turning logs into lumber?",
+      "value": "3",
+      "unit": "本条提示词记录所附主题/模型估值；不是单问句访问量",
+      "raw": {
+        "prompt": "What are the best tools and equipment for turning logs into lumber?",
+        "llm": "gemini",
+        "topic_name": "Logs to Lumber Conversion and Lumber Supply",
+        "topic_volume": "3"
+      },
+      "file": "semrush提示词数据/prompts_by_topic_fts_firewood_processing_us.csv",
+      "sheet": "CSV",
+      "row": 771,
+      "overall_topic_id": "A018",
+      "overall_topic_volume": "59",
+      "uses": [
+        "原木做板材：完整制材系统"
+      ]
+    },
+    {
+      "id": "Q011",
+      "type": "semrush_prompt",
+      "group": "转运",
+      "text": "firewood carrier and stand",
+      "value": "19701",
+      "unit": "本条提示词记录所附主题/模型估值；不是单问句访问量",
+      "raw": {
+        "prompt": "firewood carrier and stand",
+        "llm": "google_ai_overview",
+        "topic_name": "Firewood Storage Solutions",
+        "topic_volume": "19701"
+      },
+      "file": "semrush提示词数据/prompts_by_topic_fts_firewood_processing_us.csv",
+      "sheet": "CSV",
+      "row": 980,
+      "overall_topic_id": "A003",
+      "overall_topic_volume": "40428",
+      "uses": [
+        "短距离转运：木段到储存区"
+      ]
+    },
+    {
+      "id": "Q012",
+      "type": "semrush_prompt",
+      "group": "薪柴",
+      "text": "What are the main features to consider when buying a firewood processor?",
+      "value": "955",
+      "unit": "本条提示词记录所附主题/模型估值；不是单问句访问量",
+      "raw": {
+        "prompt": "What are the main features to consider when buying a firewood processor?",
+        "llm": "chatgpt",
+        "topic_name": "firewood processing equipment",
+        "topic_volume": "955"
+      },
+      "file": "semrush提示词数据/prompts_by_topic_fts_firewood_processing_us.csv",
+      "sheet": "CSV",
+      "row": 27,
+      "overall_topic_id": "A019",
+      "overall_topic_volume": "5286",
+      "uses": [
+        "已有拖拉机：三点悬挂与 PTO 分开"
+      ]
+    },
+    {
+      "id": "Q013",
+      "type": "semrush_prompt",
+      "group": "转运",
+      "text": "Can you recommend the best tools for moving logs efficiently?",
+      "value": "2",
+      "unit": "本条提示词记录所附主题/模型估值；不是单问句访问量",
+      "raw": {
+        "prompt": "Can you recommend the best tools for moving logs efficiently?",
+        "llm": "gemini",
+        "topic_name": "Log Rolling and Logging Equipment",
+        "topic_volume": "2"
+      },
+      "file": "semrush提示词数据/prompts_by_topic_fts_log_handling___moving_us.csv",
+      "sheet": "CSV",
+      "row": 48,
+      "overall_topic_id": "A007",
+      "overall_topic_volume": "6855",
+      "uses": [
+        "短距离转运：木段到储存区",
+        "机械吊移：独立的条件路径"
+      ]
+    },
+    {
+      "id": "Q014",
+      "type": "semrush_prompt",
+      "group": "已有拖拉机",
+      "text": "Can you recommend safety tips for using a log splitter log lift?",
+      "value": "518",
+      "unit": "本条提示词记录所附主题/模型估值；不是单问句访问量",
+      "raw": {
+        "prompt": "Can you recommend safety tips for using a log splitter log lift?",
+        "llm": "chatgpt",
+        "topic_name": "Log Lifting and Splitting Equipment",
+        "topic_volume": "518"
+      },
+      "file": "semrush提示词数据/prompts_by_topic_fts_log_handling___moving_us.csv",
+      "sheet": "CSV",
+      "row": 59,
+      "overall_topic_id": "A020",
+      "overall_topic_volume": "2256",
+      "uses": [
+        "已有拖拉机：三点悬挂与 PTO 分开"
+      ]
+    },
+    {
+      "id": "Q015",
+      "type": "semrush_prompt",
+      "group": "翻动与截段",
+      "text": "How do I choose the best cant hook for heavy-duty logging?",
+      "value": "557",
+      "unit": "本条提示词记录所附主题/模型估值；不是单问句访问量",
+      "raw": {
+        "prompt": "How do I choose the best cant hook for heavy-duty logging?",
+        "llm": "chatgpt",
+        "topic_name": "Logging Tools and Equipment",
+        "topic_volume": "557"
+      },
+      "file": "semrush提示词数据/prompts_by_topic_fts_log_handling___moving_us.csv",
+      "sheet": "CSV",
+      "row": 109,
+      "overall_topic_id": "A021",
+      "overall_topic_volume": "8898",
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "Q016",
+      "type": "semrush_prompt",
+      "group": "翻动与截段",
+      "text": "What are the main types of cant hooks and peaveys used in logging?",
+      "value": "71",
+      "unit": "本条提示词记录所附主题/模型估值；不是单问句访问量",
+      "raw": {
+        "prompt": "What are the main types of cant hooks and peaveys used in logging?",
+        "llm": "gemini",
+        "topic_name": "Logging Tools and Equipment",
+        "topic_volume": "71"
+      },
+      "file": "semrush提示词数据/prompts_by_topic_fts_log_handling___moving_us.csv",
+      "sheet": "CSV",
+      "row": 113,
+      "overall_topic_id": "A021",
+      "overall_topic_volume": "8898",
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "Q017",
+      "type": "semrush_prompt",
+      "group": "翻动与截段",
+      "text": "Can you explain the differences between a log peavey and a cant hook?",
+      "value": "1889",
+      "unit": "本条提示词记录所附主题/模型估值；不是单问句访问量",
+      "raw": {
+        "prompt": "Can you explain the differences between a log peavey and a cant hook?",
+        "llm": "google_ai_mode",
+        "topic_name": "Logging Tools and Equipment",
+        "topic_volume": "1889"
+      },
+      "file": "semrush提示词数据/prompts_by_topic_fts_log_handling___moving_us.csv",
+      "sheet": "CSV",
+      "row": 126,
+      "overall_topic_id": "A021",
+      "overall_topic_volume": "8898",
+      "uses": [
+        "地面翻动、定位与截段支撑"
+      ]
+    },
+    {
+      "id": "Q018",
+      "type": "semrush_prompt",
+      "group": "翻动与截段",
+      "text": "How do I choose the right peavey or log stand for my needs?",
+      "value": "6",
+      "unit": "本条提示词记录所附主题/模型估值；不是单问句访问量",
+      "raw": {
+        "prompt": "How do I choose the right peavey or log stand for my needs?",
+        "llm": "chatgpt",
+        "topic_name": "Forestry and Logging Tools",
+        "topic_volume": "6"
+      },
+      "file": "semrush提示词数据/prompts_by_topic_fts_log_handling___moving_us.csv",
+      "sheet": "CSV",
+      "row": 374,
+      "overall_topic_id": "A022",
+      "overall_topic_volume": "209",
+      "uses": [
+        "地面翻动、定位与截段支撑"
+      ]
+    },
+    {
+      "id": "Q019",
+      "type": "semrush_prompt",
+      "group": "薪柴",
+      "text": "7 ton electric wood splitter",
+      "value": "111",
+      "unit": "本条提示词记录所附主题/模型估值；不是单问句访问量",
+      "raw": {
+        "prompt": "7 ton electric wood splitter",
+        "llm": "google_ai_overview",
+        "topic_name": "Log Splitters and Industrial Wood Splitters",
+        "topic_volume": "111"
+      },
+      "file": "semrush提示词数据/prompts_by_topic_fts_log_handling___moving_us.csv",
+      "sheet": "CSV",
+      "row": 790,
+      "overall_topic_id": "A023",
+      "overall_topic_volume": "954",
+      "uses": [
+        "已截木段：选择劈柴方式"
+      ]
+    },
+    {
+      "id": "Q020",
+      "type": "semrush_prompt",
+      "group": "转运",
+      "text": "Wheeled Firewood Carriers and Carts",
+      "value": "2120",
+      "unit": "本条提示词记录所附主题/模型估值；不是单问句访问量",
+      "raw": {
+        "prompt": "Wheeled Firewood Carriers and Carts",
+        "llm": "chatgpt",
+        "topic_name": "Wheeled Firewood Carriers and Carts",
+        "topic_volume": "2120"
+      },
+      "file": "semrush提示词数据/prompts_by_topic_fts_log_handling___moving_us.csv",
+      "sheet": "CSV",
+      "row": 905,
+      "overall_topic_id": "A012",
+      "overall_topic_volume": "2260",
+      "uses": [
+        "短距离转运：木段到储存区"
+      ]
+    },
+    {
+      "id": "Q021",
+      "type": "semrush_prompt",
+      "group": "制材",
+      "text": "Can I learn to mill my own lumber at home?",
+      "value": "11",
+      "unit": "本条提示词记录所附主题/模型估值；不是单问句访问量",
+      "raw": {
+        "prompt": "Can I learn to mill my own lumber at home?",
+        "llm": "gemini",
+        "topic_name": "Wood Milling and Sawmilling",
+        "topic_volume": "11"
+      },
+      "file": "semrush提示词数据/prompts_by_topic_fts_lumber_milling_us.csv",
+      "sheet": "CSV",
+      "row": 6,
+      "overall_topic_id": "A024",
+      "overall_topic_volume": "5378",
+      "uses": [
+        "原木做板材：完整制材系统"
+      ]
+    },
+    {
+      "id": "Q022",
+      "type": "semrush_prompt",
+      "group": "制材",
+      "text": "What are the different types of wood milling techniques?",
+      "value": "11",
+      "unit": "本条提示词记录所附主题/模型估值；不是单问句访问量",
+      "raw": {
+        "prompt": "What are the different types of wood milling techniques?",
+        "llm": "gemini",
+        "topic_name": "Wood Milling and Sawmilling",
+        "topic_volume": "11"
+      },
+      "file": "semrush提示词数据/prompts_by_topic_fts_lumber_milling_us.csv",
+      "sheet": "CSV",
+      "row": 23,
+      "overall_topic_id": "A024",
+      "overall_topic_volume": "5378",
+      "uses": [
+        "原木做板材：完整制材系统"
+      ]
+    },
+    {
+      "id": "Q023",
+      "type": "semrush_prompt",
+      "group": "维护",
+      "text": "How do I maintain and care for a sawmill to ensure its longevity?",
+      "value": "2",
+      "unit": "本条提示词记录所附主题/模型估值；不是单问句访问量",
+      "raw": {
+        "prompt": "How do I maintain and care for a sawmill to ensure its longevity?",
+        "llm": "chatgpt",
+        "topic_name": "sawmill and woodworking tools",
+        "topic_volume": "2"
+      },
+      "file": "semrush提示词数据/prompts_by_topic_fts_lumber_milling_us.csv",
+      "sheet": "CSV",
+      "row": 647,
+      "overall_topic_id": "A025",
+      "overall_topic_volume": "27",
+      "uses": [
+        "已有设备：维护资料与单件补购"
+      ]
+    },
+    {
+      "id": "Q024",
+      "type": "semrush_prompt",
+      "group": "修枝",
+      "text": "Can you recommend the best tools for safe tree lopping?",
+      "value": "2",
+      "unit": "本条提示词记录所附主题/模型估值；不是单问句访问量",
+      "raw": {
+        "prompt": "Can you recommend the best tools for safe tree lopping?",
+        "llm": "gemini",
+        "topic_name": "Tree Lopping and Pruning",
+        "topic_volume": "2"
+      },
+      "file": "semrush提示词数据/prompts_by_topic_fts_tree_pruning_us.csv",
+      "sheet": "CSV",
+      "row": 8,
+      "overall_topic_id": "A026",
+      "overall_topic_volume": "974",
+      "uses": [
+        "相关指南：地面可达小枝修剪"
+      ]
+    },
+    {
+      "id": "Q025",
+      "type": "semrush_prompt",
+      "group": "修枝",
+      "text": "best tool to cut tree limbs",
+      "value": "248791",
+      "unit": "本条提示词记录所附主题/模型估值；不是单问句访问量",
+      "raw": {
+        "prompt": "best tool to cut tree limbs",
+        "llm": "google_ai_overview",
+        "topic_name": "Tree and Shrub Pruning",
+        "topic_volume": "248791"
+      },
+      "file": "semrush提示词数据/prompts_by_topic_fts_tree_pruning_us.csv",
+      "sheet": "CSV",
+      "row": 42,
+      "overall_topic_id": "A027",
+      "overall_topic_volume": "280550",
+      "uses": [
+        "相关指南：地面可达小枝修剪"
+      ]
+    },
+    {
+      "id": "Q026",
+      "type": "semrush_prompt",
+      "group": "清场",
+      "text": "fallen tree branch removal",
+      "value": "64011",
+      "unit": "本条提示词记录所附主题/模型估值；不是单问句访问量",
+      "raw": {
+        "prompt": "fallen tree branch removal",
+        "llm": "google_ai_overview",
+        "topic_name": "Tree Felling and Safety",
+        "topic_volume": "64011"
+      },
+      "file": "semrush提示词数据/prompts_by_topic_fts_fallen_tree_cleanup_us.csv",
+      "sheet": "CSV",
+      "row": 699,
+      "overall_topic_id": "A028",
+      "overall_topic_volume": "75800",
+      "uses": [
+        "处置去处与专业帮助边界"
+      ]
+    },
+    {
+      "id": "A001",
+      "type": "semrush_topic",
+      "group": "清场",
+      "text": "Tree and Brush Debris Removal",
+      "value": "16738",
+      "unit": "US 主题量估值（原字段 volume；未明示月单位）",
+      "raw": {
+        "name": "Tree and Brush Debris Removal",
+        "volume": "16738",
+        "prompts_count": "100"
+      },
+      "duplicate_exports": 4,
+      "value_variants": [
+        "16738"
+      ],
+      "file": "semrush提示词数据/topics_by_fts_branch___debris_cleanup_us.csv",
+      "sheet": "CSV",
+      "row": 4,
+      "uses": [
+        "有主机：把散枝送到集中点"
+      ]
+    },
+    {
+      "id": "A002",
+      "type": "semrush_topic",
+      "group": "储存",
+      "text": "Seasoned Firewood and Drying Techniques",
+      "value": "39693",
+      "unit": "US 主题量估值（原字段 volume；未明示月单位）",
+      "raw": {
+        "name": "Seasoned Firewood and Drying Techniques",
+        "volume": "39693",
+        "prompts_count": "179"
+      },
+      "duplicate_exports": 1,
+      "value_variants": [
+        "39693"
+      ],
+      "file": "semrush提示词数据/topics_by_fts_firewood_processing_us.csv",
+      "sheet": "CSV",
+      "row": 6,
+      "uses": [
+        "已劈好薪柴：直接进入干燥与储存"
+      ]
+    },
+    {
+      "id": "A003",
+      "type": "semrush_topic",
+      "group": "储存",
+      "text": "Firewood Storage Solutions",
+      "value": "40428",
+      "unit": "US 主题量估值（原字段 volume；未明示月单位）",
+      "raw": {
+        "name": "Firewood Storage Solutions",
+        "volume": "40428",
+        "prompts_count": "230"
+      },
+      "duplicate_exports": 1,
+      "value_variants": [
+        "40428"
+      ],
+      "file": "semrush提示词数据/topics_by_fts_firewood_processing_us.csv",
+      "sheet": "CSV",
+      "row": 59,
+      "uses": [
+        "已劈好薪柴：直接进入干燥与储存"
+      ]
+    },
+    {
+      "id": "A004",
+      "type": "semrush_topic",
+      "group": "储存",
+      "text": "Cord of Firewood",
+      "value": "314083",
+      "unit": "US 主题量估值（原字段 volume；未明示月单位）",
+      "raw": {
+        "name": "Cord of Firewood",
+        "volume": "314083",
+        "prompts_count": "869"
+      },
+      "duplicate_exports": 1,
+      "value_variants": [
+        "314083"
+      ],
+      "file": "semrush提示词数据/topics_by_fts_firewood_processing_us.csv",
+      "sheet": "CSV",
+      "row": 306,
+      "uses": [
+        "已劈好薪柴：直接进入干燥与储存"
+      ]
+    },
+    {
+      "id": "A005",
+      "type": "semrush_topic",
+      "group": "薪柴",
+      "text": "Manual Wood Splitters and Wedges",
+      "value": "10076",
+      "unit": "US 主题量估值（原字段 volume；未明示月单位）",
+      "raw": {
+        "name": "Manual Wood Splitters and Wedges",
+        "volume": "10076",
+        "prompts_count": "89"
+      },
+      "duplicate_exports": 3,
+      "value_variants": [
+        "10076"
+      ],
+      "file": "semrush提示词数据/topics_by_fts_firewood_processing_us.csv",
+      "sheet": "CSV",
+      "row": 530,
+      "uses": [
+        "已截木段：选择劈柴方式"
+      ]
+    },
+    {
+      "id": "A006",
+      "type": "semrush_topic",
+      "group": "翻动与截段",
+      "text": "Wood Cutting Stands and Log Supports",
+      "value": "16097",
+      "unit": "US 主题量估值（原字段 volume；未明示月单位）",
+      "raw": {
+        "name": "Wood Cutting Stands and Log Supports",
+        "volume": "16097",
+        "prompts_count": "60"
+      },
+      "duplicate_exports": 3,
+      "value_variants": [
+        "16097"
+      ],
+      "file": "semrush提示词数据/topics_by_fts_firewood_processing_us.csv",
+      "sheet": "CSV",
+      "row": 606,
+      "uses": [
+        "地面翻动、定位与截段支撑"
+      ]
+    },
+    {
+      "id": "A007",
+      "type": "semrush_topic",
+      "group": "转运",
+      "text": "Log Rolling and Logging Equipment",
+      "value": "6855",
+      "unit": "US 主题量估值（原字段 volume；未明示月单位）",
+      "raw": {
+        "name": "Log Rolling and Logging Equipment",
+        "volume": "6855",
+        "prompts_count": "21"
+      },
+      "duplicate_exports": 3,
+      "value_variants": [
+        "6855"
+      ],
+      "file": "semrush提示词数据/topics_by_fts_firewood_processing_us.csv",
+      "sheet": "CSV",
+      "row": 900,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "A008",
+      "type": "semrush_topic",
+      "group": "薪柴",
+      "text": "Log Splitters and Wood Splitters",
+      "value": "42834",
+      "unit": "US 主题量估值（原字段 volume；未明示月单位）",
+      "raw": {
+        "name": "Log Splitters and Wood Splitters",
+        "volume": "42834",
+        "prompts_count": "285"
+      },
+      "duplicate_exports": 2,
+      "value_variants": [
+        "42834"
+      ],
+      "file": "semrush提示词数据/topics_by_fts_log_handling___moving_us.csv",
+      "sheet": "CSV",
+      "row": 162,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "A009",
+      "type": "semrush_topic",
+      "group": "已有拖拉机",
+      "text": "Log Splitters for Tractors and 3-Point Hitch",
+      "value": "10107",
+      "unit": "US 主题量估值（原字段 volume；未明示月单位）",
+      "raw": {
+        "name": "Log Splitters for Tractors and 3-Point Hitch",
+        "volume": "10107",
+        "prompts_count": "88"
+      },
+      "duplicate_exports": 1,
+      "value_variants": [
+        "10107"
+      ],
+      "file": "semrush提示词数据/topics_by_fts_log_handling___moving_us.csv",
+      "sheet": "CSV",
+      "row": 189,
+      "uses": [
+        "已有拖拉机：三点悬挂与 PTO 分开"
+      ]
+    },
+    {
+      "id": "A010",
+      "type": "semrush_topic",
+      "group": "薪柴",
+      "text": "Wood Splitting Tools and Techniques",
+      "value": "62903",
+      "unit": "US 主题量估值（原字段 volume；未明示月单位）",
+      "raw": {
+        "name": "Wood Splitting Tools and Techniques",
+        "volume": "62903",
+        "prompts_count": "192"
+      },
+      "duplicate_exports": 2,
+      "value_variants": [
+        "62903"
+      ],
+      "file": "semrush提示词数据/topics_by_fts_log_handling___moving_us.csv",
+      "sheet": "CSV",
+      "row": 604,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "A011",
+      "type": "semrush_topic",
+      "group": "已有拖拉机",
+      "text": "PTO Log Splitters and Wood Splitters",
+      "value": "3571",
+      "unit": "US 主题量估值（原字段 volume；未明示月单位）",
+      "raw": {
+        "name": "PTO Log Splitters and Wood Splitters",
+        "volume": "3571",
+        "prompts_count": "49"
+      },
+      "duplicate_exports": 1,
+      "value_variants": [
+        "3571"
+      ],
+      "file": "semrush提示词数据/topics_by_fts_log_handling___moving_us.csv",
+      "sheet": "CSV",
+      "row": 665,
+      "uses": [
+        "已有拖拉机：三点悬挂与 PTO 分开"
+      ]
+    },
+    {
+      "id": "A012",
+      "type": "semrush_topic",
+      "group": "转运",
+      "text": "Wheeled Firewood Carriers and Carts",
+      "value": "2260",
+      "unit": "US 主题量估值（原字段 volume；未明示月单位）",
+      "raw": {
+        "name": "Wheeled Firewood Carriers and Carts",
+        "volume": "2260",
+        "prompts_count": "19"
+      },
+      "duplicate_exports": 2,
+      "value_variants": [
+        "2260"
+      ],
+      "file": "semrush提示词数据/topics_by_fts_firewood_processing_us.csv",
+      "sheet": "CSV",
+      "row": 931,
+      "uses": [
+        "短距离转运：木段到储存区"
+      ]
+    },
+    {
+      "id": "A013",
+      "type": "semrush_topic",
+      "group": "制材",
+      "text": "Sawmills and Portable Sawmills",
+      "value": "54404",
+      "unit": "US 主题量估值（原字段 volume；未明示月单位）",
+      "raw": {
+        "name": "Sawmills and Portable Sawmills",
+        "volume": "54404",
+        "prompts_count": "267"
+      },
+      "duplicate_exports": 1,
+      "value_variants": [
+        "54404"
+      ],
+      "file": "semrush提示词数据/topics_by_fts_lumber_milling_us.csv",
+      "sheet": "CSV",
+      "row": 68,
+      "uses": [
+        "原木做板材：完整制材系统"
+      ]
+    },
+    {
+      "id": "A014",
+      "type": "semrush_topic",
+      "group": "制材",
+      "text": "Chainsaw Mills and Log Sawmills",
+      "value": "20101",
+      "unit": "US 主题量估值（原字段 volume；未明示月单位）",
+      "raw": {
+        "name": "Chainsaw Mills and Log Sawmills",
+        "volume": "20101",
+        "prompts_count": "114"
+      },
+      "duplicate_exports": 1,
+      "value_variants": [
+        "20101"
+      ],
+      "file": "semrush提示词数据/topics_by_fts_lumber_milling_us.csv",
+      "sheet": "CSV",
+      "row": 76,
+      "uses": [
+        "原木做板材：完整制材系统"
+      ]
+    },
+    {
+      "id": "A015",
+      "type": "semrush_topic",
+      "group": "清场",
+      "text": "Underbrush Clearing and Maintenance",
+      "value": "418",
+      "unit": "US 主题量估值（原字段 volume；未明示月单位）",
+      "raw": {
+        "name": "Underbrush Clearing and Maintenance",
+        "volume": "418",
+        "prompts_count": "17"
+      },
+      "duplicate_exports": 1,
+      "value_variants": [
+        "418"
+      ],
+      "file": "semrush提示词数据/topics_by_fts_branch___debris_cleanup_us.csv",
+      "sheet": "CSV",
+      "row": 21,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "A016",
+      "type": "semrush_topic",
+      "group": "清场",
+      "text": "Tree and Brush Clearing Tools",
+      "value": "2869",
+      "unit": "US 主题量估值（原字段 volume；未明示月单位）",
+      "raw": {
+        "name": "Tree and Brush Clearing Tools",
+        "volume": "2869",
+        "prompts_count": "21"
+      },
+      "duplicate_exports": 3,
+      "value_variants": [
+        "2869"
+      ],
+      "file": "semrush提示词数据/topics_by_fts_branch___debris_cleanup_us.csv",
+      "sheet": "CSV",
+      "row": 78,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "A017",
+      "type": "semrush_topic",
+      "group": "薪柴",
+      "text": "Firewood Splitting and Wood Handling",
+      "value": "499",
+      "unit": "US 主题量估值（原字段 volume；未明示月单位）",
+      "raw": {
+        "name": "Firewood Splitting and Wood Handling",
+        "volume": "499",
+        "prompts_count": "20"
+      },
+      "duplicate_exports": 4,
+      "value_variants": [
+        "499"
+      ],
+      "file": "semrush提示词数据/topics_by_fts_firewood_processing_us.csv",
+      "sheet": "CSV",
+      "row": 11,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "A018",
+      "type": "semrush_topic",
+      "group": "制材",
+      "text": "Logs to Lumber Conversion and Lumber Supply",
+      "value": "59",
+      "unit": "US 主题量估值（原字段 volume；未明示月单位）",
+      "raw": {
+        "name": "Logs to Lumber Conversion and Lumber Supply",
+        "volume": "59",
+        "prompts_count": "16"
+      },
+      "duplicate_exports": 3,
+      "value_variants": [
+        "59"
+      ],
+      "file": "semrush提示词数据/topics_by_fts_firewood_processing_us.csv",
+      "sheet": "CSV",
+      "row": 53,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "A019",
+      "type": "semrush_topic",
+      "group": "薪柴",
+      "text": "firewood processing equipment",
+      "value": "5286",
+      "unit": "US 主题量估值（原字段 volume；未明示月单位）",
+      "raw": {
+        "name": "firewood processing equipment",
+        "volume": "5286",
+        "prompts_count": "80"
+      },
+      "duplicate_exports": 3,
+      "value_variants": [
+        "5286"
+      ],
+      "file": "semrush提示词数据/topics_by_fts_firewood_processing_us.csv",
+      "sheet": "CSV",
+      "row": 2,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "A020",
+      "type": "semrush_topic",
+      "group": "已有拖拉机",
+      "text": "Log Lifting and Splitting Equipment",
+      "value": "2256",
+      "unit": "US 主题量估值（原字段 volume；未明示月单位）",
+      "raw": {
+        "name": "Log Lifting and Splitting Equipment",
+        "volume": "2256",
+        "prompts_count": "34"
+      },
+      "duplicate_exports": 2,
+      "value_variants": [
+        "2256"
+      ],
+      "file": "semrush提示词数据/topics_by_fts_log_handling___moving_us.csv",
+      "sheet": "CSV",
+      "row": 4,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "A021",
+      "type": "semrush_topic",
+      "group": "翻动与截段",
+      "text": "Logging Tools and Equipment",
+      "value": "8898",
+      "unit": "US 主题量估值（原字段 volume；未明示月单位）",
+      "raw": {
+        "name": "Logging Tools and Equipment",
+        "volume": "8898",
+        "prompts_count": "68"
+      },
+      "duplicate_exports": 3,
+      "value_variants": [
+        "8898"
+      ],
+      "file": "semrush提示词数据/topics_by_fts_firewood_processing_us.csv",
+      "sheet": "CSV",
+      "row": 788,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "A022",
+      "type": "semrush_topic",
+      "group": "翻动与截段",
+      "text": "Forestry and Logging Tools",
+      "value": "209",
+      "unit": "US 主题量估值（原字段 volume；未明示月单位）",
+      "raw": {
+        "name": "Forestry and Logging Tools",
+        "volume": "209",
+        "prompts_count": "17"
+      },
+      "duplicate_exports": 3,
+      "value_variants": [
+        "209"
+      ],
+      "file": "semrush提示词数据/topics_by_fts_firewood_processing_us.csv",
+      "sheet": "CSV",
+      "row": 531,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "A023",
+      "type": "semrush_topic",
+      "group": "薪柴",
+      "text": "Log Splitters and Industrial Wood Splitters",
+      "value": "954",
+      "unit": "US 主题量估值（原字段 volume；未明示月单位）",
+      "raw": {
+        "name": "Log Splitters and Industrial Wood Splitters",
+        "volume": "954",
+        "prompts_count": "29"
+      },
+      "duplicate_exports": 3,
+      "value_variants": [
+        "954"
+      ],
+      "file": "semrush提示词数据/topics_by_fts_firewood_processing_us.csv",
+      "sheet": "CSV",
+      "row": 581,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "A024",
+      "type": "semrush_topic",
+      "group": "制材",
+      "text": "Wood Milling and Sawmilling",
+      "value": "5378",
+      "unit": "US 主题量估值（原字段 volume；未明示月单位）",
+      "raw": {
+        "name": "Wood Milling and Sawmilling",
+        "volume": "5378",
+        "prompts_count": "42"
+      },
+      "duplicate_exports": 3,
+      "value_variants": [
+        "5378"
+      ],
+      "file": "semrush提示词数据/topics_by_fts_firewood_processing_us.csv",
+      "sheet": "CSV",
+      "row": 163,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "A025",
+      "type": "semrush_topic",
+      "group": "维护",
+      "text": "sawmill and woodworking tools",
+      "value": "27",
+      "unit": "US 主题量估值（原字段 volume；未明示月单位）",
+      "raw": {
+        "name": "sawmill and woodworking tools",
+        "volume": "27",
+        "prompts_count": "17"
+      },
+      "duplicate_exports": 1,
+      "value_variants": [
+        "27"
+      ],
+      "file": "semrush提示词数据/topics_by_fts_lumber_milling_us.csv",
+      "sheet": "CSV",
+      "row": 14,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "A026",
+      "type": "semrush_topic",
+      "group": "修枝",
+      "text": "Tree Lopping and Pruning",
+      "value": "974",
+      "unit": "US 主题量估值（原字段 volume；未明示月单位）",
+      "raw": {
+        "name": "Tree Lopping and Pruning",
+        "volume": "974",
+        "prompts_count": "20"
+      },
+      "duplicate_exports": 6,
+      "value_variants": [
+        "974"
+      ],
+      "file": "semrush提示词数据/topics_by_fts_branch___debris_cleanup_us.csv",
+      "sheet": "CSV",
+      "row": 600,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "A027",
+      "type": "semrush_topic",
+      "group": "修枝",
+      "text": "Tree and Shrub Pruning",
+      "value": "280550",
+      "unit": "US 主题量估值（原字段 volume；未明示月单位）",
+      "raw": {
+        "name": "Tree and Shrub Pruning",
+        "volume": "280550",
+        "prompts_count": "827"
+      },
+      "duplicate_exports": 3,
+      "value_variants": [
+        "280550"
+      ],
+      "file": "semrush提示词数据/topics_by_fts_branch___debris_cleanup_us.csv",
+      "sheet": "CSV",
+      "row": 179,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "A028",
+      "type": "semrush_topic",
+      "group": "清场",
+      "text": "Tree Felling and Safety",
+      "value": "75800",
+      "unit": "US 主题量估值（原字段 volume；未明示月单位）",
+      "raw": {
+        "name": "Tree Felling and Safety",
+        "volume": "75800",
+        "prompts_count": "378"
+      },
+      "duplicate_exports": 5,
+      "value_variants": [
+        "75800"
+      ],
+      "file": "semrush提示词数据/topics_by_fts_branch___debris_cleanup_us.csv",
+      "sheet": "CSV",
+      "row": 177,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "M001",
+      "type": "peec",
+      "group": "清场",
+      "text": "What signs of tension, hanging limbs, or an unstable root plate mean I should stop and call a tree professional?",
+      "value": "",
+      "unit": "未提供流量估值",
+      "raw": {
+        "user": "What signs of tension, hanging limbs, or an unstable root plate mean I should stop and call a tree professional?",
+        "model": "gemini-ui",
+        "topic": "Fallen Tree Cleanup",
+        "promptId": "pr_9c01c00d-e3e6-48e0-80d0-16bc9a58a1b6",
+        "created": "46337.20833333333"
+      },
+      "file": "peec AI提示词数据/chatsexportgarveefrom-2026-10-13to-2026-11-11.xlsx",
+      "sheet": "Sheet1",
+      "row": 2,
+      "uses": [
+        "处置去处与专业帮助边界"
+      ]
+    },
+    {
+      "id": "M002",
+      "type": "peec",
+      "group": "清场",
+      "text": "What equipment can help move manageable fallen branches and logs after a storm, and when is professional help necessary?",
+      "value": "",
+      "unit": "未提供流量估值",
+      "raw": {
+        "user": "What equipment can help move manageable fallen branches and logs after a storm, and when is professional help necessary?",
+        "model": "gemini-ui",
+        "topic": "Fallen Tree Cleanup",
+        "promptId": "pr_adffadba-74d8-47b8-9ef5-5c2bab8f0506",
+        "created": "46337.20833333333"
+      },
+      "file": "peec AI提示词数据/chatsexportgarveefrom-2026-10-13to-2026-11-11.xlsx",
+      "sheet": "Sheet1",
+      "row": 3,
+      "uses": [
+        "无主机：人工清枝与碎料补扫"
+      ]
+    },
+    {
+      "id": "M003",
+      "type": "peec",
+      "group": "清场",
+      "text": "What tractor attachments are best for collecting loose branches on a small farm?",
+      "value": "",
+      "unit": "未提供流量估值",
+      "raw": {
+        "user": "What tractor attachments are best for collecting loose branches on a small farm?",
+        "model": "chatgpt-ui",
+        "topic": "Branch & Debris Cleanup",
+        "promptId": "pr_8ad95135-aa93-4205-8c17-5fce0b7f6f44",
+        "created": "46337.20833333333"
+      },
+      "file": "peec AI提示词数据/chatsexportgarveefrom-2026-10-13to-2026-11-11.xlsx",
+      "sheet": "Sheet1",
+      "row": 4,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "M004",
+      "type": "peec",
+      "group": "制材",
+      "text": "Is the GARVEE Rail Mill Guide a complete chainsaw milling setup, or is it one component of a larger system?",
+      "value": "",
+      "unit": "未提供流量估值",
+      "raw": {
+        "user": "Is the GARVEE Rail Mill Guide a complete chainsaw milling setup, or is it one component of a larger system?",
+        "model": "gemini-ui",
+        "topic": "Lumber Milling",
+        "promptId": "pr_36fa8082-63a8-4624-ae89-878328674bea",
+        "created": "46337.20833333333"
+      },
+      "file": "peec AI提示词数据/chatsexportgarveefrom-2026-10-13to-2026-11-11.xlsx",
+      "sheet": "Sheet1",
+      "row": 5,
+      "uses": [
+        "原木做板材：完整制材系统",
+        "已有设备：维护资料与单件补购"
+      ]
+    },
+    {
+      "id": "M005",
+      "type": "peec",
+      "group": "清场",
+      "text": "After a tree falls on my property, what should I check before starting cleanup?",
+      "value": "",
+      "unit": "未提供流量估值",
+      "raw": {
+        "user": "After a tree falls on my property, what should I check before starting cleanup?",
+        "model": "gemini-ui",
+        "topic": "Fallen Tree Cleanup",
+        "promptId": "pr_9230bb89-5e1c-4a4c-ae19-f1f0a8e912c8",
+        "created": "46337.20833333333"
+      },
+      "file": "peec AI提示词数据/chatsexportgarveefrom-2026-10-13to-2026-11-11.xlsx",
+      "sheet": "Sheet1",
+      "row": 8,
+      "uses": [
+        "处置去处与专业帮助边界"
+      ]
+    },
+    {
+      "id": "M006",
+      "type": "peec",
+      "group": "薪柴",
+      "text": "For occasional home firewood, how does a manual hydraulic log splitter compare with electric or gas-powered models in effort, output, and setup?",
+      "value": "",
+      "unit": "未提供流量估值",
+      "raw": {
+        "user": "For occasional home firewood, how does a manual hydraulic log splitter compare with electric or gas-powered models in effort, output, and setup?",
+        "model": "google-ai-overview",
+        "topic": "Firewood Processing",
+        "promptId": "pr_93990d96-c89c-4f05-abf6-5abca24802b8",
+        "created": "46337.20833333333"
+      },
+      "file": "peec AI提示词数据/chatsexportgarveefrom-2026-10-13to-2026-11-11.xlsx",
+      "sheet": "Sheet1",
+      "row": 9,
+      "uses": [
+        "已截木段：选择劈柴方式"
+      ]
+    },
+    {
+      "id": "M007",
+      "type": "peec",
+      "group": "制材",
+      "text": "How do I choose a portable chainsaw mill that fits my saw's bar length, the log diameter, and the board thickness I want?",
+      "value": "",
+      "unit": "未提供流量估值",
+      "raw": {
+        "user": "How do I choose a portable chainsaw mill that fits my saw's bar length, the log diameter, and the board thickness I want?",
+        "model": "gemini-ui",
+        "topic": "Lumber Milling",
+        "promptId": "pr_c6e28563-82ff-4d9f-a5bd-416026ecc2a9",
+        "created": "46337.20833333333"
+      },
+      "file": "peec AI提示词数据/chatsexportgarveefrom-2026-10-13to-2026-11-11.xlsx",
+      "sheet": "Sheet1",
+      "row": 11,
+      "uses": [
+        "原木做板材：完整制材系统"
+      ]
+    },
+    {
+      "id": "M008",
+      "type": "peec",
+      "group": "修枝",
+      "text": "For small branches I can reach safely from the ground, how does a mini chainsaw compare with loppers or a pruning saw?",
+      "value": "",
+      "unit": "未提供流量估值",
+      "raw": {
+        "user": "For small branches I can reach safely from the ground, how does a mini chainsaw compare with loppers or a pruning saw?",
+        "model": "chatgpt-ui",
+        "topic": "Tree Pruning",
+        "promptId": "pr_f9dd9213-e28a-4d94-bf70-0e80a9121fd8",
+        "created": "46337.20833333333"
+      },
+      "file": "peec AI提示词数据/chatsexportgarveefrom-2026-10-13to-2026-11-11.xlsx",
+      "sheet": "Sheet1",
+      "row": 12,
+      "uses": [
+        "相关指南：地面可达小枝修剪"
+      ]
+    },
+    {
+      "id": "M009",
+      "type": "peec",
+      "group": "翻动与截段",
+      "text": "What is the difference between a cant hook, a peavey, and a timberjack when rolling, positioning, or supporting logs?",
+      "value": "",
+      "unit": "未提供流量估值",
+      "raw": {
+        "user": "What is the difference between a cant hook, a peavey, and a timberjack when rolling, positioning, or supporting logs?",
+        "model": "google-ai-overview",
+        "topic": "Log Handling & Moving",
+        "promptId": "pr_cab33618-d4d3-43bc-a4d3-9c04deeaa3ac",
+        "created": "46337.20833333333"
+      },
+      "file": "peec AI提示词数据/chatsexportgarveefrom-2026-10-13to-2026-11-11.xlsx",
+      "sheet": "Sheet1",
+      "row": 13,
+      "uses": [
+        "地面翻动、定位与截段支撑"
+      ]
+    },
+    {
+      "id": "M010",
+      "type": "peec",
+      "group": "转运",
+      "text": "How can I verify whether log tongs are designed and rated for use with my tractor or loader, rather than for manual lifting only?",
+      "value": "",
+      "unit": "未提供流量估值",
+      "raw": {
+        "user": "How can I verify whether log tongs are designed and rated for use with my tractor or loader, rather than for manual lifting only?",
+        "model": "gemini-ui",
+        "topic": "Log Handling & Moving",
+        "promptId": "pr_f9b89402-6335-4bd1-8a7a-2ae4671457a4",
+        "created": "46337.20833333333"
+      },
+      "file": "peec AI提示词数据/chatsexportgarveefrom-2026-10-13to-2026-11-11.xlsx",
+      "sheet": "Sheet1",
+      "row": 14,
+      "uses": [
+        "机械吊移：独立的条件路径"
+      ]
+    },
+    {
+      "id": "M011",
+      "type": "peec",
+      "group": "修枝",
+      "text": "When should I prune trees and shrubs on my property, and when should I call a qualified arborist?",
+      "value": "",
+      "unit": "未提供流量估值",
+      "raw": {
+        "user": "When should I prune trees and shrubs on my property, and when should I call a qualified arborist?",
+        "model": "chatgpt-ui",
+        "topic": "Tree Pruning",
+        "promptId": "pr_0650c201-9717-4305-b221-3ed922c0076a",
+        "created": "46337.20833333333"
+      },
+      "file": "peec AI提示词数据/chatsexportgarveefrom-2026-10-13to-2026-11-11.xlsx",
+      "sheet": "Sheet1",
+      "row": 15,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "M012",
+      "type": "peec",
+      "group": "制材",
+      "text": "What equipment and setup do I need to mill logs into lumber with a chainsaw mill?",
+      "value": "",
+      "unit": "未提供流量估值",
+      "raw": {
+        "user": "What equipment and setup do I need to mill logs into lumber with a chainsaw mill?",
+        "model": "gemini-ui",
+        "topic": "Lumber Milling",
+        "promptId": "pr_7727a648-8fc6-40e2-a0cc-fc0f317bc110",
+        "created": "46337.20833333333"
+      },
+      "file": "peec AI提示词数据/chatsexportgarveefrom-2026-10-13to-2026-11-11.xlsx",
+      "sheet": "Sheet1",
+      "row": 18,
+      "uses": [
+        "原木做板材：完整制材系统"
+      ]
+    },
+    {
+      "id": "M013",
+      "type": "peec",
+      "group": "薪柴",
+      "text": "What is a practical firewood workflow, from cutting and splitting rounds to seasoning and storage?",
+      "value": "",
+      "unit": "未提供流量估值",
+      "raw": {
+        "user": "What is a practical firewood workflow, from cutting and splitting rounds to seasoning and storage?",
+        "model": "gemini-ui",
+        "topic": "Firewood Processing",
+        "promptId": "pr_d115fcbf-0c0e-4a1d-bdd6-cfac4bfa3dd8",
+        "created": "46337.20833333333"
+      },
+      "file": "peec AI提示词数据/chatsexportgarveefrom-2026-10-13to-2026-11-11.xlsx",
+      "sheet": "Sheet1",
+      "row": 19,
+      "uses": [
+        "短距离转运：木段到储存区"
+      ]
+    },
+    {
+      "id": "M014",
+      "type": "peec",
+      "group": "修枝",
+      "text": "What should I check before buying a mini chainsaw for trimming small, ground-level branches?",
+      "value": "",
+      "unit": "未提供流量估值",
+      "raw": {
+        "user": "What should I check before buying a mini chainsaw for trimming small, ground-level branches?",
+        "model": "gemini-ui",
+        "topic": "Tree Pruning",
+        "promptId": "pr_7fc83279-aa24-4477-8109-f9d691badada",
+        "created": "46337.20833333333"
+      },
+      "file": "peec AI提示词数据/chatsexportgarveefrom-2026-10-13to-2026-11-11.xlsx",
+      "sheet": "Sheet1",
+      "row": 20,
+      "uses": [
+        "相关指南：地面可达小枝修剪"
+      ]
+    },
+    {
+      "id": "M015",
+      "type": "peec",
+      "group": "清场",
+      "text": "How can I verify that clamp-on debris forks fit my loader bucket and stay within the bucket, loader, and attachment load ratings?",
+      "value": "",
+      "unit": "未提供流量估值",
+      "raw": {
+        "user": "How can I verify that clamp-on debris forks fit my loader bucket and stay within the bucket, loader, and attachment load ratings?",
+        "model": "gemini-ui",
+        "topic": "Branch & Debris Cleanup",
+        "promptId": "pr_290d7949-56ae-4974-a3d9-e54abe852d70",
+        "created": "46337.20833333333"
+      },
+      "file": "peec AI提示词数据/chatsexportgarveefrom-2026-10-13to-2026-11-11.xlsx",
+      "sheet": "Sheet1",
+      "row": 25,
+      "uses": [
+        "有主机：把散枝送到集中点"
+      ]
+    },
+    {
+      "id": "M016",
+      "type": "peec",
+      "group": "清场",
+      "text": "When collecting loose branches with a tractor, should I choose debris forks or pallet forks, and what is each attachment designed to handle?",
+      "value": "",
+      "unit": "未提供流量估值",
+      "raw": {
+        "user": "When collecting loose branches with a tractor, should I choose debris forks or pallet forks, and what is each attachment designed to handle?",
+        "model": "gemini-ui",
+        "topic": "Branch & Debris Cleanup",
+        "promptId": "pr_9be83da9-7f6b-4041-b27e-3b30563c6a2a",
+        "created": "46337.20833333333"
+      },
+      "file": "peec AI提示词数据/chatsexportgarveefrom-2026-10-13to-2026-11-11.xlsx",
+      "sheet": "Sheet1",
+      "row": 26,
+      "uses": [
+        "有主机：把散枝送到集中点"
+      ]
+    },
+    {
+      "id": "M017",
+      "type": "peec",
+      "group": "薪柴",
+      "text": "What log diameter, length, and wood conditions should I consider when choosing a manual hydraulic log splitter?",
+      "value": "",
+      "unit": "未提供流量估值",
+      "raw": {
+        "user": "What log diameter, length, and wood conditions should I consider when choosing a manual hydraulic log splitter?",
+        "model": "chatgpt-ui",
+        "topic": "Firewood Processing",
+        "promptId": "pr_fea44b09-395b-4965-b9e9-7207eb7a6d6b",
+        "created": "46337.20833333333"
+      },
+      "file": "peec AI提示词数据/chatsexportgarveefrom-2026-10-13to-2026-11-11.xlsx",
+      "sheet": "Sheet1",
+      "row": 28,
+      "uses": [
+        "已截木段：选择劈柴方式"
+      ]
+    },
+    {
+      "id": "M018",
+      "type": "peec",
+      "group": "翻动与截段",
+      "text": "What cant hook length and hook design should I compare for the log sizes I usually handle?",
+      "value": "",
+      "unit": "未提供流量估值",
+      "raw": {
+        "user": "What cant hook length and hook design should I compare for the log sizes I usually handle?",
+        "model": "google-ai-overview",
+        "topic": "Log Handling & Moving",
+        "promptId": "pr_ee30502e-d967-4baa-a75f-964720daef0d",
+        "created": "46337.20833333333"
+      },
+      "file": "peec AI提示词数据/chatsexportgarveefrom-2026-10-13to-2026-11-11.xlsx",
+      "sheet": "Sheet1",
+      "row": 34,
+      "uses": [
+        "意图边界或选型内容参考"
+      ]
+    },
+    {
+      "id": "M019",
+      "type": "peec",
+      "group": "储存",
+      "text": "What should I look for in a firewood rack and cover to keep split wood off the ground, allow airflow, and protect it from rain?",
+      "value": "",
+      "unit": "未提供流量估值",
+      "raw": {
+        "user": "What should I look for in a firewood rack and cover to keep split wood off the ground, allow airflow, and protect it from rain?",
+        "model": "gemini-ui",
+        "topic": "Firewood Processing",
+        "promptId": "pr_1203f583-9011-4529-9432-d650da2c5bbf",
+        "created": "46337.20833333333"
+      },
+      "file": "peec AI提示词数据/chatsexportgarveefrom-2026-10-13to-2026-11-11.xlsx",
+      "sheet": "Sheet1",
+      "row": 36,
+      "uses": [
+        "已劈好薪柴：直接进入干燥与储存"
+      ]
+    },
+    {
+      "id": "M020",
+      "type": "peec",
+      "group": "制材",
+      "text": "What additional components are needed to use a chainsaw mill guide rail for the first cut?",
+      "value": "",
+      "unit": "未提供流量估值",
+      "raw": {
+        "user": "What additional components are needed to use a chainsaw mill guide rail for the first cut?",
+        "model": "google-ai-overview",
+        "topic": "Lumber Milling",
+        "promptId": "pr_c77e0340-b32b-4555-baf7-561b11a84111",
+        "created": "46337.20833333333"
+      },
+      "file": "peec AI提示词数据/chatsexportgarveefrom-2026-10-13to-2026-11-11.xlsx",
+      "sheet": "Sheet1",
+      "row": 37,
+      "uses": [
+        "原木做板材：完整制材系统",
+        "已有设备：维护资料与单件补购"
+      ]
+    },
+    {
+      "id": "N001",
+      "type": "keyword",
+      "file": "SEMRUSH产品词拓展/chainsaw-mill-guide-rails_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "chainsaw mill guide rails",
+      "row": 15777,
+      "text": "chainsaw chain sharpener",
+      "value": "2900",
+      "unit": "US估算月搜索量",
+      "raw": {
+        "Keyword": "chainsaw chain sharpener",
+        "Volume": "2900",
+        "Keyword Difficulty": "25",
+        "Intent": "Informational, Commercial"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N002",
+      "type": "keyword",
+      "file": "SEMRUSH场景词拓展/firewood-storage_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood storage",
+      "row": 11,
+      "text": "firewood rack outdoor",
+      "value": "2900",
+      "unit": "US估算月搜索量",
+      "raw": {
+        "Keyword": "firewood rack outdoor",
+        "Volume": "2900",
+        "Keyword Difficulty": "45",
+        "Intent": "Informational, Transactional"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N003",
+      "type": "keyword",
+      "file": "SEMRUSH场景词拓展/firewood-storage_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood storage",
+      "row": 2302,
+      "text": "indoor firewood rack",
+      "value": "2900",
+      "unit": "US估算月搜索量",
+      "raw": {
+        "Keyword": "indoor firewood rack",
+        "Volume": "2900",
+        "Keyword Difficulty": "11",
+        "Intent": "Informational"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N004",
+      "type": "keyword",
+      "file": "SEMRUSH场景词拓展/firewood-storage_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood storage",
+      "row": 3352,
+      "text": "firewood storage shed",
+      "value": "2900",
+      "unit": "US估算月搜索量",
+      "raw": {
+        "Keyword": "firewood storage shed",
+        "Volume": "2900",
+        "Keyword Difficulty": "29",
+        "Intent": "Informational"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N005",
+      "type": "keyword",
+      "file": "SEMRUSH场景词拓展/firewood-storage_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood storage",
+      "row": 6330,
+      "text": "firewood shed",
+      "value": "2900",
+      "unit": "US估算月搜索量",
+      "raw": {
+        "Keyword": "firewood shed",
+        "Volume": "2900",
+        "Keyword Difficulty": "30",
+        "Intent": "Informational"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N006",
+      "type": "keyword",
+      "file": "SEMRUSH产品词拓展/fallen-tree-cleanup_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "fallen tree cleanup",
+      "row": 3870,
+      "text": "tree debris removal",
+      "value": "1600",
+      "unit": "US估算月搜索量",
+      "raw": {
+        "Keyword": "tree debris removal",
+        "Volume": "1600",
+        "Keyword Difficulty": "4",
+        "Intent": "Commercial"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N007",
+      "type": "keyword",
+      "file": "SEMRUSH产品词拓展/cant-hook_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "cant hook",
+      "row": 1146,
+      "text": "log roller",
+      "value": "1300",
+      "unit": "US估算月搜索量",
+      "raw": {
+        "Keyword": "log roller",
+        "Volume": "1300",
+        "Keyword Difficulty": "18",
+        "Intent": "Informational, Commercial"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N008",
+      "type": "keyword",
+      "file": "SEMRUSH产品词拓展/log-lifting-tongs_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "log lifting tongs",
+      "row": 16722,
+      "text": "hydraulic pump for log splitter",
+      "value": "1300",
+      "unit": "US估算月搜索量",
+      "raw": {
+        "Keyword": "hydraulic pump for log splitter",
+        "Volume": "1300",
+        "Keyword Difficulty": "3",
+        "Intent": "Commercial"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N009",
+      "type": "keyword",
+      "file": "SEMRUSH产品词拓展/log-lifting-tongs_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "log lifting tongs",
+      "row": 16723,
+      "text": "log dolly",
+      "value": "1000",
+      "unit": "US估算月搜索量",
+      "raw": {
+        "Keyword": "log dolly",
+        "Volume": "1000",
+        "Keyword Difficulty": "14",
+        "Intent": "Informational"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N010",
+      "type": "keyword",
+      "file": "SEMRUSH场景词拓展/firewood-storage_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood storage",
+      "row": 5175,
+      "text": "firewood rack cover",
+      "value": "1000",
+      "unit": "US估算月搜索量",
+      "raw": {
+        "Keyword": "firewood rack cover",
+        "Volume": "1000",
+        "Keyword Difficulty": "8",
+        "Intent": "Informational"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N011",
+      "type": "keyword",
+      "file": "SEMRUSH产品词拓展/log-lifting-tongs_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "log lifting tongs",
+      "row": 2934,
+      "text": "log arch",
+      "value": "880",
+      "unit": "US估算月搜索量",
+      "raw": {
+        "Keyword": "log arch",
+        "Volume": "880",
+        "Keyword Difficulty": "9",
+        "Intent": "Informational"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N012",
+      "type": "keyword",
+      "file": "SEMRUSH产品词拓展/log-lifting-tongs_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "log lifting tongs",
+      "row": 26693,
+      "text": "log splitter hydraulic pump",
+      "value": "880",
+      "unit": "US估算月搜索量",
+      "raw": {
+        "Keyword": "log splitter hydraulic pump",
+        "Volume": "880",
+        "Keyword Difficulty": "6",
+        "Intent": "Commercial"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N013",
+      "type": "keyword",
+      "file": "SEMRUSH场景词拓展/firewood-storage_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood storage",
+      "row": 3927,
+      "text": "firewood rack with cover",
+      "value": "880",
+      "unit": "US估算月搜索量",
+      "raw": {
+        "Keyword": "firewood rack with cover",
+        "Volume": "880",
+        "Keyword Difficulty": "20",
+        "Intent": "Informational"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N014",
+      "type": "keyword",
+      "file": "SEMRUSH产品词拓展/chainsaw-mill-guide-rails_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "chainsaw mill guide rails",
+      "row": 4171,
+      "text": "chainsaw ripping chain",
+      "value": "720",
+      "unit": "US估算月搜索量",
+      "raw": {
+        "Keyword": "chainsaw ripping chain",
+        "Volume": "720",
+        "Keyword Difficulty": "5",
+        "Intent": "Informational"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N015",
+      "type": "keyword",
+      "file": "SEMRUSH场景词拓展/tree-debris-cleanup_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "tree debris cleanup",
+      "row": 6,
+      "text": "tree debris removal services",
+      "value": "590",
+      "unit": "US估算月搜索量",
+      "raw": {
+        "Keyword": "tree debris removal services",
+        "Volume": "590",
+        "Keyword Difficulty": "12",
+        "Intent": "Commercial"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N016",
+      "type": "keyword",
+      "file": "SEMRUSH产品词拓展/chainsaw-mill-guide-rails_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "chainsaw mill guide rails",
+      "row": 8,
+      "text": "chainsaw mill kit",
+      "value": "480",
+      "unit": "US估算月搜索量",
+      "raw": {
+        "Keyword": "chainsaw mill kit",
+        "Volume": "480",
+        "Keyword Difficulty": "4",
+        "Intent": "Informational"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N017",
+      "type": "keyword",
+      "file": "SEMRUSH产品词拓展/log-lifting-tongs_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "log lifting tongs",
+      "row": 21249,
+      "text": "log cart",
+      "value": "260",
+      "unit": "US估算月搜索量",
+      "raw": {
+        "Keyword": "log cart",
+        "Volume": "260",
+        "Keyword Difficulty": "5",
+        "Intent": "Commercial"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N018",
+      "type": "keyword",
+      "file": "SEMRUSH场景词拓展/firewood-storage_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood storage",
+      "row": 1282,
+      "text": "firewood drying rack",
+      "value": "170",
+      "unit": "US估算月搜索量",
+      "raw": {
+        "Keyword": "firewood drying rack",
+        "Volume": "170",
+        "Keyword Difficulty": "39",
+        "Intent": "Informational, Commercial"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N019",
+      "type": "keyword",
+      "file": "SEMRUSH场景词拓展/firewood-storage_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood storage",
+      "row": 3953,
+      "text": "dimensions of a 1/2 cord of wood",
+      "value": "140",
+      "unit": "US估算月搜索量",
+      "raw": {
+        "Keyword": "dimensions of a 1/2 cord of wood",
+        "Volume": "140",
+        "Keyword Difficulty": "0",
+        "Intent": "Informational"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N020",
+      "type": "keyword",
+      "file": "SEMRUSH场景词拓展/firewood-storage_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood storage",
+      "row": 12781,
+      "text": "1 2 cord firewood rack",
+      "value": "140",
+      "unit": "US估算月搜索量",
+      "raw": {
+        "Keyword": "1 2 cord firewood rack",
+        "Volume": "140",
+        "Keyword Difficulty": "19",
+        "Intent": "Commercial"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N021",
+      "type": "keyword",
+      "file": "SEMRUSH场景词拓展/firewood-storage_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood storage",
+      "row": 21420,
+      "text": "lumber storage shed",
+      "value": "90",
+      "unit": "US估算月搜索量",
+      "raw": {
+        "Keyword": "lumber storage shed",
+        "Volume": "90",
+        "Keyword Difficulty": "30",
+        "Intent": "Informational, Commercial"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N022",
+      "type": "keyword",
+      "file": "SEMRUSH场景词拓展/firewood-storage_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood storage",
+      "row": 27270,
+      "text": "firewood moisture",
+      "value": "90",
+      "unit": "US估算月搜索量",
+      "raw": {
+        "Keyword": "firewood moisture",
+        "Volume": "90",
+        "Keyword Difficulty": "22",
+        "Intent": "Informational"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N023",
+      "type": "keyword",
+      "file": "SEMRUSH场景词拓展/firewood-storage_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood storage",
+      "row": 9545,
+      "text": "covered outdoor lumber storage",
+      "value": "50",
+      "unit": "US估算月搜索量",
+      "raw": {
+        "Keyword": "covered outdoor lumber storage",
+        "Volume": "50",
+        "Keyword Difficulty": "19",
+        "Intent": "Informational, Commercial"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N024",
+      "type": "keyword",
+      "file": "SEMRUSH场景词拓展/firewood-storage_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood storage",
+      "row": 21598,
+      "text": "how to stack firewood for drying",
+      "value": "40",
+      "unit": "US估算月搜索量",
+      "raw": {
+        "Keyword": "how to stack firewood for drying",
+        "Volume": "40",
+        "Keyword Difficulty": "9",
+        "Intent": "Informational"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N025",
+      "type": "keyword",
+      "file": "SEMRUSH产品词拓展/chainsaw-mill-guide-rails_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "chainsaw mill guide rails",
+      "row": 2862,
+      "text": "what size chainsaw for milling",
+      "value": "20",
+      "unit": "US估算月搜索量",
+      "raw": {
+        "Keyword": "what size chainsaw for milling",
+        "Volume": "20",
+        "Keyword Difficulty": "",
+        "Intent": ""
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N026",
+      "type": "keyword",
+      "file": "SEMRUSH场景词拓展/firewood-storage_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "firewood storage",
+      "row": 2468,
+      "text": "how to store firewood in winter",
+      "value": "20",
+      "unit": "US估算月搜索量",
+      "raw": {
+        "Keyword": "how to store firewood in winter",
+        "Volume": "20",
+        "Keyword Difficulty": "",
+        "Intent": ""
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N027",
+      "type": "keyword",
+      "file": "SEMRUSH产品词拓展/chainsaw-mill-guide-rails_all-keywords_us_2026-11-04.xlsx",
+      "sheet": "chainsaw mill guide rails",
+      "row": 9959,
+      "text": "chainsaw mill bar length",
+      "value": "0",
+      "unit": "US估算月搜索量",
+      "raw": {
+        "Keyword": "chainsaw mill bar length",
+        "Volume": "0",
+        "Keyword Difficulty": "",
+        "Intent": ""
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N028",
+      "type": "semrush_prompt",
+      "file": "semrush提示词数据/prompts_by_topic_fts_firewood_processing_us.csv",
+      "sheet": "CSV",
+      "row": 137,
+      "text": "ideal moisture for firewood",
+      "value": "34570",
+      "unit": "原记录附带主题/模型估值",
+      "raw": {
+        "prompt": "ideal moisture for firewood",
+        "llm": "google_ai_overview",
+        "topic_name": "Seasoned Firewood and Drying Techniques",
+        "topic_id": "12242564619527856265",
+        "topic_volume": "34570"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N029",
+      "type": "semrush_prompt",
+      "file": "semrush提示词数据/prompts_by_topic_fts_firewood_processing_us.csv",
+      "sheet": "CSV",
+      "row": 475,
+      "text": "does firewood need to be covered",
+      "value": "34570",
+      "unit": "原记录附带主题/模型估值",
+      "raw": {
+        "prompt": "does firewood need to be covered",
+        "llm": "google_ai_overview",
+        "topic_name": "Seasoned Firewood and Drying Techniques",
+        "topic_id": "12242564619527856265",
+        "topic_volume": "34570"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N030",
+      "type": "semrush_prompt",
+      "file": "semrush提示词数据/prompts_by_topic_fts_firewood_processing_us.csv",
+      "sheet": "CSV",
+      "row": 633,
+      "text": "How do I properly stack a wood rick for drying?",
+      "value": "22",
+      "unit": "原记录附带主题/模型估值",
+      "raw": {
+        "prompt": "How do I properly stack a wood rick for drying?",
+        "llm": "gemini",
+        "topic_name": "Firewood and Wood Ricks",
+        "topic_id": "10235818564481615206",
+        "topic_volume": "22"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N031",
+      "type": "semrush_prompt",
+      "file": "semrush提示词数据/prompts_by_topic_fts_firewood_processing_us.csv",
+      "sheet": "CSV",
+      "row": 646,
+      "text": "Are there any tips for stacking and storing firewood properly?",
+      "value": "718",
+      "unit": "原记录附带主题/模型估值",
+      "raw": {
+        "prompt": "Are there any tips for stacking and storing firewood properly?",
+        "llm": "gemini",
+        "topic_name": "Firewood Delivery and Sale",
+        "topic_id": "12855433847724975520",
+        "topic_volume": "718"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N032",
+      "type": "semrush_prompt",
+      "file": "semrush提示词数据/prompts_by_topic_fts_firewood_processing_us.csv",
+      "sheet": "CSV",
+      "row": 731,
+      "text": "indoor firewood holder ideas",
+      "value": "19701",
+      "unit": "原记录附带主题/模型估值",
+      "raw": {
+        "prompt": "indoor firewood holder ideas",
+        "llm": "google_ai_overview",
+        "topic_name": "Firewood Storage Solutions",
+        "topic_id": "12365289601348617928",
+        "topic_volume": "19701"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N033",
+      "type": "semrush_prompt",
+      "file": "semrush提示词数据/prompts_by_topic_fts_firewood_processing_us.csv",
+      "sheet": "CSV",
+      "row": 945,
+      "text": "firewood rack with cover",
+      "value": "19701",
+      "unit": "原记录附带主题/模型估值",
+      "raw": {
+        "prompt": "firewood rack with cover",
+        "llm": "google_ai_overview",
+        "topic_name": "Firewood Storage Solutions",
+        "topic_id": "12365289601348617928",
+        "topic_volume": "19701"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N034",
+      "type": "semrush_prompt",
+      "file": "semrush提示词数据/prompts_by_topic_fts_branch___debris_cleanup_us.csv",
+      "sheet": "CSV",
+      "row": 86,
+      "text": "where to dispose of tree branches",
+      "value": "12220",
+      "unit": "原记录附带主题/模型估值",
+      "raw": {
+        "prompt": "where to dispose of tree branches",
+        "llm": "google_ai_overview",
+        "topic_name": "Tree and Brush Debris Removal",
+        "topic_id": "3092057829044085322",
+        "topic_volume": "12220"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N035",
+      "type": "semrush_prompt",
+      "file": "semrush提示词数据/prompts_by_topic_fts_branch___debris_cleanup_us.csv",
+      "sheet": "CSV",
+      "row": 95,
+      "text": "Are there environmentally friendly options for yard waste and debris removal?",
+      "value": "618",
+      "unit": "原记录附带主题/模型估值",
+      "raw": {
+        "prompt": "Are there environmentally friendly options for yard waste and debris removal?",
+        "llm": "gemini",
+        "topic_name": "Tree and Brush Debris Removal",
+        "topic_id": "3092057829044085322",
+        "topic_volume": "618"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N036",
+      "type": "semrush_prompt",
+      "file": "semrush提示词数据/prompts_by_topic_fts_lumber_milling_us.csv",
+      "sheet": "CSV",
+      "row": 13,
+      "text": "Can I learn to mill my own lumber at home?",
+      "value": "740",
+      "unit": "原记录附带主题/模型估值",
+      "raw": {
+        "prompt": "Can I learn to mill my own lumber at home?",
+        "llm": "google_ai_mode",
+        "topic_name": "Wood Milling and Sawmilling",
+        "topic_id": "10857634626960567728",
+        "topic_volume": "740"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N037",
+      "type": "semrush_prompt",
+      "file": "semrush提示词数据/prompts_by_topic_fts_lumber_milling_us.csv",
+      "sheet": "CSV",
+      "row": 39,
+      "text": "What should I consider when choosing a sawmill for small-scale woodworking?",
+      "value": "11",
+      "unit": "原记录附带主题/模型估值",
+      "raw": {
+        "prompt": "What should I consider when choosing a sawmill for small-scale woodworking?",
+        "llm": "gemini",
+        "topic_name": "Wood Milling and Sawmilling",
+        "topic_id": "10857634626960567728",
+        "topic_volume": "11"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N038",
+      "type": "semrush_prompt",
+      "file": "semrush提示词数据/prompts_by_topic_fts_lumber_milling_us.csv",
+      "sheet": "CSV",
+      "row": 103,
+      "text": "How do I set up an industrial lumber mill in a game or real life?",
+      "value": "49",
+      "unit": "原记录附带主题/模型估值",
+      "raw": {
+        "prompt": "How do I set up an industrial lumber mill in a game or real life?",
+        "llm": "google_ai_mode",
+        "topic_name": "Industrial Lumber Mills and Roblox Sawmills",
+        "topic_id": "837609848393152494",
+        "topic_volume": "49"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N039",
+      "type": "semrush_prompt",
+      "file": "semrush提示词数据/prompts_by_topic_fts_lumber_milling_us.csv",
+      "sheet": "CSV",
+      "row": 122,
+      "text": "what does milling mean",
+      "value": "11950",
+      "unit": "原记录附带主题/模型估值",
+      "raw": {
+        "prompt": "what does milling mean",
+        "llm": "google_ai_overview",
+        "topic_name": "Mill and Milling Terminology",
+        "topic_id": "8317507129739515753",
+        "topic_volume": "11950"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N040",
+      "type": "semrush_prompt",
+      "file": "semrush提示词数据/prompts_by_topic_fts_lumber_milling_us.csv",
+      "sheet": "CSV",
+      "row": 350,
+      "text": "What are the best tools for circuit milling and PCB milling?",
+      "value": "22",
+      "unit": "原记录附带主题/模型估值",
+      "raw": {
+        "prompt": "What are the best tools for circuit milling and PCB milling?",
+        "llm": "google_ai_mode",
+        "topic_name": "PCB Milling and Circuit Milling",
+        "topic_id": "8452354909882183266",
+        "topic_volume": "22"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N041",
+      "type": "semrush_prompt",
+      "file": "semrush提示词数据/prompts_by_topic_fts_lumber_milling_us.csv",
+      "sheet": "CSV",
+      "row": 423,
+      "text": "woodworker's hardware",
+      "value": "463910",
+      "unit": "原记录附带主题/模型估值",
+      "raw": {
+        "prompt": "woodworker's hardware",
+        "llm": "google_ai_overview",
+        "topic_name": "Woodworking and Tools",
+        "topic_id": "7162600951932275272",
+        "topic_volume": "463910"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N042",
+      "type": "semrush_prompt",
+      "file": "semrush提示词数据/prompts_by_topic_fts_lumber_milling_us.csv",
+      "sheet": "CSV",
+      "row": 746,
+      "text": "What tools or equipment are recommended for stacking large quantities of lumber?",
+      "value": "138",
+      "unit": "原记录附带主题/模型估值",
+      "raw": {
+        "prompt": "What tools or equipment are recommended for stacking large quantities of lumber?",
+        "llm": "google_ai_mode",
+        "topic_name": "Lumber Stacking and Handling",
+        "topic_id": "7504745589038438349",
+        "topic_volume": "138"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N043",
+      "type": "semrush_prompt",
+      "file": "semrush提示词数据/prompts_by_topic_fts_log_handling___moving_us.csv",
+      "sheet": "CSV",
+      "row": 90,
+      "text": "How do I choose the right log lift for my strongman training?",
+      "value": "463",
+      "unit": "原记录附带主题/模型估值",
+      "raw": {
+        "prompt": "How do I choose the right log lift for my strongman training?",
+        "llm": "google_ai_mode",
+        "topic_name": "Log Lifting and Splitting Equipment",
+        "topic_id": "3433861867942971159",
+        "topic_volume": "463"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N044",
+      "type": "semrush_prompt",
+      "file": "semrush提示词数据/prompts_by_topic_fts_log_handling___moving_us.csv",
+      "sheet": "CSV",
+      "row": 628,
+      "text": "Where can I find high-quality log arch equipment and accessories?",
+      "value": "76",
+      "unit": "原记录附带主题/模型估值",
+      "raw": {
+        "prompt": "Where can I find high-quality log arch equipment and accessories?",
+        "llm": "chatgpt",
+        "topic_name": "Log Archs for Logging and Forestry",
+        "topic_id": "11199918521460107025",
+        "topic_volume": "76"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N045",
+      "type": "semrush_prompt",
+      "file": "semrush提示词数据/prompts_by_topic_fts_log_handling___moving_us.csv",
+      "sheet": "CSV",
+      "row": 696,
+      "text": "How do I choose the best towable wood splitter for my needs?",
+      "value": "58",
+      "unit": "原记录附带主题/模型估值",
+      "raw": {
+        "prompt": "How do I choose the best towable wood splitter for my needs?",
+        "llm": "google_ai_mode",
+        "topic_name": "Towable Log and Wood Splitters",
+        "topic_id": "13282339325131125765",
+        "topic_volume": "58"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N046",
+      "type": "semrush_topic",
+      "file": "semrush提示词数据/topics_by_fts_firewood_processing_us.csv",
+      "sheet": "CSV",
+      "row": 92,
+      "text": "Kindling and Firewood Tools",
+      "value": "25799",
+      "unit": "US主题量估值，原文件未标月单位",
+      "raw": {
+        "name": "Kindling and Firewood Tools",
+        "volume": "25799",
+        "prompts_count": "55"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N047",
+      "type": "semrush_topic",
+      "file": "semrush提示词数据/topics_by_fts_firewood_processing_us.csv",
+      "sheet": "CSV",
+      "row": 112,
+      "text": "Firewood Carriers and Bags",
+      "value": "2432",
+      "unit": "US主题量估值，原文件未标月单位",
+      "raw": {
+        "name": "Firewood Carriers and Bags",
+        "volume": "2432",
+        "prompts_count": "60"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N048",
+      "type": "semrush_topic",
+      "file": "semrush提示词数据/topics_by_fts_firewood_processing_us.csv",
+      "sheet": "CSV",
+      "row": 989,
+      "text": "Firewood Rack Sizes and Types",
+      "value": "4202",
+      "unit": "US主题量估值，原文件未标月单位",
+      "raw": {
+        "name": "Firewood Rack Sizes and Types",
+        "volume": "4202",
+        "prompts_count": "19"
+      },
+      "added_in": "详解版原始资料深挖"
+    },
+    {
+      "id": "N049",
+      "type": "semrush_topic",
+      "file": "semrush提示词数据/topics_by_fts_branch___debris_cleanup_us.csv",
+      "sheet": "CSV",
+      "row": 8,
+      "text": "Yard Waste and Mulch Disposal",
+      "value": "1215",
+      "unit": "US主题量估值，原文件未标月单位",
+      "raw": {
+        "name": "Yard Waste and Mulch Disposal",
+        "volume": "1215",
+        "prompts_count": "24"
+      },
+      "added_in": "详解版原始资料深挖"
+    }
+  ],
+  "findings": [
+    {
+      "id": "D1",
+      "title": "储柴要分成“户外存放”和“室内取用”",
+      "short": "同样是买储柴架，用户要解决的空间和任务不同。",
+      "tag": "加深原稿已有储存步骤",
+      "evidence": [
+        "K021",
+        "N003",
+        "K056",
+        "N032",
+        "N047"
+      ],
+      "observation": "原始关键词同时出现户外架、室内架和运柴车；提示词还有“室内薪柴收纳有什么办法”。它们共同提示：存一季的柴、把柴运到门边、每天取用，是可以分别进入的任务。",
+      "interpretation": "把储存做成可直接到达的一段；按使用位置解释架体、提袋和小车的作用。上述词不能计算两类用户占比，也不能证明室内架适合干燥湿木。",
+      "before": "飞书已写离地、通风、覆盖，也已有储存与维护衔接。",
+      "position": "FXx5rg R6；fR1HxX R5；T6vgeS R3",
+      "change": "在原储存步骤下增加“户外存放区 → 短程转运 → 近端取用”的空间图；已劈好薪柴的用户直接进入。",
+      "screen": "页面先问“你在安排哪一段？”：①户外存放 ②搬到取用点 ③室内或门边少量收纳。每个选项下面给布局、要量的尺寸和相应候选。",
+      "product": "户外架可查目录 R4319 / R4320；提袋与近端架查 R30175；小车查 R17592。它们是不同动作的候选，不能用小架替代全季储存。",
+      "limit": "这是需求拆分与内容建议；温湿条件、放置环境与商品适用仍要按型号资料确认。"
+    },
+    {
+      "id": "D2",
+      "title": "储存页还要解释怎么盖、怎么堆、怎么判断干燥",
+      "short": "储存页应该解释一组会影响选择的连续问题。",
+      "tag": "加深原稿已有离地/通风/覆盖",
+      "evidence": [
+        "N010",
+        "N024",
+        "N022",
+        "N029",
+        "N028"
+      ],
+      "observation": "罩、堆放干燥和湿度在不同原始记录中同时出现。提示词中的“柴是否需要覆盖”和“理想湿度”记录都附带 34,570，但这是相同主题/模型估值的重复附带值。",
+      "interpretation": "用“架—堆放—遮顶—干燥判断”解释任务完成条件。不能把两个34,570相加，也不能据此声称每个问题都有34,570访问。",
+      "before": "原工作簿已经写“离地、通风、覆盖”，并未完全缺少干燥储存。",
+      "position": "FXx5rg R6；0Fn7Oc R3",
+      "change": "把原来一句话展开成一张布局图和三组问答：为什么离地、覆盖如何不妨碍通风、什么时候还需要检查木料状态。",
+      "screen": "储存页放两张有注释的示意：“仍需干燥的柴”和“准备日常取用的柴”。旁边解释架长、罩的使用方式和测量方法；具体干燥数值另用已核官方资料。",
+      "product": "架与罩的标题含件不能直接证明正确覆盖方式；单独罩具或检测工具没有核准型号时，列作资料/工具需求，不虚构可买商品。",
+      "limit": "原数据表达问题，不提供干燥时间保证。本版不新设湿度阈值，不把买架子写成保证干燥。"
+    },
+    {
+      "id": "D3",
+      "title": "劈柴器需要先讲“怎么选”，再比较具体型号",
+      "short": "现有手动型号只覆盖部分用途，动力方式与木料条件要解释清楚。",
+      "tag": "加深选择维度；补主机接口分支",
+      "evidence": [
+        "K017",
+        "K015",
+        "K052",
+        "K055",
+        "K053",
+        "K054",
+        "Q019"
+      ],
+      "observation": "手动、电动、燃油、引火柴、三点挂接和PTO都有相应关键词。不同表达指向动力条件、木段大小或任务差别，不能只给一个吨位入口。",
+      "interpretation": "先问木段尺寸、木况、动力来源、使用频次，再引导到型号说明。引火柴是更细的任务；三点悬挂说明挂接，PTO说明动力，不能直接等同。",
+      "before": "飞书已有手动选择、无拖拉机薪柴用户，以及高频另选设备的限定。",
+      "position": "L775lZ R3–5；FXx5rg R5；T6vgeS R3",
+      "change": "补动力方式对照和“我已有拖拉机”说明；原 R5 空的动作补为“劈分”。目录未核准的动力型号只做比较内容。",
+      "screen": "比较表固定四列：动力来源、要核的木段条件、另需资料、是否有可核型号。先解释用户为什么会选不同方式，再放两款已知手动候选的独立参数。",
+      "product": "PTH_33PCJ57Y（R50134）列示17.7×7.9in；另一候选R30577列示18.7×8in，不能混用。吨位不单独证明适用木况或处理速度。",
+      "limit": "各词月量是独立记录，不是同一分类下的市场份额；不能据此推断电动比手动适合多少用户。"
+    },
+    {
+      "id": "D4",
+      "title": "原木“翻一下、抬起来、运过去”是不同动作",
+      "short": "需要用动作图解释工具分工，避免名字看起来相近就互相替代。",
+      "tag": "加深翻木比较与独立转运入口",
+      "evidence": [
+        "K050",
+        "N007",
+        "N009",
+        "N011",
+        "K056",
+        "Q017",
+        "N044"
+      ],
+      "observation": "除了翻木钩，还存在滚木工具、托运架/车和运柴车等词。提示词直接问 cant hook 与 peavey 的区别，也问 log arch 设备。",
+      "interpretation": "把地面翻动、带脚支撑、运输、条件性机械吊移分开。目录缺某种运输工具，不妨碍页面先解释用户在寻找什么。",
+      "before": "飞书已有翻动定位、截段、小车，以及条件吊移。",
+      "position": "FXx5rg R3–6；T6vgeS R2–4；X4mZg0 R2",
+      "change": "用四幅动作示意替代同一“搬运工具”列表；每件商品只放在已核用途旁，并标前后工序。",
+      "screen": "“我要翻动长原木”进入翻木工具比较；“我要运走木段/薪柴”进入路线与车体尺寸说明；“我要机械吊移”进入系统核件资料，不显示自动匹配结论。",
+      "product": "R194为60in翻木钩；R2为51in带脚起木器。R466吊钳是条件候选，不能根据附件标题输出可用吊装方案。",
+      "limit": "log dolly / log arch 是需求线索，不代表已核实GARVEE有相应可用型号。"
+    },
+    {
+      "id": "D5",
+      "title": "清场要回答“集中之后，枝木去哪里”",
+      "short": "本地服务词支持处置说明，不能直接转成工具购买需求。",
+      "tag": "补清场收尾；独立无主机清枝",
+      "evidence": [
+        "K005",
+        "K003",
+        "N015",
+        "Q002",
+        "N035",
+        "N049"
+      ],
+      "observation": "原始资料包含工具词，也包含“附近清运服务”“哪里处置树枝”和更环保的去处问题。相同清场主题里，找工具与找服务是两种意图。",
+      "interpretation": "清场页应同时讲分类、集中和处置查询；无主机用户可以走人工清枝路径。本地服务词不能证明用户会购买夹装清理叉。",
+      "before": "原飞书已有清运去向、有主机清场和无拖拉机薪柴；纯人工清枝没有独立展开。",
+      "position": "OPr1TO R2–3；T6vgeS R2–3；L775lZ R3",
+      "change": "增加“无主机，只清走落地枝料”入口；在清场末尾放当地处置查询清单，交代该页不提供本地清运预约。",
+      "screen": "有适配主机：核铲斗与附件→承托转移→补扫。无主机：人工分类→合适容器/现有工具→安排去处。两路最后都能跳往薪柴或制材。",
+      "product": "机械清理叉/机械松针耙只出现在相应主机条件下；人工路径不列机械附件为可选商品，人工耙现有目录候选已补入商品匹配章节，适用物料与地面仍需确认。",
+      "limit": "各地收运、焚烧、粉碎和接受条件不同，本版提供查询项目，不臆造当地规则，也不扩展成通用园艺专题。"
+    },
+    {
+      "id": "D6",
+      "title": "制材页要同时服务“第一次配齐”和“只补一个件”",
+      "short": "导轨只是系统中的一个角色，页面应把它放回完整组件图。",
+      "tag": "加深原稿已有制材系统限定",
+      "evidence": [
+        "K024",
+        "N016",
+        "K025",
+        "N014",
+        "N025",
+        "Q021",
+        "N037"
+      ],
+      "observation": "整机/套件、导轨、纵切链和链锯尺寸都有记录；原提示词还问能否在家制材、小型木工如何选设备。词量较低的组件问题仍可能决定能否完成选型。",
+      "interpretation": "第一次配齐的人需要看系统构成；已有链锯与架体的人需要检查缺件和兼容。问题词支持说明内容，不直接认证任一链锯适配。",
+      "before": "原稿已说明导轨不是完整系统，也已有熟练用户补件入口。",
+      "position": "T6vgeS R4；0Fn7Oc R4；X4mZg0 R3–4",
+      "change": "加“完整系统/只补导轨/维护替换”三个阅读入口，用组件图说明链锯、导板链条、架体、首刀导轨和固定的不同作用。",
+      "screen": "先看原木纵切成板坯的结果图，再看五类组件。每类标注“已有 / 本商品包含 / 另需 / 兼容待核”；不要把劈柴器接入制板流程。",
+      "product": "R978为9ft首刀导轨，不含链锯和制材架；R123与R15597是架体/组合目录候选，标题含件与接口仍需核。",
+      "limit": "链锯导板长度、有效切宽、木径与切厚不能互换；资料不足时可解释和补件核对，不能承诺完整套装已经可用。"
+    },
+    {
+      "id": "D7",
+      "title": "已有设备的人，还需要按型号找维护资料和替换件",
+      "short": "这类用户可以直接进入资料入口，不必再读整套购置方案。",
+      "tag": "把已有服务设想落成可建设内容",
+      "evidence": [
+        "K058",
+        "N012",
+        "N001",
+        "Q023"
+      ],
+      "observation": "资料里不只有买整机的词，也有劈柴器配件、液压泵和链条磨削工具。原提示词还有锯木设备如何维护的问题。",
+      "interpretation": "增加按型号组织的手册、含件图、维护与替换件编码；配件需求不能自动推成同一液压泵适配所有劈柴器。",
+      "before": "飞书已有核件、安装、维护和故障支持设想。",
+      "position": "fR1HxX R4–6",
+      "change": "先建设能读到的资料索引和型号对应表，再考虑实际服务入口。没有真实接入的人工诊断、照片上传不写成已提供能力。",
+      "screen": "入口文案“已有设备？按型号找说明书与配件”。结果卡先显示型号与适用范围，再显示文档或具体替换件；未知兼容必须明确。",
+      "product": "维护词支持目录核查任务；本版不新增未经确认的配件匹配，不把通用锯木设备维护问句当作某款GARVEE产品故障证据。",
+      "limit": "这是内容与资料建设需求，不是维修量、故障率或售后效果的推断。"
+    },
+    {
+      "id": "D8",
+      "title": "制材之后的板坯处理有线索，先作为收尾说明",
+      "short": "证据强度有限的方向，给读者看见，也交代不确定性。",
+      "tag": "原稿已有后续干燥；小范围补深",
+      "evidence": [
+        "N021",
+        "N023",
+        "N041",
+        "N042"
+      ],
+      "observation": "重新查找后，有板材存放词及“stickered lumber（以垫条分隔堆放的板材）”提示词；但前者偏设施，后者的附带主题估值不能当作板坯干燥问句流量。",
+      "interpretation": "在制材流程尾部解释“板坯仍有后续堆放和干燥任务”，先提供资料延伸，暂不以此单独扩建大页面或强推储柴架。",
+      "before": "原稿已写后续干燥，明确得到的是项目坯料。",
+      "position": "FXx5rg R7；T6vgeS R4",
+      "change": "加一段板坯收尾示意和待研究问题：板材尺寸、堆放空间、所需后续资料；与薪柴干燥分开。",
+      "screen": "制材页末尾：“现在得到板坯，下一步了解板坯堆放与干燥。”作为延伸内容，避免宣称马上能做成家具。",
+      "product": "目录新增核查到壁挂板材架候选，但不等于湿板干燥设备；储柴架的用途不能直接迁移到板材处理。",
+      "limit": "“how to dry lumber”等若未在本批数据中精确召回，只表示这批受限导出未找到该表达，不证明市场无需求。"
+    }
+  ],
+  "products": [
+    {
+      "id": "P01",
+      "group": "清场",
+      "name": "夹装清理叉",
+      "action": "承托散枝",
+      "parameters": "标题 42in、5 齿；目录写 fits 42–48in buckets。",
+      "included": "夹持件与安装图待核；正文宽度说法有冲突。",
+      "limitation": "适配铲斗、安装和主机能力仍待核；不代抓斗。",
+      "raw": {
+        "系统SKU": "PAU_0HLGU4QH",
+        "系统产品名称": "1 Q235 1 Q235 托盘叉48碎片叉|5叉|     黑色+橙|十字抽拉螺丝 Garvee 无",
+        "平台产品名称": "GARVEE 42\" Clamp-On Debris Forks, 2500 lb 5-Tine Q235 Steel Attachment with Pull-Out Screws, Fits 42-48\" Buckets"
+      },
+      "sku": "PAU_0HLGU4QH",
+      "snapshot": "evidence/official/P01.txt",
+      "file": "01_SKU_Audit.xlsx",
+      "sheet": "Sheet1",
+      "row": 909
+    },
+    {
+      "id": "P11",
+      "group": "清场",
+      "name": "大规格夹装清理叉",
+      "action": "另一尺寸资料入口",
+      "parameters": "标题 58in、6 齿，对应 60in buckets。",
+      "included": "螺杆与夹持结构须按手册确认。",
+      "limitation": "不同型号独立核验，不能按宽度自动通过。",
+      "raw": {
+        "系统SKU": "PHO_102RBO90",
+        "系统产品名称": "一套 碳钢 60 英寸拖拉机铲斗6齿   黄色 M16固定式螺杆 无",
+        "平台产品名称": "Garvee 58\" Clamp-On Debris Forks for 60\" Tractor Buckets, 4000 LB Heavy-Duty 6-Tine Steel Attachment for Brush, Logs, Hay & Farm Cleanup"
+      },
+      "sku": "PHO_102RBO90",
+      "snapshot": "evidence/supplement/P11.txt",
+      "file": "01_SKU_Audit.xlsx",
+      "sheet": "Sheet1",
+      "row": 1546
+    },
+    {
+      "id": "P14",
+      "group": "清场",
+      "name": "机械松针耙",
+      "action": "细碎料处理备选",
+      "parameters": "标题 60in、26 齿；Cat0/Cat1 三点挂接。",
+      "included": "仅目录标题；含件未核。",
+      "limitation": "机械耙不是人工耙；挂接、物料与地面待核。",
+      "raw": {
+        "系统SKU": "PHO_11A87HMT",
+        "系统产品名称": "60英寸松草耙 碳钢 黑色（美区） 无",
+        "平台产品名称": "Garvee 60 Inch Pine Straw Rake - 26pcs 8mm Coil Spring Tines Durable Powder Coated Steel Tow Behind Landscape Rake with 3 Point Hitch Receiver Attachment Fit to Cat0 Cat 1 Tractors for Leaves Grass, Yellow"
+      },
+      "sku": "PHO_11A87HMT",
+      "snapshot": "",
+      "file": "01_SKU_Audit.xlsx",
+      "sheet": "Sheet1",
+      "row": 229
+    },
+    {
+      "id": "P02",
+      "group": "翻动与截段",
+      "name": "带脚起木器",
+      "action": "地面抬起和支撑",
+      "parameters": "PDP 标 51in、木径 3–25in。",
+      "included": "带脚结构；完整手册未核。",
+      "limitation": "不当吊点；尺寸不单独确认稳定性。",
+      "raw": {
+        "系统SKU": "PHO_0ZJ54M94",
+        "系统产品名称": "1套 碳钢 原木千斤顶51英寸  无 中国红",
+        "平台产品名称": "Garvee 51\" Forestry Equipment Log Lifter - Heavy Duty Adjustable Steel Tool for 3-25 Inch Logs w/11\" Non-Slip Grip & Red Finish"
+      },
+      "sku": "PHO_0ZJ54M94",
+      "snapshot": "evidence/official/P02.txt",
+      "file": "01_SKU_Audit.xlsx",
+      "sheet": "Sheet1",
+      "row": 2
+    },
+    {
+      "id": "P03",
+      "group": "翻动与截段",
+      "name": "Cant hook 翻木钩",
+      "action": "地面翻动与定位",
+      "parameters": "标题 60in；钩型和允许条件待核。",
+      "included": "不默认有支脚。",
+      "limitation": "目录与宣传术语混称，不采纳含义不明的承载字段。",
+      "raw": {
+        "系统SKU": "PHO_0ZJ84PP4",
+        "系统产品名称": "1套 碳钢 原木撬木器Log Peavey 60英寸  无 中国红",
+        "平台产品名称": "Garvee 60in Steel Cant Hook for Logs, Rubber Grip, Adjustable Hook, Log Roller Tool for Sawyers, Loggers, Wood Workers, Firewood Enthusiasts, Red"
+      },
+      "sku": "PHO_0ZJ84PP4",
+      "snapshot": "evidence/official/P03.txt",
+      "file": "01_SKU_Audit.xlsx",
+      "sheet": "Sheet1",
+      "row": 194
+    },
+    {
+      "id": "P10",
+      "group": "翻动与截段",
+      "name": "燃油链锯候选",
+      "action": "适用时截段",
+      "parameters": "已归档正文标 20in / 52cc。",
+      "included": "导板、链条、含件与手册未完整核验。",
+      "limitation": "制材适配未知；不能只按排量或导板长推荐。",
+      "raw": {
+        "系统SKU": "PPG_345LAOSQ",
+        "系统产品名称": "1个包裹 碳钢+尼龙 油锯，有EPA,无carb   5200 蓝色",
+        "平台产品名称": "Garvee 20 Inch Gas Chainsaw 52cc 2-Stroke, 3.0HP Powerful Engine, Quick Start, Auto Chain Lubrication, Anti-Vibration, Wood Cutting & Tree Pruning"
+      },
+      "sku": "PPG_345LAOSQ",
+      "snapshot": "evidence/supplement/P10.txt",
+      "file": "01_SKU_Audit.xlsx",
+      "sheet": "Sheet1",
+      "row": 30134
+    },
+    {
+      "id": "P04",
+      "group": "薪柴",
+      "name": "手动液压劈柴器 A",
+      "action": "合适木段劈分",
+      "parameters": "PDP 最大长 17.7in × 径 7.9in；12 ton 为原列示。",
+      "included": "含件、木况与维护手册待核。",
+      "limitation": "手动/尺寸条件；不代截段或制板。",
+      "raw": {
+        "系统SKU": "PTH_33PCJ57Y",
+        "系统产品名称": "手动劈柴机  12T 碳钢 油缸橘黄+本体黑 美区",
+        "平台产品名称": "Garvee Manual Hydraulic Log Splitter 12 Ton Force for 17.7\" Logs Full Steel Beam Dual Speed Handles Orange Black"
+      },
+      "sku": "PTH_33PCJ57Y",
+      "snapshot": "evidence/official/P04.txt",
+      "file": "01_SKU_Audit.xlsx",
+      "sheet": "Sheet1",
+      "row": 50134
+    },
+    {
+      "id": "P05",
+      "group": "薪柴",
+      "name": "手动液压劈柴器 B",
+      "action": "与 A 对照",
+      "parameters": "PDP 最大长 18.7in × 径 8in。",
+      "included": "JSON-LD 与 data-variant-sku 均为 PHO_33VUEB66。",
+      "limitation": "8in / 200mm 有舍入差；链接 slug 不是 SKU；不与 A 混参数。",
+      "raw": {
+        "系统SKU": "PHO_33VUEB66",
+        "系统产品名称": "1个包裹【精品项目】 QT500 劈柴机8105，黑 劈柴机8105 黑色顶 无",
+        "平台产品名称": "Garvee Hydraulic Log Splitter Wood Cutter 12 Ton Manual Powerful Steel Beam Spring-Loaded Return Knob Built-in Wheels Portable for Outdoor Use"
+      },
+      "sku": "PHO_33VUEB66",
+      "snapshot": "evidence/official/P05.txt",
+      "file": "01_SKU_Audit.xlsx",
+      "sheet": "Sheet1",
+      "row": 30577
+    },
+    {
+      "id": "P15",
+      "group": "转运",
+      "name": "园艺小车候选",
+      "action": "短程木段/薪柴转运",
+      "parameters": "标题 500lb、10in 轮、可拆侧板。",
+      "included": "仅目录标题；车斗尺寸和固定方式待核。",
+      "limitation": "标题承载不等于现场可用载荷；坡地条件未知。",
+      "raw": {
+        "系统SKU": "PHO_34H8CJPP",
+        "系统产品名称": "1 Q235 1 钢 钢制花园手推车   承重 500 磅|黑色+橙色 Garvee 无",
+        "平台产品名称": "Garvee Steel Garden Cart Mesh Steel Heavy Duty 500lbs Capacity Removable Sides 10-In Tires Yard Lawn Garden"
+      },
+      "sku": "PHO_34H8CJPP",
+      "snapshot": "",
+      "file": "01_SKU_Audit.xlsx",
+      "sheet": "Sheet1",
+      "row": 17592
+    },
+    {
+      "id": "P12",
+      "group": "储存",
+      "name": "短规格储柴架",
+      "action": "离地堆放",
+      "parameters": "归档 PDP 架长 50in；标题含 600D 罩。",
+      "included": "完整占地、载荷、罩使用方式待核。",
+      "limitation": "列示长度不等于实测容量；湿木侧面通风另解释。",
+      "raw": {
+        "系统SKU": "PHO_10IS617F",
+        "系统产品名称": "1个 碳钢 柴火架   一节 无",
+        "平台产品名称": "Garvee 4.3' Heavy Duty Outdoor Firewood Rack with Waterproof 600D Oxford Cover, 440 lbs Capacity 1/4 Cord Wood Log Holder for Patio Fireplace, Black"
+      },
+      "sku": "PHO_10IS617F",
+      "snapshot": "evidence/supplement/P12.txt",
+      "file": "01_SKU_Audit.xlsx",
+      "sheet": "Sheet1",
+      "row": 4319
+    },
+    {
+      "id": "P13",
+      "group": "储存",
+      "name": "长规格储柴架",
+      "action": "离地堆放",
+      "parameters": "归档 PDP 架长 100in；标题列 100×47×14in。",
+      "included": "标题含罩；罩的遮顶用法待手册确认。",
+      "limitation": "不保证干燥时间；容量声明须说明堆放条件。",
+      "raw": {
+        "系统SKU": "PHO_10ISA0BQ",
+        "系统产品名称": "1个 碳钢 柴火架   两节 无",
+        "平台产品名称": "Garvee 8.5FT Outdoor Firewood Rack with Cover, 1/2 Cord of Firewood, Heavy Duty Firewood Holder & Waterproof Cover for Fireplace, Patio, Log Storage Rack for Firewood 100in*47in*14in Outdoor Indoor"
+      },
+      "sku": "PHO_10ISA0BQ",
+      "snapshot": "evidence/supplement/P13.txt",
+      "file": "01_SKU_Audit.xlsx",
+      "sheet": "Sheet1",
+      "row": 4320
+    },
+    {
+      "id": "P16",
+      "group": "转运",
+      "name": "近端储柴架与提袋",
+      "action": "取用路径",
+      "parameters": "目录标题 2.7ft、carry tote。",
+      "included": "架与提袋；具体含件待核。",
+      "limitation": "不是全季储存设施；不证明适合大原木。",
+      "raw": {
+        "系统SKU": "PPG_33XJY7H8",
+        "系统产品名称": "一套 碳钢 柴火架   2.7FT柴火架+提柴布袋 无",
+        "平台产品名称": "Garvee Firewood Rack 2.7FT Adjustable Heavy-Duty Steel Log Holder with Carry Tote, Rust-Resistant Powder Coat, Indoor Outdoor Fireplace Patio Camping"
+      },
+      "sku": "PPG_33XJY7H8",
+      "snapshot": "",
+      "file": "01_SKU_Audit.xlsx",
+      "sheet": "Sheet1",
+      "row": 30175
+    },
+    {
+      "id": "P08",
+      "group": "吊移",
+      "name": "四爪原木吊钳",
+      "action": "条件性机械吊移",
+      "parameters": "标题 28in / opening 32in，二者语义须分清。",
+      "included": "吊钳以外主机与连接件不默认包含。",
+      "limitation": "载荷、接口、工况与整套系统未核；不作可用吊装方案。",
+      "raw": {
+        "系统SKU": "PHO_0ZJ3Q0XK",
+        "系统产品名称": "1套 碳钢 原木提升钳 中国红  无 四爪28IN",
+        "平台产品名称": "Garvee 28\" 4-Claw Log Lifting Tongs, 5500 lb Static / 4409 lb Dynamic Steel Log Grapple with 32\" Opening for Tractor, ATV, Skid Steer & Forestry"
+      },
+      "sku": "PHO_0ZJ3Q0XK",
+      "snapshot": "evidence/official/P08.txt",
+      "file": "01_SKU_Audit.xlsx",
+      "sheet": "Sheet1",
+      "row": 466
+    },
+    {
+      "id": "P06",
+      "group": "制材",
+      "name": "首刀导轨",
+      "action": "建立制材首刀导向",
+      "parameters": "9ft；已归档正文为导轨和 3 横杆。",
+      "included": "不包含链锯与制材架。",
+      "limitation": "接口与固定另核；不称完整制材设备。",
+      "raw": {
+        "系统SKU": "PHO_12AI01SC",
+        "系统产品名称": "9英尺 铝材质 开板架导轨  无 本色",
+        "平台产品名称": "Garvee 9FT Rail Mill Guide System 3 Crossbar Kits Work with Chainsaw Mill, Aluminum Adjustable Saw Milling Rails System for Builders and Woodworkers"
+      },
+      "sku": "PHO_12AI01SC",
+      "snapshot": "evidence/official/P06.txt",
+      "file": "01_SKU_Audit.xlsx",
+      "sheet": "Sheet1",
+      "row": 978
+    },
+    {
+      "id": "P17",
+      "group": "制材",
+      "name": "链锯制材架候选",
+      "action": "固定切板厚度的架体",
+      "parameters": "目录标题 14–36in；可调 cuts 1/2–14in。",
+      "included": "仅目录；含件与兼容未核。",
+      "limitation": "目录存在不等于完整可用系统。",
+      "raw": {
+        "系统SKU": "PHO_12AFG754",
+        "系统产品名称": "36英寸 铝材质 开板架  无 本色",
+        "平台产品名称": "Garvee Chainsaw Mill 14\"-36\" Portable Planking Lumber Cutting Milling Bar, Adjustable 1/2\"-14\" Cuts"
+      },
+      "sku": "PHO_12AFG754",
+      "snapshot": "",
+      "file": "01_SKU_Audit.xlsx",
+      "sheet": "Sheet1",
+      "row": 123
+    },
+    {
+      "id": "P18",
+      "group": "制材",
+      "name": "制材架与导轨组合候选",
+      "action": "完整系统核件入口",
+      "parameters": "标题 36in 架 + 9ft 导轨；4 横杆。",
+      "included": "目录系统名称另写 2 个嵌块，须核实际含件。",
+      "limitation": "不能借用 P06 的 3 横杆；链锯及链条另核。",
+      "raw": {
+        "系统SKU": "PPG_339GPG7U",
+        "系统产品名称": "1 铝制 36inch开板架+9FT导轨|2个嵌块 银色 无",
+        "平台产品名称": "Garvee Rail Mill Guide System, 36 Inch Chain Saw Milling Machine, 9 Ft 4 Crossbar Kits, Aluminum Wood Lumber Cutting Saw Mill for Builders and Woodworkers"
+      },
+      "sku": "PPG_339GPG7U",
+      "snapshot": "",
+      "file": "01_SKU_Audit.xlsx",
+      "sheet": "Sheet1",
+      "row": 15597
+    },
+    {
+      "id": "P19",
+      "group": "修枝",
+      "name": "剪枝剪候选",
+      "action": "地面小枝修剪",
+      "parameters": "标题 7.87in、75Cr1 刀片。",
+      "included": "仅目录标题；适用枝径未确认。",
+      "limitation": "不以手柄长度作为枝径条件。",
+      "raw": {
+        "系统SKU": "PPG_34FSNEDQ",
+        "系统产品名称": "1pcs 75crl 材料刀头、铝合金仿木纹镀铬手柄 果枝剪 供应商品牌RUR授权销售 含logo   8*20cm",
+        "平台产品名称": "Garvee 7.87\" Heavy Duty Garden Pruning Shears - 75Cr1 High-Carbon Steel Blades - Ergonomic Aluminum Handle - Ideal for Trimming Limbs, Plants, Shrubs & Vines - Fundamental Hand Tool for Florists & Gardeners"
+      },
+      "sku": "PPG_34FSNEDQ",
+      "snapshot": "",
+      "file": "01_SKU_Audit.xlsx",
+      "sheet": "Sheet1",
+      "row": 26510
+    },
+    {
+      "id": "P20",
+      "group": "修枝",
+      "name": "长柄剪候选",
+      "action": "地面可达枝条",
+      "parameters": "标题 23in / 35mm 枝径、SK-5 刀片。",
+      "included": "仅目录标题；手册与使用条件待核。",
+      "limitation": "不代高处平台或专业树木处理。",
+      "raw": {
+        "系统SKU": "PPG_34HTYE34",
+        "系统产品名称": "1pcs SK-5刀片、铝合金手柄 便携款 鲨鱼口刀片树枝剪 供应商品牌RUR授权销售 含logo   长度59cm，修剪直径35mm",
+        "平台产品名称": "Garvee 23\" Bypass Loppers, Heavy Duty Tree Branch Cutter with SK-5 Steel Blade, 35mm Cutting Capacity, Lightweight Aluminum Handles for Tree Trimming & Gardening, Black"
+      },
+      "sku": "PPG_34HTYE34",
+      "snapshot": "",
+      "file": "01_SKU_Audit.xlsx",
+      "sheet": "Sheet1",
+      "row": 26592
+    },
+    {
+      "id": "P09",
+      "group": "修枝",
+      "name": "迷你链锯候选",
+      "action": "仅相关小枝工具比较",
+      "parameters": "6/8in 文案；重量与宣传说法待核。",
+      "included": "实物、手册与含件待确认。",
+      "limitation": "不代大木截段锯或制材锯；不照搬安全宣传。",
+      "raw": {
+        "系统SKU": "PLS_3387XU9G",
+        "系统产品名称": "8寸兼6寸 锂电电锯 2电2链2导板1充  无  2电2链1充",
+        "平台产品名称": "Garvee Mini Chainsaw Cordless, 8 inch & 6 inch Electric Chain Saw with 2 Pack Rechargeable Batteries, Battery Powered Handheld Saw Gardening Tools for Trees Branches Trimming Wood Cutting"
+      },
+      "sku": "PLS_3387XU9G",
+      "snapshot": "evidence/official/P09.txt",
+      "file": "01_SKU_Audit.xlsx",
+      "sheet": "Sheet1",
+      "row": 26355
+    }
+  ],
+  "pages": [
+    {
+      "id": "HUB",
+      "name": "树木清理与木材利用 Hub",
+      "proposed_path": "/pages/tree-cleanup-wood-use",
+      "goal": "选择结果和已有装备；将不同起点送往相应页面。",
+      "scenes": [
+        "S01",
+        "S02",
+        "S04",
+        "S07",
+        "S09"
+      ],
+      "evidence": [
+        "K001",
+        "K015",
+        "K024",
+        "M013"
+      ],
+      "modules": [
+        "Hero：清走落地枝木，按去处继续",
+        "三去向：清场 / 自用薪柴 / 原木制材，并列而非规模榜",
+        "物料起点：散枝 / 长原木 / 已截木段 / 已劈好",
+        "已有装备六问：用途、工具、尺寸、型号、路线、频次",
+        "按任务看工具：核心、条件、另需、已有跳过",
+        "选型比较：动作差异 / 动力方式 / 完整系统",
+        "问题与指南：储存、处置、维护及专业帮助边界"
+      ],
+      "products": [
+        "P01",
+        "P04",
+        "P06",
+        "P12"
+      ],
+      "links": [
+        "LP-C",
+        "LP-F",
+        "LP-M",
+        "G-S",
+        "G-T",
+        "G-H"
+      ],
+      "phase": "1期"
+    },
+    {
+      "id": "LP-C",
+      "name": "落地枝木清场页",
+      "proposed_path": "/pages/branch-debris-cleanup",
+      "goal": "分物料和主机条件，选择机械承托或人工清理。",
+      "scenes": [
+        "S01",
+        "S02",
+        "S12"
+      ],
+      "evidence": [
+        "K005",
+        "K031",
+        "K032",
+        "Q001"
+      ],
+      "modules": [
+        "场景图：可控落地材料与集中点",
+        "有主机 / 无主机双入口",
+        "细枝/木段/长原木与地面示意",
+        "人工耙 / 机械耙 / 清理叉 / 抓斗任务比较",
+        "铲斗测量和夹装资料卡",
+        "处置去处与当地服务意图区分",
+        "按动作展示商品；跳往翻木/薪柴/制材"
+      ],
+      "products": [
+        "P01",
+        "P11",
+        "P14"
+      ],
+      "links": [
+        "HUB",
+        "G-H",
+        "LP-F",
+        "LP-M",
+        "G-P"
+      ],
+      "phase": "1期"
+    },
+    {
+      "id": "LP-F",
+      "name": "自用薪柴页",
+      "proposed_path": "/pages/home-firewood-workflow",
+      "goal": "按木料阶段只补需要的动作。",
+      "scenes": [
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07"
+      ],
+      "evidence": [
+        "K015",
+        "K023",
+        "K022",
+        "Q006",
+        "M013"
+      ],
+      "modules": [
+        "木料起点：长原木 / 已截段 / 已劈开",
+        "定位→截段→劈分→转运→储存；可跳过",
+        "尺寸、木况、动力与工作量比较",
+        "P04 / P05 型号参数并列表",
+        "已有拖拉机的接口内容入口",
+        "小车与储柴设施：任务收尾",
+        "问答与相邻指南"
+      ],
+      "products": [
+        "P02",
+        "P10",
+        "P04",
+        "P05",
+        "P15",
+        "P12",
+        "P13"
+      ],
+      "links": [
+        "HUB",
+        "G-T",
+        "G-S",
+        "G-H",
+        "G-R"
+      ],
+      "phase": "1期"
+    },
+    {
+      "id": "LP-M",
+      "name": "链锯制材系统页",
+      "proposed_path": "/pages/chainsaw-milling-system",
+      "goal": "解释完整系统，再进入单件补购。",
+      "scenes": [
+        "S09",
+        "S10"
+      ],
+      "evidence": [
+        "K024",
+        "K025",
+        "K046",
+        "Q021",
+        "M020"
+      ],
+      "modules": [
+        "原木→纵切板坯→后续干燥示意",
+        "系统组件：链锯 / 导板与链 / 架 / 导轨 / 固定",
+        "完整含件、已有件、另需件对照",
+        "首刀导轨单件与架体候选分开",
+        "木径/有效切宽/板厚/接口核对",
+        "翻动定位与维护内容",
+        "不把劈柴放进制板配置"
+      ],
+      "products": [
+        "P06",
+        "P17",
+        "P18",
+        "P10",
+        "P03"
+      ],
+      "links": [
+        "HUB",
+        "G-H",
+        "G-R",
+        "LP-F"
+      ],
+      "phase": "1期框架；2期补足资料"
+    },
+    {
+      "id": "G-S",
+      "name": "干燥与储存指南",
+      "proposed_path": "/guides/firewood-storage-seasoning",
+      "goal": "已劈好薪柴可以直达；解释架与罩的任务。",
+      "scenes": [
+        "S06",
+        "S07"
+      ],
+      "evidence": [
+        "K020",
+        "K022",
+        "K041",
+        "K044",
+        "Q008",
+        "A004"
+      ],
+      "modules": [
+        "湿木/已干木分流",
+        "离地、通风、遮顶布局图",
+        "季节储存与近端取用分开",
+        "长度、占地和 cord 计量解释；不按架长推容量",
+        "50in / 100in 架体资料比较",
+        "干燥判断与湿度检测；不保证固定时间",
+        "转运与日常取用清单"
+      ],
+      "products": [
+        "P12",
+        "P13",
+        "P16",
+        "P15"
+      ],
+      "links": [
+        "LP-F",
+        "G-T",
+        "G-R"
+      ],
+      "phase": "1期"
+    },
+    {
+      "id": "G-T",
+      "name": "劈柴方式与尺寸比较",
+      "proposed_path": "/guides/log-splitter-selection",
+      "goal": "分开手动、电动、燃油、三点悬挂/PTO 和引火柴用途。",
+      "scenes": [
+        "S04",
+        "S05"
+      ],
+      "evidence": [
+        "K015",
+        "K017",
+        "K023",
+        "K052",
+        "K053",
+        "K054",
+        "K055",
+        "Q019",
+        "M006"
+      ],
+      "modules": [
+        "按木段/木况/工作量/动力条件列选择问题",
+        "动力方式比较；不编实际产能",
+        "P04/P05 各自尺寸与另需资料",
+        "三点挂接≠PTO 驱动；液压参数另核",
+        "引火柴与大木段区分",
+        "已有设备跳过与维护补件入口"
+      ],
+      "products": [
+        "P04",
+        "P05"
+      ],
+      "links": [
+        "LP-F",
+        "G-S",
+        "G-R"
+      ],
+      "phase": "1期"
+    },
+    {
+      "id": "G-H",
+      "name": "翻动、支撑与吊移工具比较",
+      "proposed_path": "/guides/log-handling-tool-comparison",
+      "goal": "用动作图分清 cant hook、timberjack、支撑架和吊钳。",
+      "scenes": [
+        "S03",
+        "S08"
+      ],
+      "evidence": [
+        "K008",
+        "K009",
+        "K010",
+        "Q017",
+        "Q018"
+      ],
+      "modules": [
+        "滚动/定位/带脚支撑/机械吊移四格图",
+        "柄长、钩型、木径与支脚解释",
+        "P02/P03 型号与链接核对",
+        "普通 sawhorse 与原木切割支架用途核对",
+        "条件吊移完整系统资料清单",
+        "截段与制材相邻入口"
+      ],
+      "products": [
+        "P02",
+        "P03",
+        "P08"
+      ],
+      "links": [
+        "LP-C",
+        "LP-F",
+        "LP-M"
+      ],
+      "phase": "1期"
+    },
+    {
+      "id": "G-R",
+      "name": "型号资料与维护补件",
+      "proposed_path": "/guides/tool-manuals-parts",
+      "goal": "按 SKU 找资料，不把补件用户引回完整套装。",
+      "scenes": [
+        "S10"
+      ],
+      "evidence": [
+        "K058",
+        "K025",
+        "Q023",
+        "M020"
+      ],
+      "modules": [
+        "型号选择与 SKU/图片一致性",
+        "含件图、说明书和安装检查点",
+        "按设备归档维护内容",
+        "替换件编码、对应型号与兼容说明",
+        "单件/完整配置分开",
+        "尚无资料的项目清楚标记待核"
+      ],
+      "products": [
+        "P04",
+        "P05",
+        "P06",
+        "P17",
+        "P18"
+      ],
+      "links": [
+        "LP-F",
+        "LP-M",
+        "G-T"
+      ],
+      "phase": "2期；1期先做资料索引"
+    },
+    {
+      "id": "G-P",
+      "name": "地面修枝与专业帮助指南",
+      "proposed_path": "/guides/ground-level-pruning-boundaries",
+      "goal": "比较地面工具；分清本地服务与可控任务。",
+      "scenes": [
+        "S11",
+        "S12"
+      ],
+      "evidence": [
+        "K028",
+        "K029",
+        "Q024",
+        "M001",
+        "M008"
+      ],
+      "modules": [
+        "地面可达小枝工具比较",
+        "剪枝剪、长柄剪、修枝锯、迷你锯",
+        "不稳树体/高处/电线等专业帮助边界",
+        "落枝回到清场；当地处置查询清单",
+        "不推荐安全笼与链锯组合"
+      ],
+      "products": [
+        "P19",
+        "P20",
+        "P09"
+      ],
+      "links": [
+        "LP-C",
+        "HUB"
+      ],
+      "phase": "2期；1期保留边界链接"
+    }
+  ],
+  "feishu_changes": [
+    {
+      "id": "F01",
+      "status": "已覆盖",
+      "position": "VCE8ddsB3oHA18xbolbcpzRanjc；OPr1TO::R2；e3hulW::R5",
+      "original_summary": "原稿已有清运/薪柴/制材三去向和工具分工。",
+      "revision": "保留三路；主 Hub 从可控落地枝木出发，先问去处，再核已有设备。",
+      "module": "Hub 首屏/三去向",
+      "scenes": [
+        "S01",
+        "S04",
+        "S09"
+      ],
+      "evidence": [
+        "K001",
+        "K015",
+        "K024",
+        "Q001"
+      ]
+    },
+    {
+      "id": "F02",
+      "status": "新增分支",
+      "position": "L775lZ::R3；T6vgeS::R3",
+      "original_summary": "已有无拖拉机的薪柴用户；纯清枝路径尚未独立。",
+      "revision": "新增无主机纯清枝入口；人工工具与机械附件分开，不把无主机薪柴误说成原稿未提。",
+      "module": "清场页/已有装备",
+      "scenes": [
+        "S02"
+      ],
+      "evidence": [
+        "K005",
+        "K033",
+        "Q003"
+      ]
+    },
+    {
+      "id": "F03",
+      "status": "需加深",
+      "position": "PT81dm9DEozFSPxe4BbcZTQfnke；T6vgeS::R2；0Fn7Oc::R2",
+      "original_summary": "已有铲斗核对和承托、不主动夹持的限定。",
+      "revision": "做铲斗测量图和型号资料卡；宽度仅缩小资料入口，夹持厚度、锁紧空间与整机能力仍须核。",
+      "module": "清场页/适配表",
+      "scenes": [
+        "S01"
+      ],
+      "evidence": [
+        "K031",
+        "K032",
+        "M015",
+        "M016"
+      ]
+    },
+    {
+      "id": "F04",
+      "status": "需加深",
+      "position": "CwB8dyfG7oG0scxpRQIcyabLnAf；FXx5rg::R2–3",
+      "original_summary": "原稿已有耙具补扫。",
+      "revision": "按人工耙/机械耙、细碎料/粗枝和草坪/碎石地拆开；P14 仅机械备选。",
+      "module": "清场页/物料比较",
+      "scenes": [
+        "S01",
+        "S02"
+      ],
+      "evidence": [
+        "K005",
+        "K033",
+        "Q004",
+        "M016"
+      ]
+    },
+    {
+      "id": "F05",
+      "status": "需纠正",
+      "position": "CZJcd8HO5oZtA9xgaGAc5zVBnm7；US49dESyfojlQ9xZBpec2rHgnTe",
+      "original_summary": "PHO_0ZJ84PP4 的链接指向另一款带脚起木器。",
+      "revision": "60in cant hook 对应目录 R194；51in timberjack 为 PHO_0ZJ54M94 / R2。动作图和 URL 同时纠正。",
+      "module": "翻木工具比较/型号卡",
+      "scenes": [
+        "S03"
+      ],
+      "evidence": [
+        "K008",
+        "K050",
+        "Q017",
+        "M009"
+      ]
+    },
+    {
+      "id": "F06",
+      "status": "需加深",
+      "position": "JgPbdHQRfoNfE7x1an2c7akon2g；FXx5rg::R4",
+      "original_summary": "已有翻动、定位和截段描述。",
+      "revision": "把翻动、支撑、切割拆开；已截段可跳过；普通 sawhorse 不自动归入原木切割支撑。",
+      "module": "动作比较页/木料起点",
+      "scenes": [
+        "S03"
+      ],
+      "evidence": [
+        "K009",
+        "K035",
+        "Q018",
+        "A006"
+      ]
+    },
+    {
+      "id": "F07",
+      "status": "需加深",
+      "position": "L775lZ::R3–5；FXx5rg::R5；T6vgeS::R3",
+      "original_summary": "原稿已有手动选择与高频另选设备，R5 动作为空。",
+      "revision": "补 R5“劈分”；增加手动/电动/燃油/引火柴比较；用木段、木况、动力和频次决定资料入口。",
+      "module": "薪柴页/工具比较",
+      "scenes": [
+        "S04"
+      ],
+      "evidence": [
+        "K015",
+        "K017",
+        "K023",
+        "K052",
+        "K055",
+        "Q006",
+        "M006"
+      ]
+    },
+    {
+      "id": "F08",
+      "status": "需纠正",
+      "position": "I0podYKxDoryPhxWmNccqq1Cnhc；CR6jddFy1ovQjaxwdKBcNwpInLb；T6vgeS::R3",
+      "original_summary": "正文 PTH_33PCJ57Y 和链接所指 PHO_33VUEB66 是不同型号。",
+      "revision": "分别保留 P04 17.7×7.9in、P05 18.7×8in；修链接与型号参数。P05 以 HTML SKU 字段而非 slug 核准。",
+      "module": "薪柴页/型号比较",
+      "scenes": [
+        "S04"
+      ],
+      "evidence": [
+        "K016",
+        "K023",
+        "M017"
+      ]
+    },
+    {
+      "id": "F09",
+      "status": "新增分支",
+      "position": "L775lZ::R2；0Fn7Oc::R5",
+      "original_summary": "已有主机画像，尚未解释主机与劈柴附件供能关系。",
+      "revision": "新增已有拖拉机劈柴选型说明：三点悬挂和 PTO 独立核验；不输出未经确认的匹配型号。",
+      "module": "劈柴比较页/主机接口",
+      "scenes": [
+        "S05"
+      ],
+      "evidence": [
+        "K053",
+        "K054",
+        "A009",
+        "A011"
+      ]
+    },
+    {
+      "id": "F10",
+      "status": "需加深",
+      "position": "CPzedJHNOoqqLCxqhxocn9oNnUz；FXx5rg::R6",
+      "original_summary": "已有小车或条件托盘化搬运。",
+      "revision": "转运成为可独立进入的任务；增加目录 R17592 小车和 R30175 提袋候选，分别核路线、车斗、固定。",
+      "module": "薪柴页/转运模块",
+      "scenes": [
+        "S06"
+      ],
+      "evidence": [
+        "K056",
+        "Q020",
+        "A012"
+      ]
+    },
+    {
+      "id": "F11",
+      "status": "需加深",
+      "position": "If8CdPBiqosNB8xki6Ici0dNnNf；FXx5rg::R6；0Fn7Oc::R3",
+      "original_summary": "原稿已写储存步骤，候选仍待核。",
+      "revision": "展开离地、通风、遮顶、湿度、占地/cord 和近端取用；R4319/R4320 是目录身份候选，不能说目录没有储柴架。",
+      "module": "独立储存页/架与罩比较",
+      "scenes": [
+        "S07"
+      ],
+      "evidence": [
+        "K020",
+        "K022",
+        "K041",
+        "Q008",
+        "A003"
+      ]
+    },
+    {
+      "id": "F12",
+      "status": "需加深",
+      "position": "IKDbd10CJovu8Bxa3sCciyFcnqf；HDZndvpOyoL7tfxFXCecm2xZnJc",
+      "original_summary": "已有设备先排除、已有劈柴设备者可只补储存。",
+      "revision": "增加“长原木/已截木段/已劈好”起点；已劈好直接到储存，不强制走共同搬移与加工。",
+      "module": "Hub 已有装备/储存入口",
+      "scenes": [
+        "S07",
+        "S10"
+      ],
+      "evidence": [
+        "K019",
+        "K022",
+        "Q011",
+        "M013",
+        "M019"
+      ]
+    },
+    {
+      "id": "F13",
+      "status": "需加深",
+      "position": "DN9xdiw2xoXtIex9sKecmhadnsc；ENFud9Ck2oyt3RxPoAfcLwr6nwB",
+      "original_summary": "原稿已有条件吊移和吊钳。",
+      "revision": "与地面翻木分开；列完整连接与主机核对清单，28in 与开口32in 分列，不把附件数值代入整机能力。",
+      "module": "吊移相关指南",
+      "scenes": [
+        "S08"
+      ],
+      "evidence": [
+        "K010",
+        "K011",
+        "Q013",
+        "M010"
+      ]
+    },
+    {
+      "id": "F14",
+      "status": "需纠正",
+      "position": "Eyfqd0diPosL8TxJ5O9cTOJ6nIe；D27JdmW47oaJdixUr3ZcfZ8ZnDg；T6vgeS::R4",
+      "original_summary": "正文制材关联劈柴器；工作簿 R4 已明确不含劈柴器。",
+      "revision": "统一为纵向制板；移除制材默认劈柴器关联，另有薪柴任务才链接薪柴页。",
+      "module": "制材页/流程和相关链接",
+      "scenes": [
+        "S09"
+      ],
+      "evidence": [
+        "K024",
+        "K027",
+        "Q010",
+        "M012"
+      ]
+    },
+    {
+      "id": "F15",
+      "status": "需纠正",
+      "position": "ZD80dqfT6oQNaPx4SULcrLh8nyg；EJlpdIcJ0oDgbGxcu1fcQQP3nfh；EF1XdJnj6oXmObxJgfgccvhnneo",
+      "original_summary": "PHO_12AI01SC 的原链接是 PPG_36F7LH3D，且用语“辅助伐木”。",
+      "revision": "改为 PHO_12AI01SC / R978 的首刀导轨；链接和 3 横杆含件核对，不自动替换不同 SKU。",
+      "module": "导轨单件页/含件图",
+      "scenes": [
+        "S09"
+      ],
+      "evidence": [
+        "K025",
+        "K026",
+        "M004",
+        "M020"
+      ]
+    },
+    {
+      "id": "F16",
+      "status": "需加深",
+      "position": "SXf2d4n68ogvNNxFS6XcCiUKnZd；0Fn7Oc::R4；X4mZg0::R3–4",
+      "original_summary": "原稿已说明导轨不是完整系统。",
+      "revision": "补“完整系统/仅补导轨/替换件”入口和组件核对图；目录 R123/R15597 有架体/组合标题，缺的是可核的完整含件与兼容。",
+      "module": "制材页/系统构成",
+      "scenes": [
+        "S09"
+      ],
+      "evidence": [
+        "K024",
+        "K025",
+        "K046",
+        "Q022",
+        "A014",
+        "M020"
+      ]
+    },
+    {
+      "id": "F17",
+      "status": "需加深",
+      "position": "fR1HxX::R4–6",
+      "original_summary": "原稿已有核件、维护和配件服务设想。",
+      "revision": "落为按型号组织的核件表、手册索引、维护内容与替换件编码；未建的人工能力标为建设项。",
+      "module": "型号资料/维护补件页",
+      "scenes": [
+        "S10"
+      ],
+      "evidence": [
+        "K058",
+        "Q023",
+        "M004"
+      ]
+    },
+    {
+      "id": "F18",
+      "status": "已覆盖",
+      "position": "SA9adQS2BoqXDux2kYNcelxDnLZ；fR1HxX::R2–3",
+      "original_summary": "原稿已有用途、已有工具、尺寸、型号、路线、频次六问。",
+      "revision": "保留六问，页面本地自查与清单即可；照片/人工核验入口须真实存在后再展示。",
+      "module": "Hub 自查/资料清单",
+      "scenes": [
+        "S01",
+        "S04",
+        "S09",
+        "S10"
+      ],
+      "evidence": [
+        "K032",
+        "K023",
+        "M015",
+        "M017",
+        "M020"
+      ]
+    },
+    {
+      "id": "F19",
+      "status": "新增分支",
+      "position": "JxtEdeFn9ouMc1x6SnbcNYpZn9g；CG4FdfDpro0ltLxkbbVco0BunTd",
+      "original_summary": "原稿已有迷你锯；地面手动工具比较不足。",
+      "revision": "补剪枝剪、长柄剪、修枝锯与迷你锯对照；目录 R26510/R26592 为具体手动候选。",
+      "module": "相关修枝指南",
+      "scenes": [
+        "S11"
+      ],
+      "evidence": [
+        "Q024",
+        "Q025",
+        "M008",
+        "M014"
+      ]
+    },
+    {
+      "id": "F20",
+      "status": "删除推荐",
+      "position": "NVOQdXBeKouCBYxU6OOcuOJCnAe；PriUdmD57oEjmWxaI7XcqFzInxh",
+      "original_summary": "原稿建议安全笼与链锯用于高处修剪。",
+      "revision": "从推荐组合删除；保留专业帮助边界与地面小枝指南。本机高量服务词不能证明该组合用途。",
+      "module": "相关指南/专业边界",
+      "scenes": [
+        "S11",
+        "S12"
+      ],
+      "evidence": [
+        "K028",
+        "K029",
+        "Q024",
+        "M001",
+        "M008"
+      ]
+    },
+    {
+      "id": "F21",
+      "status": "需纠正",
+      "position": "LaqMdBS8ioGHrrxgFOOcqrLFnQf；MkahdepFColsp1xMPpjcMJcFn2c；e3hulW::R5",
+      "original_summary": "原稿把主机画像和多个关键环节覆盖写得较确定。",
+      "revision": "改为规划服务对象；目录覆盖部分动作，完整任务仍依赖已有/另需设备。服务、品牌和同名词单列，不能当工具人群规模。",
+      "module": "Hub 范围/需求页",
+      "scenes": [
+        "S01",
+        "S02",
+        "S12"
+      ],
+      "evidence": [
+        "K003",
+        "K014",
+        "K028",
+        "Q002"
+      ]
+    },
+    {
+      "id": "F22",
+      "status": "需加深",
+      "position": "OPr1TO::R3–6",
+      "original_summary": "原稿已有流程、配置、指南和案例模块。",
+      "revision": "按木料起点允许跳过，把任务商品、选型比较和相邻内容页串接；案例标注具体设备和证据层级。",
+      "module": "Hub/三落地页",
+      "scenes": [
+        "S01",
+        "S04",
+        "S07",
+        "S09"
+      ],
+      "evidence": [
+        "K001",
+        "K022",
+        "K024",
+        "M013",
+        "M020"
+      ]
+    },
+    {
+      "id": "F23",
+      "status": "已覆盖",
+      "position": "X4mZg0::R2–5",
+      "original_summary": "原稿已借鉴动作解释、缺件清单、含件和具体项目展示。",
+      "revision": "保留这些页面机制；不把别家工具的多合一功能或效果转给 GARVEE，已归档页面只支持相应机制。",
+      "module": "动作图/系统含件/案例标注",
+      "scenes": [
+        "S03",
+        "S09"
+      ],
+      "evidence": [
+        "K008",
+        "K025",
+        "Q017",
+        "M020"
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "S01",
+      "title": "有主机：把散枝送到集中点",
+      "route": "清场",
+      "start": "已有拖拉机/装载机与铲斗，地上是可控散枝。",
+      "result": "恢复通道；枝料进入已确认的暂存或处置去处。",
+      "steps": [
+        "先分出细枝、木段、长原木和杂物",
+        "核对铲斗、接口与承托条件",
+        "清理叉承托转运；细碎料单独补扫"
+      ],
+      "skip": "已有适用叉具则只补测量与安装资料。",
+      "products": [
+        "P01",
+        "P11",
+        "P14"
+      ],
+      "need": "已有主机、适配铲斗、防护、路线与集中点；当地处置要求另查。",
+      "why": "附件词明确出现铲斗限定；广义清枝主题又包含清运服务，因此落地页要先分物料和装备，再展示清理叉。",
+      "evidence": [
+        "K031",
+        "K032",
+        "K049",
+        "Q001",
+        "A001",
+        "M015",
+        "M016"
+      ],
+      "feishu": [
+        "F01",
+        "F03",
+        "F04"
+      ],
+      "limit": "宽度不能独立证明适配；清理叉没有抓斗的主动夹持能力。",
+      "catalog_match_ids": [
+        "C02",
+        "C03"
+      ]
+    },
+    {
+      "id": "S02",
+      "title": "无主机：人工清枝与碎料补扫",
+      "route": "清场",
+      "start": "没有拖拉机，只清理可人工处理的落地枝条。",
+      "result": "分批集中细枝，避免被推入机械附件路径。",
+      "steps": [
+        "先确认落地枝条可控和最终去处",
+        "按物料与地面选择已有手工具/容器",
+        "分批集中；零碎料补扫；超出能力转向专业帮助"
+      ],
+      "skip": "不配置清理叉、机械耙和托盘附件。",
+      "products": [],
+      "need": "人工耙具、容器与防护可用已有物品；目录已找到人工耙候选，型号与用途条件见新增商品匹配章节。",
+      "why": "brush clearing tools 及清枝问题支持工具比较内容；“无主机纯清枝”是补全路径的设计推断，数据不直接证明该人群比例。",
+      "evidence": [
+        "K005",
+        "K033",
+        "Q003",
+        "Q004",
+        "M002"
+      ],
+      "feishu": [
+        "F02",
+        "F04"
+      ],
+      "limit": "P14 是机械松针耙，不能当人工耙。松针、细枝、粗木与草坪/碎石地分别解释。",
+      "catalog_match_ids": [
+        "C01"
+      ]
+    },
+    {
+      "id": "S03",
+      "title": "地面翻动、定位与截段支撑",
+      "route": "共用动作",
+      "start": "有长原木，下一步要截成木段或进入制材。",
+      "result": "明确要翻动还是带脚支撑，再选择工具。",
+      "steps": [
+        "按动作比较 cant hook / peavey / timberjack",
+        "核对木径、钩型、地面与支脚",
+        "需要截段时另核锯具与支撑；已有木段跳过"
+      ],
+      "skip": "已截木段或已有合适定位工具时跳过相应商品。",
+      "products": [
+        "P02",
+        "P03",
+        "P10"
+      ],
+      "need": "适用截段工具、防护和稳定作业区；普通 sawhorse 必须另核原木切割用途。",
+      "why": "比较词、log jack 和支撑主题说明应给动作对照图；柄长、抬起、地面支撑和机械吊移不能混为一类。",
+      "evidence": [
+        "K008",
+        "K009",
+        "K012",
+        "K038",
+        "Q017",
+        "Q018",
+        "A006",
+        "M009"
+      ],
+      "feishu": [
+        "F05",
+        "F06"
+      ],
+      "limit": "cant hook 不自动带脚，普通工作马凳不自动是原木切割支架；资料尺寸仅供筛查。",
+      "catalog_match_ids": [
+        "C04",
+        "C05",
+        "C06"
+      ]
+    },
+    {
+      "id": "S04",
+      "title": "已截木段：选择劈柴方式",
+      "route": "薪柴",
+      "start": "有适用木段，想处理成自用薪柴。",
+      "result": "按木段尺寸、木况、工作量与动力条件选型。",
+      "steps": [
+        "已截段直接进入尺寸与木况核对",
+        "比较手动液压、电动、燃油及引火柴工具",
+        "选定一类后进入转运与储存"
+      ],
+      "skip": "已有劈柴设备则跳过设备选择；不同时默认加入两款手动型号。",
+      "products": [
+        "P04",
+        "P05"
+      ],
+      "need": "具体型号说明书、木段条件、操作意愿与动力条件；电动/燃油完整候选待核。",
+      "why": "manual 2,900 与 electric 8,100 等分别为不同关键词；这些词提示要解释不同方案，不支持把所有薪柴用户引向手动设备。",
+      "evidence": [
+        "K015",
+        "K016",
+        "K017",
+        "K023",
+        "K043",
+        "K052",
+        "K055",
+        "Q006",
+        "Q019",
+        "A005",
+        "M006",
+        "M017"
+      ],
+      "feishu": [
+        "F07",
+        "F08"
+      ],
+      "limit": "吨位不是产能；引火柴工具不替代大木段劈分；木种、节疤与含水状态仍影响适用。",
+      "catalog_match_ids": [
+        "C07",
+        "C08",
+        "C09"
+      ]
+    },
+    {
+      "id": "S05",
+      "title": "已有拖拉机：三点悬挂与 PTO 分开",
+      "route": "薪柴",
+      "start": "已有拖拉机，考虑液压或动力接口的劈柴附件。",
+      "result": "先区分挂接、液压供能与 PTO 传动，再核具体设备。",
+      "steps": [
+        "记录主机型号和可用液压条件",
+        "区分三点挂接与 PTO 驱动",
+        "设备、接口和说明书核定后再形成配置"
+      ],
+      "skip": "已有拖拉机不意味着要重新买手动劈柴器。",
+      "products": [],
+      "need": "具体主机液压参数、挂接类别、传动与防护资料；本轮不给完整适配推荐。",
+      "why": "3 point 和 PTO 关键词及两个独立 AI 主题要求保留专门解释入口；三点悬挂≠PTO，不能由主题名称推断供能方式。",
+      "evidence": [
+        "K053",
+        "K054",
+        "A009",
+        "A011",
+        "Q012",
+        "Q014"
+      ],
+      "feishu": [
+        "F09"
+      ],
+      "limit": "提示词为相关设备选择/上料问题，非该接口方案的有效性验证；商品型号仍待查。",
+      "catalog_match_ids": [
+        "C08"
+      ]
+    },
+    {
+      "id": "S06",
+      "title": "短距离转运：木段到储存区",
+      "route": "薪柴",
+      "start": "木段或劈好薪柴需要移动，已有设备可能只缺搬运环节。",
+      "result": "加工区与储柴区形成可用连接。",
+      "steps": [
+        "核路线、坡度、地面与木段尺寸",
+        "人工小车/提袋与经核机械方案分开",
+        "安排稳定装载与取用位置"
+      ],
+      "skip": "已有适用搬运容器时只补路线规划。",
+      "products": [
+        "P15",
+        "P16"
+      ],
+      "need": "轮胎、车斗尺寸、装载固定、实际使用条件；额定标题不等于现场能力。",
+      "why": "firewood cart 与 Wheeled Firewood Carriers and Carts 支持把转运独立成内容块，而不是劈完即结束。",
+      "evidence": [
+        "K056",
+        "Q020",
+        "Q013",
+        "Q011",
+        "A012",
+        "M013"
+      ],
+      "feishu": [
+        "F10"
+      ],
+      "limit": "小车不代原木吊机；近端小架不代整个季节的储存设施。",
+      "catalog_match_ids": [
+        "C10",
+        "C11"
+      ]
+    },
+    {
+      "id": "S07",
+      "title": "已劈好薪柴：直接进入干燥与储存",
+      "route": "薪柴",
+      "start": "已有或买入劈好薪柴，不需要上游加工工具。",
+      "result": "离地、通风、遮顶；区分干燥、容量与近端取用。",
+      "steps": [
+        "量存放空间和计划堆放体积",
+        "湿木安排离地通风及遮顶方式",
+        "用适当方法判断干燥，另安排近端取用"
+      ],
+      "skip": "跳过清理叉、链锯和劈柴器；已有储存设施只核条件。",
+      "products": [
+        "P12",
+        "P13",
+        "P16"
+      ],
+      "need": "完整占地与载荷、罩使用方式、湿度检测、cord 单位解释；湿度计具体候选待核。",
+      "why": "firewood rack 9,900、how to store firewood 480 及储存/干燥主题说明：原稿已有储存步骤，应加深为独立入口，回答架、罩与木况的关系。",
+      "evidence": [
+        "K019",
+        "K020",
+        "K021",
+        "K022",
+        "K041",
+        "K042",
+        "K044",
+        "K045",
+        "K057",
+        "Q007",
+        "Q008",
+        "Q009",
+        "A003",
+        "A002",
+        "A004",
+        "M019"
+      ],
+      "feishu": [
+        "F11",
+        "F12"
+      ],
+      "limit": "Cord of Firewood 横跨购柴和计量；不能全部视为工具需求。不保证固定时间干透，长度不等于实测容量。",
+      "catalog_match_ids": [
+        "C11",
+        "C12",
+        "C13",
+        "C21"
+      ]
+    },
+    {
+      "id": "S08",
+      "title": "机械吊移：独立的条件路径",
+      "route": "共用动作",
+      "start": "确有吊移需求，并有待核验的主机和完整连接系统。",
+      "result": "区别地面翻木和机械起吊；形成资料核对表。",
+      "steps": [
+        "确认需要吊起，而非仅翻动",
+        "分别核主机、吊点、连接件、钳具与工况",
+        "资料完整后由对应专业流程确认"
+      ],
+      "skip": "不需要吊移则跳过吊钳。",
+      "products": [
+        "P08"
+      ],
+      "need": "整套系统工作条件、说明书、开口与木径语义、连接件和操作方案。",
+      "why": "log tongs 与移动原木问法支持独立解释其角色，不能与 cant hook、托盘叉或手搬工具互换。",
+      "evidence": [
+        "K010",
+        "K011",
+        "K013",
+        "K039",
+        "Q013",
+        "M010"
+      ],
+      "feishu": [
+        "F13"
+      ],
+      "limit": "本规划不输出可用吊装方案；“有拖拉机”不构成吊装适配。",
+      "catalog_match_ids": [
+        "C20"
+      ]
+    },
+    {
+      "id": "S09",
+      "title": "原木做板材：完整制材系统",
+      "route": "制材",
+      "start": "有值得保留的原木，具备相应经验；可能已有部分系统。",
+      "result": "先识别完整系统，再区分补购导轨和整套含件。",
+      "steps": [
+        "明确纵向制板目标和后续干燥位置",
+        "核链锯、导板/纵切链、制材架、首刀导轨与固定",
+        "按已有组件仅补缺件；板坯后续干燥"
+      ],
+      "skip": "已有适用链锯/制材架不重复配置；只缺导轨进入单件页。",
+      "products": [
+        "P06",
+        "P17",
+        "P18",
+        "P10"
+      ],
+      "need": "所有组件兼容、完整含件与说明书；标题组合不能证明整套兼容。",
+      "why": "chainsaw mill 4,400、attachment 880、guide rails 20 是不同词；高量入口需要系统解释，低量导轨词支持精确单件页面。",
+      "evidence": [
+        "K024",
+        "K025",
+        "K026",
+        "K027",
+        "K046",
+        "K048",
+        "K059",
+        "Q021",
+        "Q022",
+        "Q010",
+        "A014",
+        "A013",
+        "M004",
+        "M007",
+        "M012",
+        "M020"
+      ],
+      "feishu": [
+        "F14",
+        "F15",
+        "F16"
+      ],
+      "limit": "劈柴≠制板；导轨≠整机；迷你锯不自动充当制材锯。广义 sawmill 主题横跨设备类型。",
+      "catalog_match_ids": [
+        "C04",
+        "C14",
+        "C15",
+        "C16",
+        "C18"
+      ]
+    },
+    {
+      "id": "S10",
+      "title": "已有设备：维护资料与单件补购",
+      "route": "跨路径",
+      "start": "已有叉具、劈柴器或制材设备，只想维护或补一个组件。",
+      "result": "按型号找到说明、核件与替换件路径。",
+      "steps": [
+        "先选设备型号和需要完成的动作",
+        "看含件图、连接/磨损检查与说明书索引",
+        "区分单件、替换件和完整系统"
+      ],
+      "skip": "已有整机时不默认展示重复整套配置。",
+      "products": [
+        "P04",
+        "P05",
+        "P06",
+        "P17",
+        "P18"
+      ],
+      "need": "SKU 对应手册、爆炸图、替换件编码和兼容清单；无资料就标待核。",
+      "why": "log splitter parts 880 直接支持补件入口；Semrush 的 sawmill 维护问题只支持制材维护内容。向其他设备扩展是内容规划，尚无各类维护需求规模。",
+      "evidence": [
+        "K058",
+        "K025",
+        "Q023",
+        "M004",
+        "M020"
+      ],
+      "feishu": [
+        "F17",
+        "F18"
+      ],
+      "limit": "原稿已有维护服务设想；这里只规划内容与补件清单，不称现成诊断、上传或人工服务。",
+      "catalog_match_ids": [
+        "C17"
+      ]
+    },
+    {
+      "id": "S11",
+      "title": "相关指南：地面可达小枝修剪",
+      "route": "相关内容",
+      "start": "需要处理地面可安全触及的小枝。",
+      "result": "比较剪枝剪、长柄剪、修枝锯和迷你锯的用途。",
+      "steps": [
+        "按枝径、可达位置与工具说明判断",
+        "比较手动剪、修枝锯与小型链锯",
+        "修剪后的落枝回到清场入口"
+      ],
+      "skip": "已有适用手工具就直接看清理与维护内容。",
+      "products": [
+        "P19",
+        "P20",
+        "P09"
+      ],
+      "need": "工具手册、实际枝径与操作条件；修枝锯具体候选待核。",
+      "why": "本机修剪工具问题与 Peec 地面比较问法支持相关指南；不据此把高处作业加入主场景。",
+      "evidence": [
+        "K005",
+        "Q024",
+        "Q025",
+        "M008",
+        "M014"
+      ],
+      "feishu": [
+        "F19",
+        "F20"
+      ],
+      "limit": "不以安全笼+链锯作为推荐组合；高处、悬枝、受力不明树体转向相应专业帮助。",
+      "catalog_match_ids": [
+        "C19"
+      ]
+    },
+    {
+      "id": "S12",
+      "title": "处置去处与专业帮助边界",
+      "route": "相关内容",
+      "start": "遇到当地处置、清运服务或复杂倒木问题。",
+      "result": "区分购物、信息和本地服务意图。",
+      "steps": [
+        "先确认可控落地材料与去处",
+        "本地服务问题给查询清单和选择标准",
+        "不稳树体、受力不明或电线附近停止自行处理"
+      ],
+      "skip": "服务意图不进入商品组合。",
+      "products": [],
+      "need": "当地处置规则和有资质专业人员由用户所在地点另行确认。",
+      "why": "near me 服务词和真实清运提示词说明需求混杂；单独回应处置与专业边界，避免把服务需求算进工具场景。",
+      "evidence": [
+        "K003",
+        "K028",
+        "K029",
+        "Q002",
+        "Q026",
+        "M001",
+        "M005"
+      ],
+      "feishu": [
+        "F20",
+        "F21"
+      ],
+      "limit": "搜索估值不等于本站可承接访问；本规划不承诺 GARVEE 提供当地服务。",
+      "catalog_match_ids": []
+    }
+  ],
+  "excluded_examples": [
+    "N038",
+    "N039",
+    "N040",
+    "N043",
+    "K014"
+  ],
+  "prompt_translations": {
+    "Q001": "树枝与灌木残料清理",
+    "Q002": "附近哪里可以处置树枝",
+    "Q007": "薪柴需要多久干燥",
+    "Q008": "薪柴湿度",
+    "Q017": "原木叉杆与翻木钩有什么区别",
+    "Q021": "我能在家学着把原木加工成板材吗"
+  },
+  "text_translations": {
+    "outdoor firewood rack": "户外储柴架",
+    "indoor firewood rack": "室内取用储柴架",
+    "firewood rack outdoor": "户外柴架（另一表达）",
+    "firewood cart": "运柴车",
+    "firewood rack": "储柴架",
+    "firewood storage": "薪柴储存",
+    "how to store firewood": "如何存放薪柴",
+    "how to store firewood outside": "如何在户外存放薪柴",
+    "how to store firewood outside in winter": "冬季如何在户外存放薪柴",
+    "how to store firewood in winter": "冬季如何存放薪柴",
+    "firewood rack cover": "储柴架罩",
+    "firewood cover": "薪柴覆盖物",
+    "firewood rack with cover": "带罩储柴架",
+    "firewood drying rack": "薪柴干燥架",
+    "firewood moisture": "薪柴湿度",
+    "how to stack firewood for drying": "怎样堆放薪柴以利干燥",
+    "firewood shed": "储柴棚",
+    "firewood storage shed": "薪柴储存棚",
+    "manual log splitter": "手动劈柴器",
+    "electric log splitter": "电动劈柴器",
+    "gas log splitter": "燃油劈柴器",
+    "manual hydraulic log splitter": "手动液压劈柴器",
+    "kindling splitter": "引火柴劈分工具",
+    "3 point log splitter": "三点悬挂劈柴器",
+    "pto log splitter": "PTO动力输出劈柴器",
+    "what size log splitter do i need": "我需要哪种规格的劈柴器",
+    "cant hook": "翻木钩",
+    "cant hook vs peavey": "翻木钩与原木叉杆比较",
+    "log jack": "起木/支撑工具",
+    "log roller": "滚木工具",
+    "log roller tool": "翻滚原木的工具",
+    "log dolly": "原木托运车",
+    "log arch": "原木托运架",
+    "log cart": "原木运输车",
+    "log lifting tongs": "原木吊钳",
+    "log tongs for tractor": "拖拉机相关原木钳",
+    "brush clearing tools": "清枝清灌工具",
+    "best brush clearing tools": "清枝工具怎么选",
+    "clamp on debris forks": "夹装清理叉",
+    "debris forks for tractor bucket": "拖拉机铲斗清理叉",
+    "clamp on debris forks for tractor bucket": "夹装在拖拉机铲斗上的清理叉",
+    "tree debris removal near me": "附近的枝木清运服务",
+    "tree debris removal services": "枝木清运服务",
+    "tree debris removal": "枝木残料清理",
+    "fallen tree cleanup": "倒木清理",
+    "chainsaw mill": "链锯制材设备",
+    "chainsaw mill kit": "链锯制材套件",
+    "chainsaw mill attachment": "链锯制材附件",
+    "chainsaw mill guide rails": "链锯制材首刀导轨",
+    "chainsaw ripping chain": "链锯纵切链",
+    "chainsaw milling chain": "链锯制材链条",
+    "what size chainsaw for milling": "制材需要何种规格链锯",
+    "chainsaw mill bar length": "制材链锯导板长度",
+    "log splitter parts": "劈柴器配件",
+    "log splitter hydraulic pump": "劈柴器液压泵",
+    "hydraulic pump for log splitter": "劈柴器液压泵（另一表达）",
+    "chainsaw chain sharpener": "链锯链条磨削工具",
+    "lumber storage shed": "板材存放棚",
+    "covered outdoor lumber storage": "有遮盖的户外板材存放",
+    "1 2 cord firewood rack": "半cord柴量相关储柴架",
+    "dimensions of a 1/2 cord of wood": "半cord堆放柴量的尺寸",
+    "salsa timberjack": "同名自行车品牌/车型词，作为排除样本",
+    "does firewood need to be covered": "薪柴需要覆盖吗",
+    "ideal moisture for firewood": "薪柴理想湿度是多少",
+    "indoor firewood holder ideas": "室内薪柴收纳有什么办法",
+    "How do I properly stack a wood rick for drying?": "怎样堆放一垛薪柴以利干燥",
+    "Are there any tips for stacking and storing firewood properly?": "怎样正确堆放与存放薪柴",
+    "where to dispose of tree branches near me": "附近哪里可以处置树枝",
+    "where to dispose of tree branches": "哪里可以处置树枝",
+    "Are there environmentally friendly options for yard waste and debris removal?": "庭院残料有没有更环保的处置方式",
+    "Can I learn to mill my own lumber at home?": "我能在家学习把原木加工成板材吗",
+    "What should I consider when choosing a sawmill for small-scale woodworking?": "小型木工项目选择制材设备要考虑什么",
+    "What are the best tools and equipment for turning logs into lumber?": "原木变板材需要哪些工具和设备",
+    "Can you explain the differences between a log peavey and a cant hook?": "原木叉杆和翻木钩有什么区别",
+    "How do I maintain and care for a sawmill to ensure its longevity?": "锯木设备怎样维护保养",
+    "Can you recommend the best tools for moving logs efficiently?": "有哪些适合搬移原木的工具",
+    "Can you recommend techniques for splitting huge logs safely?": "大木段劈分有哪些注意事项",
+    "7 ton electric wood splitter": "7吨电动劈柴器相关问句",
+    "stickered lumber": "用垫条隔开的堆放板材",
+    "What tools or equipment are recommended for stacking large quantities of lumber?": "大量板材堆放需要哪些工具或设备",
+    "How do I set up an industrial lumber mill in a game or real life?": "游戏或现实中的工业锯木厂，混合意图样本",
+    "what does milling mean": "milling含义，未限定原木制材",
+    "What are the best tools for circuit milling and PCB milling?": "电路板铣削工具，排除样本",
+    "How do I choose the right log lift for my strongman training?": "力量训练用log lift，排除样本",
+    "Where can I find high-quality log arch equipment and accessories?": "哪里可以找原木托运架及附件",
+    "How do I choose the best towable wood splitter for my needs?": "如何选择可牵引劈柴器",
+    "Firewood Carriers and Bags": "运柴提具与提袋主题",
+    "Firewood Rack Sizes and Types": "储柴架尺寸与类型主题",
+    "Kindling and Firewood Tools": "引火柴与薪柴工具主题",
+    "Yard Waste and Mulch Disposal": "庭院残料与覆盖料处置主题"
+  }
+}
