@@ -1,0 +1,1582 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>场景研究与页面搭建 SOP</title>
+<style>:root {
+  color-scheme: light;
+  --ink: #132523;
+  --muted: #4b6561;
+  --accent: #0f6b60;
+  --accent-soft: #e6f4f0;
+  --deep: #0e3a35;
+  --deep-2: #154e47;
+  --line: #d4e2de;
+  --paper: #ffffff;
+  --ground: #f1f5f3;
+  --tint: #ebf6f2;
+  --warm: #8a4b14;
+  --warm-bg: #fff6eb;
+  --warm-line: #e5b887;
+  --shadow-sm: 0 1px 2px rgba(14, 58, 53, .05), 0 4px 12px rgba(14, 58, 53, .04);
+  --shadow-md: 0 2px 6px rgba(14, 58, 53, .06), 0 14px 32px rgba(14, 58, 53, .06);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  line-height: 1.7;
+  color: var(--ink);
+  background: var(--ground);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; }
+a { color: var(--accent); text-underline-offset: .24em; text-decoration-thickness: 1.5px; }
+a:hover { color: var(--deep); text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid #b45309; outline-offset: 3px; border-radius: 4px; }
+.hero :focus-visible { outline-color: #fbbf24; }
+.skip { position: absolute; z-index: 10; inset: 1rem auto auto 1rem; padding: .55rem 1rem; background: white; color: var(--deep); font-weight: 700; border-radius: .5rem; box-shadow: var(--shadow-md); }
+.skip:not(:focus) { clip-path: inset(50%); width: 1px; height: 1px; padding: 0; overflow: hidden; }
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #0b312d 0%, #124841 56%, #185e55 100%);
+  color: white;
+  border-bottom: 4px solid #6ec4ad;
+}
+.frame { max-width: 1520px; margin-inline: auto; padding-inline: clamp(16px, 3vw, 44px); }
+.hero .frame { padding-block: clamp(28px, 4.5vw, 58px); }
+.hero-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 28px; }
+h1, h2, h3, h4 { line-height: 1.32; text-wrap: balance; }
+h1 { margin: 0; font-size: clamp(1.9rem, 3.8vw, 3.2rem); letter-spacing: -.03em; font-weight: 800; }
+.hero-metrics { display: flex; flex-wrap: wrap; gap: 8px; }
+.metric-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 5px 12px; border-radius: 999px;
+  background: rgba(255, 255, 255, .11); border: 1px solid rgba(255, 255, 255, .2);
+  color: #e8fbf5; font-size: .86rem; font-weight: 600;
+}
+.hero-chain {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+  margin: 18px 0 0; padding: 0; list-style: none;
+}
+.hero-chain li {
+  padding: 5px 12px; border-radius: 8px;
+  background: rgba(255, 255, 255, .12); border: 1px solid rgba(255, 255, 255, .18);
+  color: #ffffff; font-size: .92rem; font-weight: 650;
+}
+.hero-chain li.arrow { background: none; border: 0; padding: 0 2px; color: #8ad8c3; font-weight: 700; }
+.hero-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.hero-links a {
+  display: inline-flex; align-items: center; min-height: 40px;
+  padding: 6px 14px; border-radius: 9px;
+  background: rgba(255, 255, 255, .14); border: 1px solid rgba(255, 255, 255, .28);
+  color: #ffffff; font-weight: 650; font-size: .92rem; text-decoration: none;
+  transition: background .15s ease, border-color .15s ease;
+}
+.hero-links a:hover { background: rgba(255, 255, 255, .24); border-color: #9ce6d1; color: #fff; }
+.hero p { max-width: 68rem; margin: .85rem 0 0; color: #e2f5ee; font-size: .98rem; overflow-wrap: anywhere; }
+.hero strong { color: #fff; }
+
+/* Layout & Nav */
+.doc-layout { display: grid; gap: clamp(18px, 2.5vw, 34px); padding-block: 26px 64px; align-items: start; }
+main { min-width: 0; }
+nav {
+  background: var(--paper); border: 1px solid var(--line); border-top: 4px solid var(--accent);
+  border-radius: 14px; padding: 16px 14px; box-shadow: var(--shadow-sm);
+}
+nav strong { display: block; font-size: .85rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); padding-inline: 8px; }
+nav ul { list-style: none; margin: .55em 0 0; padding: 0; }
+nav li { margin: 2px 0; }
+nav a {
+  display: block; border-radius: 7px; padding: .35em .6em;
+  font-size: .91rem; font-weight: 600; color: var(--ink); text-decoration: none;
+  transition: background .15s ease, color .15s ease;
+}
+nav a:hover { background: var(--tint); color: var(--deep); }
+nav a[aria-current="true"] { background: var(--accent); color: #ffffff; }
+nav ul ul { padding-left: .65em; margin: .2em 0 .45em .55em; border-left: 2px solid var(--line); }
+nav ul ul a { font-size: .85rem; font-weight: 500; color: var(--muted); padding: .26em .55em; }
+nav ul ul a[aria-current="true"] { background: var(--tint); color: var(--deep); font-weight: 650; }
+@media (min-width: 1180px) {
+  .doc-layout { grid-template-columns: 224px minmax(0, 1fr); }
+  nav { position: sticky; top: 18px; }
+}
+@media (max-width: 1179px) {
+  nav > ul { display: flex; flex-wrap: wrap; gap: 6px 10px; }
+  nav ul ul { display: none; }
+}
+
+/* Sections */
+.doc-section {
+  padding: clamp(18px, 2.4vw, 34px);
+  margin-bottom: 24px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+}
+.section-head {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px;
+  padding-bottom: 12px; margin-bottom: 18px; border-bottom: 1px solid #e5eeeb;
+}
+.section-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 3px 10px; border-radius: 999px;
+  background: var(--tint); color: var(--accent); border: 1px solid #bfe0d7;
+  font-size: .8rem; font-weight: 700;
+}
+.doc-section h2 { font-size: clamp(1.35rem, 2.4vw, 1.85rem); margin: 0; color: var(--deep); font-weight: 800; }
+h3 {
+  margin: 2em 0 .75em; padding: 6px 12px;
+  border-left: 4px solid var(--accent); background: #f5faf8; border-radius: 0 8px 8px 0;
+  font-size: clamp(1.08rem, 1.55vw, 1.26rem); color: var(--deep); font-weight: 750;
+}
+.doc-section > h3:first-of-type { margin-top: 1.1em; }
+[id] { scroll-margin-top: 18px; }
+p { margin: .65em 0 1em; }
+.doc-section p:last-child { margin-bottom: 0; }
+.doc-section p, blockquote, td, th { overflow-wrap: anywhere; }
+code { background: #ecf3f1; color: #0f4740; border-radius: 4px; padding: .12em .35em; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .9em; }
+blockquote {
+  margin: 1em 0; background: linear-gradient(90deg, #eef8f5 0%, #f8fcfa 100%);
+  border: 1px solid #cbe4dc; border-inline-start: 4px solid var(--accent);
+  border-radius: 10px; padding: .9em 1.15em; font-size: .95rem;
+}
+blockquote p { margin: 0; }
+ul.compact-rules {
+  display: grid; gap: 8px; padding: 0; list-style: none; margin: .8em 0 1.2em;
+}
+ul.compact-rules li {
+  padding: .65em .95em; border-radius: 9px; background: #f8fbfa; border: 1px solid #dfeae6; font-size: .94rem;
+}
+
+/* Flowcharts & SVGs */
+.flow-card {
+  margin: 1.1em 0 1.5em; padding: 14px;
+  background: #f8fbfa; border: 1px solid var(--line); border-radius: 14px;
+}
+.diagram-bar {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;
+  padding: 2px 4px 12px; border-bottom: 1px solid #e1ece8; margin-bottom: 12px;
+}
+.diagram-title { font-size: .98rem; color: var(--deep); font-weight: 750; }
+.diagram-legend { display: flex; flex-wrap: wrap; gap: 10px 14px; list-style: none; margin: 0; padding: 0; font-size: .82rem; color: var(--muted); font-weight: 600; }
+.diagram-legend li { display: inline-flex; align-items: center; gap: 5px; }
+.dot { width: 11px; height: 11px; border-radius: 3px; display: inline-block; border: 1.5px solid #2b7a70; background: #fff; }
+.dot.decision { background: #dff2ec; border-color: #196f63; transform: rotate(45deg); width: 9px; height: 9px; border-radius: 2px; }
+.dot.hold { background: var(--warm-bg); border-color: #cf904b; }
+.dot.end { background: var(--deep); border-color: var(--deep); }
+.dash { width: 18px; height: 0; border-top: 2px dashed #b45309; display: inline-block; }
+
+.flow-visual svg { display: block; width: 100%; height: auto; }
+.phase-bg { fill: #f1f7f5; stroke: #d4e3de; stroke-width: 1.2; }
+.phase-name { font-size: 20px; font-weight: 800; fill: var(--deep); }
+.node { stroke-width: 1.65; }
+.node.action { fill: #ffffff; stroke: #5f9d92; }
+.node.decision { fill: #e3f4ee; stroke: #1e7366; }
+.node.hold, .return-panel { fill: var(--warm-bg); stroke: #d8a269; }
+.node.archive { fill: #f1f5f6; stroke: #8aa3a0; }
+.node.end { fill: var(--deep); stroke: var(--deep); }
+.node-text {
+  display: flex; align-items: center; justify-content: center; height: 100%;
+  text-align: center; font-size: 16.5px; font-weight: 650; line-height: 1.32; color: var(--ink);
+}
+.node-text.small { font-size: 15px; line-height: 1.28; }
+.end ~ foreignObject .node-text { color: #ffffff; }
+.decision-icon { fill: #1a6d61; }
+.forward, .return { stroke: #0f766e; stroke-width: 2.1; fill: none; stroke-linejoin: round; }
+.return { stroke: #b45309; stroke-dasharray: 6 4; }
+.edge-pill { fill: #ffffff; stroke: #b8d5ce; stroke-width: 1.1; }
+.return-pill { fill: #fff7ed; stroke: #efb982; }
+.edge-label { fill: #124c45; font-size: 13.5px; font-weight: 700; }
+.return-label { fill: var(--warm); }
+.return-heading { fill: var(--warm); font-size: 15.5px; font-weight: 800; }
+
+.flow-text { border: 1px solid var(--line); border-radius: 10px; margin-top: 10px; background: white; }
+.flow-text summary {
+  min-height: 44px; padding: .6em 1em; cursor: pointer; font-weight: 650; font-size: .92rem; color: var(--accent);
+  display: flex; align-items: center;
+}
+.flow-text[open] summary { background: var(--tint); border-radius: 9px 9px 0 0; border-bottom: 1px solid var(--line); }
+.flow-text-body { padding: .4em 1.1em 1em; font-size: .92rem; }
+.flow-group { margin-top: 1em; }
+.flow-group h4 { margin: 0 0 .4em; color: var(--deep); font-size: .98rem; }
+.flow-text-body ol { margin: .4em 0 0; padding-inline-start: 1.55em; }
+.flow-text-body ol > li { margin-top: .55em; }
+.flow-text-body ul { margin: .2em 0 0; padding-inline-start: 1.15em; }
+.return-tag { color: var(--warm); background: var(--warm-bg); border: 1px solid #f0cba4; border-radius: 4px; padding: 0 .35em; font-size: .85em; font-weight: 700; }
+@media (max-width: 920px) { .flow-visual { display: none; } }
+
+/* Tables */
+table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 1em 0 1.4em; font-size: .89rem; line-height: 1.62; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; table-layout: fixed; }
+th, td { padding: .65em .75em; vertical-align: top; border-bottom: 1px solid #e1ece8; border-right: 1px solid #e7efec; text-align: left; }
+th:last-child, td:last-child { border-right: 0; }
+tbody tr:last-child th, tbody tr:last-child td { border-bottom: 0; }
+thead th { background: var(--deep); color: white; font-weight: 700; font-size: .86rem; }
+tbody th { font-weight: 700; color: var(--deep); background: #f8fbfa; }
+tbody tr:nth-child(even) td { background: #fbfdfc; }
+tbody tr:nth-child(even) th { background: #f3f9f7; }
+tbody tr:hover td, tbody tr:hover th { background: #eef7f4; }
+.steps col:first-child { width: 12%; }
+.steps col:nth-child(2) { width: 14%; }
+.steps col:nth-child(3) { width: 29%; }
+.steps col:nth-child(4) { width: 25%; }
+.steps col:nth-child(5) { width: 20%; }
+.matrix col:first-child { width: 13%; }
+.matrix col:nth-child(2) { width: 22%; }
+.matrix col:nth-child(3) { width: 25%; }
+.matrix col:nth-child(4) { width: 20%; }
+.matrix col:nth-child(5) { width: 20%; }
+.readouts col:first-child { width: 16%; }
+.readouts col:nth-child(2) { width: 24%; }
+.readouts col:nth-child(3) { width: 32%; }
+.readouts col:nth-child(4) { width: 28%; }
+.rules col:first-child { width: 16%; }
+.rules col:nth-child(2) { width: 30%; }
+.rules col:nth-child(3) { width: 27%; }
+.rules col:nth-child(4) { width: 27%; }
+.glossary col:first-child { width: 22%; }
+.glossary col:nth-child(2) { width: 66%; }
+.glossary col:nth-child(3) { width: 12%; }
+.checklist col:first-child { width: 14%; }
+.checklist col:nth-child(2) { width: 36%; }
+.checklist col:nth-child(3) { width: 34%; }
+.checklist col:nth-child(4), .checklist col:nth-child(5) { width: 8%; }
+.cell-label { display: none; }
+@media (max-width: 790px) {
+  table, tbody, tr, th, td { display: block; border-radius: 0; border: 0; }
+  table { border: 0; }
+  colgroup { display: none; }
+  thead { position: absolute; clip-path: inset(50%); width: 1px; height: 1px; overflow: hidden; }
+  tbody tr { margin-bottom: .9em; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: white; }
+  tbody th { background: var(--tint); border-bottom: 1px solid var(--line); }
+  tbody td, tbody th { padding: .6em .85em; }
+  tbody td + td { border-top: 1px solid #e6efec; }
+  .cell-label { display: block; color: var(--deep); font-weight: 700; font-size: .82rem; margin-bottom: 2px; }
+}
+
+/* CSV Templates */
+.template { border: 1px solid var(--line); border-radius: 12px; margin: .95em 0; overflow: clip; background: white; }
+.template-bar {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5em;
+  padding: .55em .9em; background: var(--tint); border-bottom: 1px solid var(--line);
+}
+.template-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.template-bar h3 { margin: 0; padding: 0; border: 0; background: none; font-size: .98rem; color: var(--deep); }
+.col-count {
+  font-size: .78rem; font-weight: 700; color: var(--accent);
+  background: white; border: 1px solid #b8dcd2; border-radius: 999px; padding: 2px 9px;
+}
+button {
+  color: var(--accent); background: white; border: 1.5px solid #498d80; border-radius: 8px;
+  min-height: 40px; padding-inline: .95em; cursor: pointer; font: inherit; font-size: .86rem; font-weight: 700;
+  transition: background .15s ease, color .15s ease;
+}
+button:hover { background: var(--accent); color: white; border-color: var(--accent); }
+.template pre { margin: 0; padding: .85em 1em; white-space: pre-wrap; overflow-wrap: anywhere; background: #fbfdfc; line-height: 1.65; font-size: .87rem; }
+.template code { padding: 0; background: none; color: #173a35; }
+.copy-status { margin: 0; padding: 0 .95em .45em; font-size: .86rem; font-weight: 650; color: var(--accent); }
+.copy-status:empty { display: none; }
+
+footer { margin: 1.4em 0 0; display: flex; justify-content: flex-end; }
+footer a {
+  display: inline-flex; align-items: center; min-height: 40px; padding: 6px 14px;
+  background: white; border: 1px solid var(--line); border-radius: 8px; text-decoration: none; font-weight: 650;
+}
+footer a:hover { background: var(--tint); }
+
+@media print {
+  :root { background: white; font-size: 9.8pt; }
+  .skip, nav, .flow-visual, .diagram-legend, button, .copy-status, footer { display: none !important; }
+  .hero { background: white; color: var(--ink); border-bottom: 2px solid var(--deep); }
+  .hero p, .hero strong, .hero a, .metric-pill, .hero-chain li { color: var(--ink); background: none; border-color: var(--line); }
+  .hero .frame, .frame, .doc-section { padding: 0; box-shadow: none; }
+  .doc-layout { display: block; }
+  .doc-section { border: 0; margin: 1em 0; }
+  .flow-card { background: white; border-color: var(--line); padding: 8px; }
+  .flow-text { border: 0; }
+  .flow-text > .flow-text-body { content-visibility: visible !important; display: block !important; }
+  .flow-text::details-content { content-visibility: visible !important; }
+  h2, h3 { break-after: avoid; }
+  tr, .template, .flow-card { break-inside: avoid; }
+  thead th { background: #eef3f1; color: var(--ink); }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<header class="hero">
+  <div class="frame">
+    <div class="hero-top">
+      <h1>场景研究与页面搭建 SOP</h1>
+      <div class="hero-metrics" aria-label="文档概览">
+        <span class="metric-pill">4 个阶段 · 15 步</span>
+        <span class="metric-pill">6 张流程图</span>
+        <span class="metric-pill">10 张标准表</span>
+        <span class="metric-pill">10 项必验</span>
+      </div>
+    </div>
+    <ul class="hero-chain" aria-label="七步主干"><li>品运初稿</li><li class="arrow" aria-hidden="true">→</li><li>Semrush 长尾词</li><li class="arrow" aria-hidden="true">→</li><li>Semrush AI 提示词</li><li class="arrow" aria-hidden="true">→</li><li>Peec AI 补充提问</li><li class="arrow" aria-hidden="true">→</li><li>场景与分支</li><li class="arrow" aria-hidden="true">→</li><li>商品与页面</li><li class="arrow" aria-hidden="true">→</li><li>验收交付</li></ul>
+    <div class="hero-links"><a href="./skills/scene-page-workflow/SKILL.md">配套 Skill</a><a href="../index.html">公开项目报告</a><a href="../%E5%9F%BA%E7%A1%80%E9%9C%80%E6%B1%82%E8%AF%81%E6%8D%AE.csv">需求证据样例</a><a href="./%E8%B5%84%E6%96%99/GARVEE%20%E6%9E%AF%E6%9E%9D%E5%8E%9F%E6%9C%A8%E5%A4%84%E7%90%86%E5%9C%BA%E6%99%AF%E7%A0%94%E7%A9%B6%E6%B5%81%E7%A8%8B%E8%AF%B4%E6%98%8E.docx">流程参考稿</a></div>
+  </div>
+</header>
+<div class="frame doc-layout" id="top" tabindex="-1">
+<nav aria-label="文档目录"><strong>目录导航</strong><ul><li><a href="#flow">一、端到端总流程与红线</a></li><li><a href="#steps">二、分阶段执行结构与决策树</a><ul><li><a href="#stage1">阶段一：立项与数据采集（步骤 1–6）</a></li><li><a href="#stage2">阶段二：场景归并与路径分流（步骤 7–8）</a></li><li><a href="#stage3">阶段三：三关核品与页面搭建（步骤 9–12）</a></li><li><a href="#stage4">阶段四：验收、交接与授权发布（步骤 13–15）</a></li></ul></li><li><a href="#templates">三、标准数据表结构（10 张可复制 CSV 表头）</a></li><li><a href="#acceptance">四、成品验收单</a></li></ul></nav>
+<main id="main" tabindex="-1">
+<section class="doc-section" aria-labelledby="flow"><div class="section-head"><span class="section-badge">流程总览</span><h2 id="flow" tabindex="-1">一、端到端总流程与红线</h2></div>
+<p>实线按阶段推进；虚线表示缺证、冲突或验收不通过时的精准回退目标。</p>
+<figure class="flow-card" id="diagram-1">
+    
+    <div class="diagram-bar">
+      <strong class="diagram-title">图 1 · 端到端总流程图（4 阶段 · 15 步 + 精准回退）</strong>
+      <ul class="diagram-legend" aria-hidden="true">
+        <li><span class="dot action"></span>步骤</li>
+        <li><span class="dot decision"></span>判断关口</li>
+        <li><span class="dot hold"></span>待核/暂缓</li>
+        <li><span class="dot end"></span>终点/放行</li>
+        <li><span class="dash"></span>回退补证</li>
+      </ul>
+    </div>
+    <div class="flow-visual" aria-hidden="true">
+      <svg viewBox="0 0 1160 1995" xmlns="http://www.w3.org/2000/svg" focusable="false">
+        <defs>
+          <marker id="forward-end-1" viewBox="0 0 10 10" markerWidth="6" markerHeight="6" orient="auto" refX="9" refY="5"><path d="M0 0L10 5 0 10Z" fill="#0f766e" /></marker>
+          <marker id="return-end-1" viewBox="0 0 10 10" markerWidth="6" markerHeight="6" orient="auto" refX="9" refY="5"><path d="M0 0L10 5 0 10Z" fill="#b45309" /></marker>
+        </defs>
+        
+    <g>
+      <rect class="phase-bg" x="10" y="12" width="1140" height="488" rx="14" />
+      <text class="phase-name" x="30" y="46">阶段一 · 立项与数据采集（步骤 1–6）</text>
+    </g>
+    <g>
+      <rect class="phase-bg" x="10" y="514" width="1140" height="434" rx="14" />
+      <text class="phase-name" x="30" y="548">阶段二 · 场景归并与路径分流（步骤 7–8）</text>
+    </g>
+    <g>
+      <rect class="phase-bg" x="10" y="962" width="1140" height="490" rx="14" />
+      <text class="phase-name" x="30" y="996">阶段三 · 三关核品与页面搭建（步骤 9–12）</text>
+    </g>
+    <g>
+      <rect class="phase-bg" x="10" y="1466" width="1140" height="516" rx="14" />
+      <text class="phase-name" x="30" y="1500">阶段四 · 验收、交接与授权发布（步骤 13–15）</text>
+    </g>
+        <g><path data-edge="S01->S02" d="M420 120V136" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="S02->S03" d="M420 186V202" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="S03->S04" d="M420 252V268" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="S04->S05" d="M420 318V334" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="S05->D06" d="M420 384V404" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="D06->S06" d="M640 432H740" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="D06->S07" d="M420 460V564" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="S06->S07" d="M936 460V589H640" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="S07->D07" d="M420 614V634" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="D07->H07" d="M200 660H128V718" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="D07->W07" d="M640 660H936V718" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="W07->S04" d="M1132 744H1144V792H1092" class="return" marker-end="url(#return-end-1)" />
+<path data-edge="W07->S08" d="M870 770V834H640" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="D07->S08" d="M420 686V808" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="S08->S01" d="M200 834H120V808" class="return" marker-end="url(#return-end-1)" />
+<path data-edge="S08->D08" d="M420 860V882" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="D08->S09" d="M420 932V1014" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="D08->S11" d="M640 907H1096V1344H640" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="S09->S10" d="M420 1064V1082" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="S10->D10" d="M420 1132V1150" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="D10->L10" d="M300 1202V1219H160V1236" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="D10->M10" d="M502 1202V1236" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="M10->S10" d="M682 1262H704V1107H640" class="return" marker-end="url(#return-end-1)" />
+<path data-edge="D10->Y10" d="M590 1202V1219H876V1236" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="L10->S11" d="M160 1288V1344H200" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="M10->S11" d="M476 1288V1318" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="Y10->S11" d="M876 1288V1344H640" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="S11->S12" d="M420 1370V1386" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="S12->S13" d="M420 1438V1518" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="S13->S14" d="M420 1570V1622" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="S14->D15" d="M420 1672V1692" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="D15->E15" d="M330 1744V1760H181V1776" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="D15->S15" d="M510 1744V1760H786V1776" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="S15->D16" d="M786 1826V1846" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="D16->V15" d="M700 1894V1905H590V1916" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="D16->U15" d="M870 1894V1905H930V1916" class="forward" marker-end="url(#forward-end-1)" />
+<path data-edge="U15->S14" d="M1100 1941H1124V1976H1066" class="return" marker-end="url(#return-end-1)" /></g>
+        <g>
+      <rect class="return-panel" x="684" y="1500" width="448" height="240" rx="12" />
+      <text class="return-heading" x="706" y="1525">验收未通过 → 精准回退目标</text>
+      <path class="return" d="M664 1544V1714" />
+      <path data-edge="S13->S03" d="M640 1544H696" class="return" marker-end="url(#return-end-1)" />
+<g class="edge-badge" data-edge-label="原值或单位有误 → 步骤 3 · 清洗">
+    <rect class="edge-pill return-pill" x="708.0" y="1534.5" width="228.4" height="23" rx="11.5" />
+    <text class="edge-label return-label" x="708" y="1550.5" text-anchor="start">原值或单位有误 → 步骤 3 · 清洗</text>
+  </g>
+<path data-edge="S13->S05" d="M664 1570H696" class="return" marker-end="url(#return-end-1)" />
+<g class="edge-badge" data-edge-label="主题或问句有误 → 步骤 5 · AI 主题/问句">
+    <rect class="edge-pill return-pill" x="708.0" y="1558.5" width="286.0" height="23" rx="11.5" />
+    <text class="edge-label return-label" x="708" y="1574.5" text-anchor="start">主题或问句有误 → 步骤 5 · AI 主题/问句</text>
+  </g>
+<path data-edge="S13->S06" d="M664 1594H696" class="return" marker-end="url(#return-end-1)" />
+<g class="edge-badge" data-edge-label="监测口径或引用有误 → 步骤 6 · Peec 监测">
+    <rect class="edge-pill return-pill" x="708.0" y="1582.5" width="293.6" height="23" rx="11.5" />
+    <text class="edge-label return-label" x="708" y="1598.5" text-anchor="start">监测口径或引用有误 → 步骤 6 · Peec 监测</text>
+  </g>
+<path data-edge="S13->S07" d="M664 1618H696" class="return" marker-end="url(#return-end-1)" />
+<g class="edge-badge" data-edge-label="意图归并有歧义 → 步骤 7 · 意图归并">
+    <rect class="edge-pill return-pill" x="708.0" y="1606.5" width="255.6" height="23" rx="11.5" />
+    <text class="edge-label return-label" x="708" y="1622.5" text-anchor="start">意图归并有歧义 → 步骤 7 · 意图归并</text>
+  </g>
+<path data-edge="S13->S01" d="M664 1642H696" class="return" marker-end="url(#return-end-1)" />
+<g class="edge-badge" data-edge-label="范围或基线不符 → 步骤 1 · 立项/基线">
+    <rect class="edge-pill return-pill" x="708.0" y="1630.5" width="263.2" height="23" rx="11.5" />
+    <text class="edge-label return-label" x="708" y="1646.5" text-anchor="start">范围或基线不符 → 步骤 1 · 立项/基线</text>
+  </g>
+<path data-edge="S13->S08" d="M664 1666H696" class="return" marker-end="url(#return-end-1)" />
+<g class="edge-badge" data-edge-label="选路或分支有误 → 步骤 8 · 分支选路">
+    <rect class="edge-pill return-pill" x="708.0" y="1654.5" width="255.6" height="23" rx="11.5" />
+    <text class="edge-label return-label" x="708" y="1670.5" text-anchor="start">选路或分支有误 → 步骤 8 · 分支选路</text>
+  </g>
+<path data-edge="S13->S10" d="M664 1690H696" class="return" marker-end="url(#return-end-1)" />
+<g class="edge-badge" data-edge-label="型号或兼容有误 → 步骤 10 · 核品兼容">
+    <rect class="edge-pill return-pill" x="708.0" y="1678.5" width="263.2" height="23" rx="11.5" />
+    <text class="edge-label return-label" x="708" y="1694.5" text-anchor="start">型号或兼容有误 → 步骤 10 · 核品兼容</text>
+  </g>
+<path data-edge="S13->S12" d="M664 1714H696" class="return" marker-end="url(#return-end-1)" />
+<g class="edge-badge" data-edge-label="模块或呈现有误 → 步骤 12 · 模块呈现">
+    <rect class="edge-pill return-pill" x="708.0" y="1702.5" width="263.2" height="23" rx="11.5" />
+    <text class="edge-label return-label" x="708" y="1718.5" text-anchor="start">模块或呈现有误 → 步骤 12 · 模块呈现</text>
+  </g>
+    </g>
+        <g data-node="S01">
+      <rect class="node action" x="200" y="68" width="440" height="52" rx="11" />
+      
+      <foreignObject x="212" y="71" width="416" height="46">
+        <div class="node-text">1. 品运立项：范围单、种子词表、待查问题与指定基线</div>
+      </foreignObject>
+    </g>
+<g data-node="S02">
+      <rect class="node action" x="200" y="136" width="440" height="50" rx="11" />
+      
+      <foreignObject x="212" y="139" width="416" height="44">
+        <div class="node-text">2. Semrush 长尾词工具（KMT）：选国家库逐词导出</div>
+      </foreignObject>
+    </g>
+<g data-node="S03">
+      <rect class="node action" x="200" y="202" width="440" height="50" rx="11" />
+      
+      <foreignObject x="212" y="205" width="416" height="44">
+        <div class="node-text">3. 清洗去重：保原值、出处与单位，同键合并、冲突双留</div>
+      </foreignObject>
+    </g>
+<g data-node="S04">
+      <rect class="node action" x="200" y="268" width="440" height="50" rx="11" />
+      
+      <foreignObject x="212" y="271" width="416" height="44">
+        <div class="node-text">4. 分词与八维聚类：标主意图，选出场景词与任务词</div>
+      </foreignObject>
+    </g>
+<g data-node="S05">
+      <rect class="node action" x="200" y="334" width="440" height="50" rx="11" />
+      
+      <foreignObject x="212" y="337" width="416" height="44">
+        <div class="node-text">5. Semrush AI Prompt Research：单场景词导出主题与原问句</div>
+      </foreignObject>
+    </g>
+<g data-node="D06">
+      <rect class="node decision" x="200" y="404" width="440" height="56" rx="9" />
+      <path class="decision-icon" d="M217 432l7 -7 7 7 -7 7Z" />
+      <foreignObject x="238" y="407" width="392" height="50">
+        <div class="node-text">6a. 现有证据能否答清分支与选型？</div>
+      </foreignObject>
+    </g>
+<g data-node="S06">
+      <rect class="node action" x="740" y="404" width="392" height="56" rx="11" />
+      
+      <foreignObject x="752" y="407" width="368" height="50">
+        <div class="node-text">6. Peec AI：补充配置提问，导出回答与引用</div>
+      </foreignObject>
+    </g>
+<g data-node="S07">
+      <rect class="node action" x="200" y="564" width="440" height="50" rx="11" />
+      
+      <foreignObject x="212" y="567" width="416" height="44">
+        <div class="node-text">7. 归并场景证据卡：分列观察、推断与设计选择</div>
+      </foreignObject>
+    </g>
+<g data-node="D07">
+      <rect class="node decision" x="200" y="634" width="440" height="52" rx="9" />
+      <path class="decision-icon" d="M217 660l7 -7 7 7 -7 7Z" />
+      <foreignObject x="238" y="637" width="392" height="46">
+        <div class="node-text">7a. 原文能否区分目标、动作或限制？</div>
+      </foreignObject>
+    </g>
+<g data-node="H07">
+      <rect class="node archive" x="26" y="718" width="204" height="52" rx="11" />
+      
+      <foreignObject x="38" y="721" width="180" height="46">
+        <div class="node-text">记排除理由，归档结束</div>
+      </foreignObject>
+    </g>
+<g data-node="W07">
+      <rect class="node hold" x="740" y="718" width="392" height="52" rx="11" />
+      
+      <foreignObject x="752" y="721" width="368" height="46">
+        <div class="node-text">留待核假设，不拆分支，仅给有据说明</div>
+      </foreignObject>
+    </g>
+<g data-node="S08">
+      <rect class="node action" x="200" y="808" width="440" height="52" rx="11" />
+      
+      <foreignObject x="212" y="811" width="416" height="46">
+        <div class="node-text">8. 对照基线做反事实检验：定入口、分支、跳过与终点</div>
+      </foreignObject>
+    </g>
+<g data-node="D08">
+      <rect class="node decision" x="200" y="882" width="440" height="50" rx="9" />
+      <path class="decision-icon" d="M217 907l7 -7 7 7 -7 7Z" />
+      <foreignObject x="238" y="885" width="392" height="44">
+        <div class="node-text">8a. 分支是否涉及商品选型？</div>
+      </foreignObject>
+    </g>
+<g data-node="S09">
+      <rect class="node action" x="200" y="1014" width="440" height="50" rx="11" />
+      
+      <foreignObject x="212" y="1017" width="416" height="44">
+        <div class="node-text">9. 目录召回：按角色查型号，区分整套含件与独立单件</div>
+      </foreignObject>
+    </g>
+<g data-node="S11">
+      <rect class="node action" x="200" y="1318" width="440" height="52" rx="11" />
+      
+      <foreignObject x="212" y="1321" width="416" height="46">
+        <div class="node-text">11. 问题落点分流，发生成任务卡（冻结输入与禁写项）</div>
+      </foreignObject>
+    </g>
+<g data-node="S10">
+      <rect class="node action" x="200" y="1082" width="440" height="50" rx="11" />
+      
+      <foreignObject x="212" y="1085" width="416" height="44">
+        <div class="node-text">10. 三关核品：核目标市场渠道在架链接与场景兼容</div>
+      </foreignObject>
+    </g>
+<g data-node="D10">
+      <rect class="node decision" x="200" y="1150" width="440" height="52" rx="9" />
+      <path class="decision-icon" d="M217 1176l7 -7 7 7 -7 7Z" />
+      <foreignObject x="238" y="1153" width="392" height="46">
+        <div class="node-text">10a. 上架与适用判定</div>
+      </foreignObject>
+    </g>
+<g data-node="L10">
+      <rect class="node action" x="26" y="1236" width="268" height="52" rx="11" />
+      
+      <foreignObject x="38" y="1239" width="244" height="46">
+        <div class="node-text">可售卖商品表（允许推荐）</div>
+      </foreignObject>
+    </g>
+<g data-node="M10">
+      <rect class="node hold" x="322" y="1236" width="360" height="52" rx="11" />
+      
+      <foreignObject x="334" y="1239" width="336" height="46">
+        <div class="node-text">待核清单（列补查人，页面给自核项）</div>
+      </foreignObject>
+    </g>
+<g data-node="Y10">
+      <rect class="node action" x="710" y="1236" width="332" height="52" rx="11" />
+      
+      <foreignObject x="722" y="1239" width="308" height="46">
+        <div class="node-text">品类商机卡（页面给无绑定选型说明）</div>
+      </foreignObject>
+    </g>
+<g data-node="S12">
+      <rect class="node action" x="200" y="1386" width="440" height="52" rx="11" />
+      
+      <foreignObject x="212" y="1389" width="416" height="46">
+        <div class="node-text">12. 搭建模块表与页面原型：校验选路、跳过与返回</div>
+      </foreignObject>
+    </g>
+<g data-node="S13">
+      <rect class="node action" x="200" y="1518" width="440" height="52" rx="11" />
+      
+      <foreignObject x="212" y="1521" width="416" height="46">
+        <div class="node-text">13. 成品验收：证据反查、口径核对、选路与可访问性</div>
+      </foreignObject>
+    </g>
+<g data-node="S14">
+      <rect class="node action" x="200" y="1622" width="440" height="50" rx="11" />
+      
+      <foreignObject x="212" y="1625" width="416" height="44">
+        <div class="node-text">14. 冻结版本，完成约定复审与本地交接</div>
+      </foreignObject>
+    </g>
+<g data-node="D15">
+      <rect class="node decision" x="200" y="1692" width="440" height="52" rx="9" />
+      <path class="decision-icon" d="M217 1718l7 -7 7 7 -7 7Z" />
+      <foreignObject x="238" y="1695" width="392" height="46">
+        <div class="node-text">15a. 另有该版本与目标的发布授权？</div>
+      </foreignObject>
+    </g>
+<g data-node="E15">
+      <rect class="node end" x="26" y="1776" width="310" height="50" rx="11" />
+      
+      <foreignObject x="38" y="1779" width="286" height="44">
+        <div class="node-text">本地交付结束，登记权限状态</div>
+      </foreignObject>
+    </g>
+<g data-node="S15">
+      <rect class="node action" x="516" y="1776" width="540" height="50" rx="11" />
+      
+      <foreignObject x="528" y="1779" width="516" height="44">
+        <div class="node-text">15. 按授权发布并从目标位回读版本、清单与指纹</div>
+      </foreignObject>
+    </g>
+<g data-node="D16">
+      <rect class="node decision" x="516" y="1846" width="540" height="48" rx="9" />
+      <path class="decision-icon" d="M533 1870l7 -7 7 7 -7 7Z" />
+      <foreignObject x="554" y="1849" width="492" height="42">
+        <div class="node-text">15b. 回读是否一致？</div>
+      </foreignObject>
+    </g>
+<g data-node="V15">
+      <rect class="node end" x="460" y="1916" width="260" height="50" rx="11" />
+      
+      <foreignObject x="472" y="1919" width="236" height="44">
+        <div class="node-text">登记发布回执，流程完结</div>
+      </foreignObject>
+    </g>
+<g data-node="U15">
+      <rect class="node hold" x="760" y="1916" width="340" height="50" rx="11" />
+      
+      <foreignObject x="772" y="1919" width="316" height="44">
+        <div class="node-text">暂停对外确认，核实外部状态后回查冻结包</div>
+      </foreignObject>
+    </g>
+        <g><g class="edge-badge" data-edge-label="不能且有权限">
+    <rect class="edge-pill" x="640.2" y="400.5" width="99.6" height="23" rx="11.5" />
+    <text class="edge-label" x="690" y="416.5" text-anchor="middle">不能且有权限</text>
+  </g>
+<g class="edge-badge" data-edge-label="已足够或无权限跳过，记原因">
+    <rect class="edge-pill" x="325.6" y="476.5" width="188.8" height="23" rx="11.5" />
+    <text class="edge-label" x="420" y="492.5" text-anchor="middle">已足够或无权限跳过，记原因</text>
+  </g>
+<g class="edge-badge" data-edge-label="噪声或同名错义">
+    <rect class="edge-pill" x="71.4" y="634.5" width="113.2" height="23" rx="11.5" />
+    <text class="edge-label" x="128" y="650.5" text-anchor="middle">噪声或同名错义</text>
+  </g>
+<g class="edge-badge" data-edge-label="弱证据或矛盾">
+    <rect class="edge-pill" x="760.2" y="634.5" width="99.6" height="23" rx="11.5" />
+    <text class="edge-label" x="810" y="650.5" text-anchor="middle">弱证据或矛盾</text>
+  </g>
+<g class="edge-badge" data-edge-label="需改入口且可补证 → 步骤 4 · 分类选词">
+    <rect class="edge-pill return-pill" x="814.8" y="780.5" width="269.2" height="23" rx="11.5" />
+    <text class="edge-label return-label" x="1084" y="796.5" text-anchor="end">需改入口且可补证 → 步骤 4 · 分类选词</text>
+  </g>
+<g class="edge-badge" data-edge-label="仅用已支持部分">
+    <rect class="edge-pill" x="705.4" y="822.5" width="113.2" height="23" rx="11.5" />
+    <text class="edge-label" x="762" y="838.5" text-anchor="middle">仅用已支持部分</text>
+  </g>
+<g class="edge-badge" data-edge-label="能">
+    <rect class="edge-pill" x="404.2" y="734.5" width="31.6" height="23" rx="11.5" />
+    <text class="edge-label" x="420" y="750.5" text-anchor="middle">能</text>
+  </g>
+<g class="edge-badge" data-edge-label="基线冲突或范围不清 → 步骤 1">
+    <rect class="edge-pill return-pill" x="22.0" y="780.5" width="205.6" height="23" rx="11.5" />
+    <text class="edge-label return-label" x="22" y="796.5" text-anchor="start">基线冲突或范围不清 → 步骤 1</text>
+  </g>
+<g class="edge-badge" data-edge-label="需商品或选型">
+    <rect class="edge-pill" x="370.2" y="970.5" width="99.6" height="23" rx="11.5" />
+    <text class="edge-label" x="420" y="986.5" text-anchor="middle">需商品或选型</text>
+  </g>
+<g class="edge-badge" data-edge-label="纯信息或服务">
+    <rect class="edge-pill" x="924.2" y="970.5" width="99.6" height="23" rx="11.5" />
+    <text class="edge-label" x="974" y="986.5" text-anchor="middle">纯信息或服务</text>
+  </g>
+<g class="edge-badge" data-edge-label="上架且适用">
+    <rect class="edge-pill" x="137.0" y="1205.5" width="86.0" height="23" rx="11.5" />
+    <text class="edge-label" x="180" y="1221.5" text-anchor="middle">上架且适用</text>
+  </g>
+<g class="edge-badge" data-edge-label="适配未明、限域未命中或冲突">
+    <rect class="edge-pill" x="407.6" y="1205.5" width="188.8" height="23" rx="11.5" />
+    <text class="edge-label" x="502" y="1221.5" text-anchor="middle">适配未明、限域未命中或冲突</text>
+  </g>
+<g class="edge-badge" data-edge-label="补齐资料">
+    <rect class="edge-pill return-pill" x="716.0" y="1152.5" width="72.4" height="23" rx="11.5" />
+    <text class="edge-label return-label" x="716" y="1168.5" text-anchor="start">补齐资料</text>
+  </g>
+<g class="edge-badge" data-edge-label="确认未上架且需求成立">
+    <rect class="edge-pill" x="769.0" y="1205.5" width="154.0" height="23" rx="11.5" />
+    <text class="edge-label" x="846" y="1221.5" text-anchor="middle">确认未上架且需求成立</text>
+  </g>
+<g class="edge-badge" data-edge-label="通过">
+    <rect class="edge-pill" x="434.0" y="1583.5" width="45.2" height="23" rx="11.5" />
+    <text class="edge-label" x="434" y="1599.5" text-anchor="start">通过</text>
+  </g>
+<g class="edge-badge" data-edge-label="无或待批">
+    <rect class="edge-pill" x="201.8" y="1746.5" width="72.4" height="23" rx="11.5" />
+    <text class="edge-label" x="238" y="1762.5" text-anchor="middle">无或待批</text>
+  </g>
+<g class="edge-badge" data-edge-label="有">
+    <rect class="edge-pill" x="674.2" y="1746.5" width="31.6" height="23" rx="11.5" />
+    <text class="edge-label" x="690" y="1762.5" text-anchor="middle">有</text>
+  </g>
+<g class="edge-badge" data-edge-label="一致">
+    <rect class="edge-pill" x="597.4" y="1892.5" width="45.2" height="23" rx="11.5" />
+    <text class="edge-label" x="620" y="1908.5" text-anchor="middle">一致</text>
+  </g>
+<g class="edge-badge" data-edge-label="不一致或未知">
+    <rect class="edge-pill" x="898.2" y="1892.5" width="99.6" height="23" rx="11.5" />
+    <text class="edge-label" x="948" y="1908.5" text-anchor="middle">不一致或未知</text>
+  </g>
+<g class="edge-badge" data-edge-label="步骤 14 · 冻结交接">
+    <rect class="edge-pill return-pill" x="912.8" y="1964.5" width="145.2" height="23" rx="11.5" />
+    <text class="edge-label return-label" x="1058" y="1980.5" text-anchor="end">步骤 14 · 冻结交接</text>
+  </g></g>
+      </svg>
+    </div>
+    <details class="flow-text" id="flow-text-1">
+    <summary>按文字展开流程与分支明细（29 个节点）</summary>
+    <div class="flow-text-body">
+      <section class="flow-group">
+        <h4>阶段一 · 立项与数据采集（步骤 1–6）</h4>
+        <ol><li data-text-node="S01"><strong>1. 品运立项：范围单、种子词表、待查问题与指定基线</strong><ul><li data-text-edge="S01->S02">接续 → 2. Semrush 长尾词工具（KMT）：选国家库逐词导出</li></ul></li><li data-text-node="S02"><strong>2. Semrush 长尾词工具（KMT）：选国家库逐词导出</strong><ul><li data-text-edge="S02->S03">接续 → 3. 清洗去重：保原值、出处与单位，同键合并、冲突双留</li></ul></li><li data-text-node="S03"><strong>3. 清洗去重：保原值、出处与单位，同键合并、冲突双留</strong><ul><li data-text-edge="S03->S04">接续 → 4. 分词与八维聚类：标主意图，选出场景词与任务词</li></ul></li><li data-text-node="S04"><strong>4. 分词与八维聚类：标主意图，选出场景词与任务词</strong><ul><li data-text-edge="S04->S05">接续 → 5. Semrush AI Prompt Research：单场景词导出主题与原问句</li></ul></li><li data-text-node="S05"><strong>5. Semrush AI Prompt Research：单场景词导出主题与原问句</strong><ul><li data-text-edge="S05->D06">接续 → 6a. 现有证据能否答清分支与选型？</li></ul></li><li data-text-node="D06"><strong>6a. 现有证据能否答清分支与选型？</strong><ul><li data-text-edge="D06->S06">不能且有权限 → 6. Peec AI：补充配置提问，导出回答与引用</li><li data-text-edge="D06->S07">已足够或无权限跳过，记原因 → 7. 归并场景证据卡：分列观察、推断与设计选择</li></ul></li><li data-text-node="S06"><strong>6. Peec AI：补充配置提问，导出回答与引用</strong><ul><li data-text-edge="S06->S07">接续 → 7. 归并场景证据卡：分列观察、推断与设计选择</li></ul></li></ol>
+      </section>
+      <section class="flow-group">
+        <h4>阶段二 · 场景归并与路径分流（步骤 7–8）</h4>
+        <ol><li data-text-node="S07"><strong>7. 归并场景证据卡：分列观察、推断与设计选择</strong><ul><li data-text-edge="S07->D07">接续 → 7a. 原文能否区分目标、动作或限制？</li></ul></li><li data-text-node="D07"><strong>7a. 原文能否区分目标、动作或限制？</strong><ul><li data-text-edge="D07->H07">噪声或同名错义 → 记排除理由，归档结束</li><li data-text-edge="D07->W07">弱证据或矛盾 → 留待核假设，不拆分支，仅给有据说明</li><li data-text-edge="D07->S08">能 → 8. 对照基线做反事实检验：定入口、分支、跳过与终点</li></ul></li><li data-text-node="H07"><strong>记排除理由，归档结束</strong></li><li data-text-node="W07"><strong>留待核假设，不拆分支，仅给有据说明</strong><ul><li data-text-edge="W07->S04"><span class="return-tag">回退</span> 需改入口且可补证 → 4. 分词与八维聚类：标主意图，选出场景词与任务词</li><li data-text-edge="W07->S08">仅用已支持部分 → 8. 对照基线做反事实检验：定入口、分支、跳过与终点</li></ul></li><li data-text-node="S08"><strong>8. 对照基线做反事实检验：定入口、分支、跳过与终点</strong><ul><li data-text-edge="S08->S01"><span class="return-tag">回退</span> 基线冲突或范围不清 → 1. 品运立项：范围单、种子词表、待查问题与指定基线</li><li data-text-edge="S08->D08">接续 → 8a. 分支是否涉及商品选型？</li></ul></li><li data-text-node="D08"><strong>8a. 分支是否涉及商品选型？</strong><ul><li data-text-edge="D08->S09">需商品或选型 → 9. 目录召回：按角色查型号，区分整套含件与独立单件</li><li data-text-edge="D08->S11">纯信息或服务 → 11. 问题落点分流，发生成任务卡（冻结输入与禁写项）</li></ul></li></ol>
+      </section>
+      <section class="flow-group">
+        <h4>阶段三 · 三关核品与页面搭建（步骤 9–12）</h4>
+        <ol><li data-text-node="S09"><strong>9. 目录召回：按角色查型号，区分整套含件与独立单件</strong><ul><li data-text-edge="S09->S10">接续 → 10. 三关核品：核目标市场渠道在架链接与场景兼容</li></ul></li><li data-text-node="S10"><strong>10. 三关核品：核目标市场渠道在架链接与场景兼容</strong><ul><li data-text-edge="S10->D10">接续 → 10a. 上架与适用判定</li></ul></li><li data-text-node="D10"><strong>10a. 上架与适用判定</strong><ul><li data-text-edge="D10->L10">上架且适用 → 可售卖商品表（允许推荐）</li><li data-text-edge="D10->M10">适配未明、限域未命中或冲突 → 待核清单（列补查人，页面给自核项）</li><li data-text-edge="D10->Y10">确认未上架且需求成立 → 品类商机卡（页面给无绑定选型说明）</li></ul></li><li data-text-node="L10"><strong>可售卖商品表（允许推荐）</strong><ul><li data-text-edge="L10->S11">接续 → 11. 问题落点分流，发生成任务卡（冻结输入与禁写项）</li></ul></li><li data-text-node="M10"><strong>待核清单（列补查人，页面给自核项）</strong><ul><li data-text-edge="M10->S10"><span class="return-tag">回退</span> 补齐资料 → 10. 三关核品：核目标市场渠道在架链接与场景兼容</li><li data-text-edge="M10->S11">接续 → 11. 问题落点分流，发生成任务卡（冻结输入与禁写项）</li></ul></li><li data-text-node="Y10"><strong>品类商机卡（页面给无绑定选型说明）</strong><ul><li data-text-edge="Y10->S11">接续 → 11. 问题落点分流，发生成任务卡（冻结输入与禁写项）</li></ul></li><li data-text-node="S11"><strong>11. 问题落点分流，发生成任务卡（冻结输入与禁写项）</strong><ul><li data-text-edge="S11->S12">接续 → 12. 搭建模块表与页面原型：校验选路、跳过与返回</li></ul></li><li data-text-node="S12"><strong>12. 搭建模块表与页面原型：校验选路、跳过与返回</strong><ul><li data-text-edge="S12->S13">接续 → 13. 成品验收：证据反查、口径核对、选路与可访问性</li></ul></li></ol>
+      </section>
+      <section class="flow-group">
+        <h4>阶段四 · 验收、交接与授权发布（步骤 13–15）</h4>
+        <ol><li data-text-node="S13"><strong>13. 成品验收：证据反查、口径核对、选路与可访问性</strong><ul><li data-text-edge="S13->S03"><span class="return-tag">回退</span> 原值或单位有误 → 3. 清洗去重：保原值、出处与单位，同键合并、冲突双留</li><li data-text-edge="S13->S05"><span class="return-tag">回退</span> 主题或问句有误 → 5. Semrush AI Prompt Research：单场景词导出主题与原问句</li><li data-text-edge="S13->S06"><span class="return-tag">回退</span> 监测口径或引用有误 → 6. Peec AI：补充配置提问，导出回答与引用</li><li data-text-edge="S13->S07"><span class="return-tag">回退</span> 意图归并有歧义 → 7. 归并场景证据卡：分列观察、推断与设计选择</li><li data-text-edge="S13->S01"><span class="return-tag">回退</span> 范围或基线不符 → 1. 品运立项：范围单、种子词表、待查问题与指定基线</li><li data-text-edge="S13->S08"><span class="return-tag">回退</span> 选路或分支有误 → 8. 对照基线做反事实检验：定入口、分支、跳过与终点</li><li data-text-edge="S13->S10"><span class="return-tag">回退</span> 型号或兼容有误 → 10. 三关核品：核目标市场渠道在架链接与场景兼容</li><li data-text-edge="S13->S12"><span class="return-tag">回退</span> 模块或呈现有误 → 12. 搭建模块表与页面原型：校验选路、跳过与返回</li><li data-text-edge="S13->S14">通过 → 14. 冻结版本，完成约定复审与本地交接</li></ul></li><li data-text-node="S14"><strong>14. 冻结版本，完成约定复审与本地交接</strong><ul><li data-text-edge="S14->D15">接续 → 15a. 另有该版本与目标的发布授权？</li></ul></li><li data-text-node="D15"><strong>15a. 另有该版本与目标的发布授权？</strong><ul><li data-text-edge="D15->E15">无或待批 → 本地交付结束，登记权限状态</li><li data-text-edge="D15->S15">有 → 15. 按授权发布并从目标位回读版本、清单与指纹</li></ul></li><li data-text-node="E15"><strong>本地交付结束，登记权限状态</strong></li><li data-text-node="S15"><strong>15. 按授权发布并从目标位回读版本、清单与指纹</strong><ul><li data-text-edge="S15->D16">接续 → 15b. 回读是否一致？</li></ul></li><li data-text-node="D16"><strong>15b. 回读是否一致？</strong><ul><li data-text-edge="D16->V15">一致 → 登记发布回执，流程完结</li><li data-text-edge="D16->U15">不一致或未知 → 暂停对外确认，核实外部状态后回查冻结包</li></ul></li><li data-text-node="V15"><strong>登记发布回执，流程完结</strong></li><li data-text-node="U15"><strong>暂停对外确认，核实外部状态后回查冻结包</strong><ul><li data-text-edge="U15->S14"><span class="return-tag">回退</span> 接续 → 14. 冻结版本，完成约定复审与本地交接</li></ul></li></ol>
+      </section></div>
+  </details>
+  </figure>
+<p><strong>四条流程红线（全流程适用）</strong></p>
+<table class="rules" role="table"><colgroup><col><col><col><col></colgroup><thead><tr><th id="rules-3-0" scope="col">红线项</th><th id="rules-3-1" scope="col">硬性判定标准</th><th id="rules-3-2" scope="col">禁止行为</th><th id="rules-3-3" scope="col">正确处置</th></tr></thead><tbody><tr><th scope="row">可售卖定义</th><td><span class="cell-label" aria-hidden="true">硬性判定标准</span>目标市场 <strong>且</strong> 目标渠道已上架 <strong>且</strong> 当前分支适用，三者缺一不可</td><td><span class="cell-label" aria-hidden="true">禁止行为</span>仅凭目录命中、异市场/异渠道链接或历史链接直接推荐</td><td><span class="cell-label" aria-hidden="true">正确处置</span>在架与适用分别留证；缺任一关进待核清单或商机卡</td></tr>
+<tr><th scope="row">读数口径隔离</th><td><span class="cell-label" aria-hidden="true">硬性判定标准</span>关键词月估算、AI 主题估值、问句附带估值、Peec 运行数属不同层级</td><td><span class="cell-label" aria-hidden="true">禁止行为</span>跨层相加、跨模型求和、对冲突值取均值、把估值当真实流量</td><td><span class="cell-label" aria-hidden="true">正确处置</span>按原始层级分列标注；同键异值双留来源并暂停该数值比较</td></tr>
+<tr><th scope="row">两类提示词区分</th><td><span class="cell-label" aria-hidden="true">硬性判定标准</span><strong>研究提示词</strong>（步骤 5/6 收录或监测）≠ <strong>生成任务卡</strong>（步骤 11 约束产出）</td><td><span class="cell-label" aria-hidden="true">禁止行为</span>把模型回答当客观事实，或把内部配置题直接当作用户搜索需求</td><td><span class="cell-label" aria-hidden="true">正确处置</span>模型说法须回查引用原文或商品资料；页面只采信可追溯原词/原问句</td></tr>
+<tr><th scope="row">发布授权门禁</th><td><span class="cell-label" aria-hidden="true">硬性判定标准</span>无该版本与目标的明确发布授权时，流程止于步骤 14 本地交接</td><td><span class="cell-label" aria-hidden="true">禁止行为</span>默认外发、未回读即对外确认、状态未知时整包重发</td><td><span class="cell-label" aria-hidden="true">正确处置</span>回读目标位版本、文件清单与指纹；异常先核查外部实际状态</td></tr></tbody></table>
+<p><strong>核心术语速查（一句话看懂专业名词）</strong></p>
+<table class="glossary" role="table"><colgroup><col><col><col></colgroup><thead><tr><th id="glossary-5-0" scope="col">术语</th><th id="glossary-5-1" scope="col">一句话释义</th><th id="glossary-5-2" scope="col">所在步骤</th></tr></thead><tbody><tr><th scope="row">种子词（Seed）</th><td><span class="cell-label" aria-hidden="true">一句话释义</span>从品运初稿提炼的产品核心词、当地别称或任务词，用作 Semrush 扩词起点</td><td><span class="cell-label" aria-hidden="true">所在步骤</span>1–2</td></tr>
+<tr><th scope="row">归一键 / 去重键</th><td><span class="cell-label" aria-hidden="true">一句话释义</span><code>归一键</code>按语言统一大小写和空格；<code>去重键</code>=<code>归一键+市场+窗口+口径</code>，用于同口径去重</td><td><span class="cell-label" aria-hidden="true">所在步骤</span>3</td></tr>
+<tr><th scope="row">同键异值</th><td><span class="cell-label" aria-hidden="true">一句话释义</span>同一去重键出现多个不同数值时，双留来源进冲突表，不取均值、暂停该数值比较</td><td><span class="cell-label" aria-hidden="true">所在步骤</span>3</td></tr>
+<tr><th scope="row">八维标注与主意图</th><td><span class="cell-label" aria-hidden="true">一句话释义</span>按核心词/场景/动作/材料/配件/属性适配/比较选购/用户问题多选标注，另定唯一主意图</td><td><span class="cell-label" aria-hidden="true">所在步骤</span>4</td></tr>
+<tr><th scope="row">AI Topic / Prompt</th><td><span class="cell-label" aria-hidden="true">一句话释义</span>Semrush 中 <code>Topic</code> 为主题聚合估值，<code>Prompt</code> 为具体原问句；两者数值分层，不可相加</td><td><span class="cell-label" aria-hidden="true">所在步骤</span>5</td></tr>
+<tr><th scope="row">配置题 / 运行数</th><td><span class="cell-label" aria-hidden="true">一句话释义</span>Peec 中团队配置的监测问题（<code>promptId</code>）及各次回答记录（<code>runId</code>），仅作观察线索，非流量</td><td><span class="cell-label" aria-hidden="true">所在步骤</span>6</td></tr>
+<tr><th scope="row">观察 / 推断 / 选择</th><td><span class="cell-label" aria-hidden="true">一句话释义</span><code>原文观察</code>为词句字面；<code>语义推断</code>为条件推测；<code>设计选择</code>为页面落点决定，三者分栏不混写</td><td><span class="cell-label" aria-hidden="true">所在步骤</span>7</td></tr>
+<tr><th scope="row">指定基线</th><td><span class="cell-label" aria-hidden="true">一句话释义</span>旧版方案互相冲突时，由范围负责人书面指定的唯一比对起点版本</td><td><span class="cell-label" aria-hidden="true">所在步骤</span>1、8</td></tr>
+<tr><th scope="row">反事实检验</th><td><span class="cell-label" aria-hidden="true">一句话释义</span>假设条件改变后，检验<strong>下一动作、适用商品、操作前提</strong>是否实质变化；均不变则不拆分支</td><td><span class="cell-label" aria-hidden="true">所在步骤</span>8</td></tr>
+<tr><th scope="row">整套含件 vs 单件</th><td><span class="cell-label" aria-hidden="true">一句话释义</span>随主机打包附带的部件（不可单买）与独立上架售卖的备件/配件，核品时必须分开登记</td><td><span class="cell-label" aria-hidden="true">所在步骤</span>9–10</td></tr>
+<tr><th scope="row">可售卖 vs 限域未命中</th><td><span class="cell-label" aria-hidden="true">一句话释义</span><code>可售卖</code>须满足目标市场+渠道已上架且适用；<code>限域未命中</code>指仅部分目录未查到，进待核</td><td><span class="cell-label" aria-hidden="true">所在步骤</span>10</td></tr>
+<tr><th scope="row">served 型号 / 指纹</th><td><span class="cell-label" aria-hidden="true">一句话释义</span><code>served 型号</code>指模型复审时服务端实际响应版本；<code>指纹</code>指文件校验哈希或版本号，用于核对一致</td><td><span class="cell-label" aria-hidden="true">所在步骤</span>14–15</td></tr></tbody></table>
+</section>
+<section class="doc-section" aria-labelledby="steps"><div class="section-head"><span class="section-badge">分步执行</span><h2 id="steps" tabindex="-1">二、分阶段执行结构与决策树</h2></div>
+<h3 id="stage1" tabindex="-1">1. 阶段一：立项与数据采集（步骤 1–6）</h3>
+<figure class="flow-card" id="diagram-2">
+    
+    <div class="diagram-bar">
+      <strong class="diagram-title">图 2 · 阶段一：采集、清洗与八维聚类流水线（步骤 1–6）</strong>
+      <ul class="diagram-legend" aria-hidden="true">
+        <li><span class="dot action"></span>步骤</li>
+        <li><span class="dot decision"></span>判断关口</li>
+        <li><span class="dot hold"></span>待核/暂缓</li>
+        <li><span class="dot end"></span>终点/放行</li>
+        <li><span class="dash"></span>回退补证</li>
+      </ul>
+    </div>
+    <div class="flow-visual" aria-hidden="true">
+      <svg viewBox="0 0 1120 910" xmlns="http://www.w3.org/2000/svg" focusable="false">
+        <defs>
+          <marker id="forward-end-2" viewBox="0 0 10 10" markerWidth="6" markerHeight="6" orient="auto" refX="9" refY="5"><path d="M0 0L10 5 0 10Z" fill="#0f766e" /></marker>
+          <marker id="return-end-2" viewBox="0 0 10 10" markerWidth="6" markerHeight="6" orient="auto" refX="9" refY="5"><path d="M0 0L10 5 0 10Z" fill="#b45309" /></marker>
+        </defs>
+        
+        <g><path data-edge="P1->P1A" d="M440 68V82H192V96" class="forward" marker-end="url(#forward-end-2)" />
+<path data-edge="P1->P1B" d="M560 68V96" class="forward" marker-end="url(#forward-end-2)" />
+<path data-edge="P1->P1C" d="M680 68V82H928V96" class="forward" marker-end="url(#forward-end-2)" />
+<path data-edge="P1B->P2" d="M560 148V178" class="forward" marker-end="url(#forward-end-2)" />
+<path data-edge="P2->P3" d="M560 226V254" class="forward" marker-end="url(#forward-end-2)" />
+<path data-edge="P3->D3" d="M440 302V317H320V332" class="forward" marker-end="url(#forward-end-2)" />
+<path data-edge="D3->P3C" d="M440 356H620" class="forward" marker-end="url(#forward-end-2)" />
+<path data-edge="D3->P4" d="M320 380V412" class="forward" marker-end="url(#forward-end-2)" />
+<path data-edge="P3C->P4" d="M800 380V396H680V412" class="forward" marker-end="url(#forward-end-2)" />
+<path data-edge="P4->P4B" d="M560 460V488" class="forward" marker-end="url(#forward-end-2)" />
+<path data-edge="P4B->P4C" d="M560 536V564" class="forward" marker-end="url(#forward-end-2)" />
+<path data-edge="P4C->P5" d="M560 612V640" class="forward" marker-end="url(#forward-end-2)" />
+<path data-edge="P5->D6" d="M440 690V706H335V722" class="forward" marker-end="url(#forward-end-2)" />
+<path data-edge="P1C->D6" d="M928 148V162H1102V704H460V722" class="forward" marker-end="url(#forward-end-2)" />
+<path data-edge="D6->P6" d="M530 749H640" class="forward" marker-end="url(#forward-end-2)" />
+<path data-edge="P6->P6O" d="M862 784V824" class="forward" marker-end="url(#forward-end-2)" />
+<path data-edge="P6O->P7" d="M640 850H530" class="forward" marker-end="url(#forward-end-2)" />
+<path data-edge="D6->P7" d="M335 776V824" class="forward" marker-end="url(#forward-end-2)" /></g>
+        
+        <g data-node="P1">
+      <rect class="node action" x="340" y="22" width="440" height="46" rx="11" />
+      
+      <foreignObject x="352" y="25" width="416" height="40">
+        <div class="node-text small">1. 品运初稿拆解</div>
+      </foreignObject>
+    </g>
+<g data-node="P1A">
+      <rect class="node action" x="24" y="96" width="336" height="52" rx="11" />
+      
+      <foreignObject x="36" y="99" width="312" height="46">
+        <div class="node-text small">范围单：市场 / 渠道 / 语言 / 决策目标 / 指定基线</div>
+      </foreignObject>
+    </g>
+<g data-node="P1B">
+      <rect class="node action" x="392" y="96" width="336" height="52" rx="11" />
+      
+      <foreignObject x="404" y="99" width="312" height="46">
+        <div class="node-text small">种子词表：品类核心词 + 当地别称 + 对应任务</div>
+      </foreignObject>
+    </g>
+<g data-node="P1C">
+      <rect class="node action" x="760" y="96" width="336" height="52" rx="11" />
+      
+      <foreignObject x="772" y="99" width="312" height="46">
+        <div class="node-text small">待查问题：已有条件 / 限制 / 兼容疑点</div>
+      </foreignObject>
+    </g>
+<g data-node="P2">
+      <rect class="node action" x="280" y="178" width="560" height="48" rx="11" />
+      
+      <foreignObject x="292" y="181" width="536" height="42">
+        <div class="node-text small">2. Semrush 长尾词工具（KMT）：选国家库逐词导出</div>
+      </foreignObject>
+    </g>
+<g data-node="P3">
+      <rect class="node action" x="280" y="254" width="560" height="48" rx="11" />
+      
+      <foreignObject x="292" y="257" width="536" height="42">
+        <div class="node-text small">3. 清洗与对账：生成归一键 + 去重键（词×市场×窗口×口径）</div>
+      </foreignObject>
+    </g>
+<g data-node="D3">
+      <rect class="node decision" x="200" y="332" width="240" height="48" rx="9" />
+      <path class="decision-icon" d="M217 356l7 -7 7 7 -7 7Z" />
+      <foreignObject x="238" y="335" width="192" height="42">
+        <div class="node-text small">同键异值？</div>
+      </foreignObject>
+    </g>
+<g data-node="P3C">
+      <rect class="node hold" x="620" y="332" width="360" height="48" rx="11" />
+      
+      <foreignObject x="632" y="335" width="336" height="42">
+        <div class="node-text small">双留来源进冲突表，暂停数值比较</div>
+      </foreignObject>
+    </g>
+<g data-node="P4">
+      <rect class="node action" x="240" y="412" width="640" height="48" rx="11" />
+      
+      <foreignObject x="252" y="415" width="616" height="42">
+        <div class="node-text small">4. 分词与八维标注（保复合词/型号/否定/范围）</div>
+      </foreignObject>
+    </g>
+<g data-node="P4B">
+      <rect class="node action" x="240" y="488" width="640" height="48" rx="11" />
+      
+      <foreignObject x="252" y="491" width="616" height="42">
+        <div class="node-text small">按 对象×动作×目标 聚类 + 四类边界抽查</div>
+      </foreignObject>
+    </g>
+<g data-node="P4C">
+      <rect class="node action" x="240" y="564" width="640" height="48" rx="11" />
+      
+      <foreignObject x="252" y="567" width="616" height="42">
+        <div class="node-text small">输出：入选场景词/任务词 + 排除记录</div>
+      </foreignObject>
+    </g>
+<g data-node="P5">
+      <rect class="node action" x="240" y="640" width="640" height="50" rx="11" />
+      
+      <foreignObject x="252" y="643" width="616" height="44">
+        <div class="node-text small">5. Semrush AI Prompt Research：单场景词分析，分导出 Topic 与 Prompt 表</div>
+      </foreignObject>
+    </g>
+<g data-node="D6">
+      <rect class="node decision" x="140" y="722" width="390" height="54" rx="9" />
+      <path class="decision-icon" d="M157 749l7 -7 7 7 -7 7Z" />
+      <foreignObject x="178" y="725" width="342" height="48">
+        <div class="node-text small">仍缺选型条件或模型引用依据？</div>
+      </foreignObject>
+    </g>
+<g data-node="P6">
+      <rect class="node action" x="640" y="722" width="444" height="62" rx="11" />
+      
+      <foreignObject x="652" y="725" width="420" height="56">
+        <div class="node-text small">6. Peec AI：Prompts加题→Chats核答→Project导出→按promptId/created筛窗</div>
+      </foreignObject>
+    </g>
+<g data-node="P6O">
+      <rect class="node action" x="640" y="824" width="444" height="52" rx="11" />
+      
+      <foreignObject x="652" y="827" width="420" height="46">
+        <div class="node-text small">回查引用原文 → 整理有据条件与待核说法</div>
+      </foreignObject>
+    </g>
+<g data-node="P7">
+      <rect class="node end" x="140" y="824" width="390" height="52" rx="11" />
+      
+      <foreignObject x="152" y="827" width="366" height="46">
+        <div class="node-text small">进入步骤 7：场景归并</div>
+      </foreignObject>
+    </g>
+        <g><g class="edge-badge" data-edge-label="是">
+    <rect class="edge-pill" x="514.2" y="344.5" width="31.6" height="23" rx="11.5" />
+    <text class="edge-label" x="530" y="360.5" text-anchor="middle">是</text>
+  </g>
+<g class="edge-badge" data-edge-label="否">
+    <rect class="edge-pill" x="304.2" y="384.5" width="31.6" height="23" rx="11.5" />
+    <text class="edge-label" x="320" y="400.5" text-anchor="middle">否</text>
+  </g>
+<g class="edge-badge" data-edge-label="是且有权限">
+    <rect class="edge-pill" x="542.0" y="720.5" width="86.0" height="23" rx="11.5" />
+    <text class="edge-label" x="585" y="736.5" text-anchor="middle">是且有权限</text>
+  </g>
+<g class="edge-badge" data-edge-label="否或跳过，记原因">
+    <rect class="edge-pill" x="274.6" y="788.5" width="120.8" height="23" rx="11.5" />
+    <text class="edge-label" x="335" y="804.5" text-anchor="middle">否或跳过，记原因</text>
+  </g></g>
+      </svg>
+    </div>
+    <details class="flow-text" id="flow-text-2">
+    <summary>按文字展开流程与分支明细（16 个节点）</summary>
+    <div class="flow-text-body"><ol><li data-text-node="P1"><strong>1. 品运初稿拆解</strong><ul><li data-text-edge="P1->P1A">接续 → 范围单：市场 / 渠道 / 语言 / 决策目标 / 指定基线</li><li data-text-edge="P1->P1B">接续 → 种子词表：品类核心词 + 当地别称 + 对应任务</li><li data-text-edge="P1->P1C">接续 → 待查问题：已有条件 / 限制 / 兼容疑点</li></ul></li><li data-text-node="P1A"><strong>范围单：市场 / 渠道 / 语言 / 决策目标 / 指定基线</strong></li><li data-text-node="P1B"><strong>种子词表：品类核心词 + 当地别称 + 对应任务</strong><ul><li data-text-edge="P1B->P2">接续 → 2. Semrush 长尾词工具（KMT）：选国家库逐词导出</li></ul></li><li data-text-node="P1C"><strong>待查问题：已有条件 / 限制 / 兼容疑点</strong><ul><li data-text-edge="P1C->D6">接续 → 仍缺选型条件或模型引用依据？</li></ul></li><li data-text-node="P2"><strong>2. Semrush 长尾词工具（KMT）：选国家库逐词导出</strong><ul><li data-text-edge="P2->P3">接续 → 3. 清洗与对账：生成归一键 + 去重键（词×市场×窗口×口径）</li></ul></li><li data-text-node="P3"><strong>3. 清洗与对账：生成归一键 + 去重键（词×市场×窗口×口径）</strong><ul><li data-text-edge="P3->D3">接续 → 同键异值？</li></ul></li><li data-text-node="D3"><strong>同键异值？</strong><ul><li data-text-edge="D3->P3C">是 → 双留来源进冲突表，暂停数值比较</li><li data-text-edge="D3->P4">否 → 4. 分词与八维标注（保复合词/型号/否定/范围）</li></ul></li><li data-text-node="P3C"><strong>双留来源进冲突表，暂停数值比较</strong><ul><li data-text-edge="P3C->P4">接续 → 4. 分词与八维标注（保复合词/型号/否定/范围）</li></ul></li><li data-text-node="P4"><strong>4. 分词与八维标注（保复合词/型号/否定/范围）</strong><ul><li data-text-edge="P4->P4B">接续 → 按 对象×动作×目标 聚类 + 四类边界抽查</li></ul></li><li data-text-node="P4B"><strong>按 对象×动作×目标 聚类 + 四类边界抽查</strong><ul><li data-text-edge="P4B->P4C">接续 → 输出：入选场景词/任务词 + 排除记录</li></ul></li><li data-text-node="P4C"><strong>输出：入选场景词/任务词 + 排除记录</strong><ul><li data-text-edge="P4C->P5">接续 → 5. Semrush AI Prompt Research：单场景词分析，分导出 Topic 与 Prompt 表</li></ul></li><li data-text-node="P5"><strong>5. Semrush AI Prompt Research：单场景词分析，分导出 Topic 与 Prompt 表</strong><ul><li data-text-edge="P5->D6">接续 → 仍缺选型条件或模型引用依据？</li></ul></li><li data-text-node="D6"><strong>仍缺选型条件或模型引用依据？</strong><ul><li data-text-edge="D6->P6">是且有权限 → 6. Peec AI：Prompts加题→Chats核答→Project导出→按promptId/created筛窗</li><li data-text-edge="D6->P7">否或跳过，记原因 → 进入步骤 7：场景归并</li></ul></li><li data-text-node="P6"><strong>6. Peec AI：Prompts加题→Chats核答→Project导出→按promptId/created筛窗</strong><ul><li data-text-edge="P6->P6O">接续 → 回查引用原文 → 整理有据条件与待核说法</li></ul></li><li data-text-node="P6O"><strong>回查引用原文 → 整理有据条件与待核说法</strong><ul><li data-text-edge="P6O->P7">接续 → 进入步骤 7：场景归并</li></ul></li><li data-text-node="P7"><strong>进入步骤 7：场景归并</strong></li></ol></div>
+  </details>
+  </figure>
+<table class="steps" role="table"><colgroup><col><col><col><col><col></colgroup><thead><tr><th id="steps-2-0" scope="col">步骤与角色</th><th id="steps-2-1" scope="col">输入</th><th id="steps-2-2" scope="col">核心操作</th><th id="steps-2-3" scope="col">判断关口与产出</th><th id="steps-2-4" scope="col">回退条件</th></tr></thead><tbody><tr><th scope="row">1　品运立项</th><td><span class="cell-label" aria-hidden="true">输入</span>品运初稿、品类任务、目标市场与渠道、现有页面</td><td><span class="cell-label" aria-hidden="true">核心操作</span>拆出<strong>范围单、种子词表、待查问题</strong>三清单；标明已确认、待核、假设与指定基线</td><td><span class="cell-label" aria-hidden="true">判断关口与产出</span>说清市场、渠道、用户与页面决策目标 → 三清单与基线</td><td><span class="cell-label" aria-hidden="true">回退条件</span>范围含混先确认；无权限先做获准部分</td></tr>
+<tr><th scope="row">2　研究采集</th><td><span class="cell-label" aria-hidden="true">输入</span>范围单、种子词、工具权限</td><td><span class="cell-label" aria-hidden="true">核心操作</span><strong>Keyword Magic Tool</strong> 选目标国家库 → 逐词查 → All Keywords → Export；记日期、窗口与截断</td><td><span class="cell-label" aria-hidden="true">判断关口与产出</span>资料可定位，区分完整/部分/空表/不可读 → 来源清单与原表</td><td><span class="cell-label" aria-hidden="true">回退条件</span>缺表先登记覆盖缺口，不擅自推断全量</td></tr>
+<tr><th scope="row">3　研究清洗</th><td><span class="cell-label" aria-hidden="true">输入</span>原始词表、来源清单</td><td><span class="cell-label" aria-hidden="true">核心操作</span>文本格式导入防丢前导零；建立归一键与去重键；执行对账公式并分离冲突数值</td><td><span class="cell-label" aria-hidden="true">判断关口与产出</span>同键同值仅引 1 次，异值进冲突表 → 有效词表、重复映射、冲突清单</td><td><span class="cell-label" aria-hidden="true">回退条件</span>原值冲突暂停数值比较，原词仍入语义审读</td></tr>
+<tr><th scope="row">4　研究+品运选词</th><td><span class="cell-label" aria-hidden="true">输入</span>有效词表、长尾原文</td><td><span class="cell-label" aria-hidden="true">核心操作</span>保复合词/型号/否定/范围分词；标<strong>八维标签</strong>与<strong>主意图</strong>；<code>对象×动作×目标</code>聚类并抽查四类边界词</td><td><span class="cell-label" aria-hidden="true">判断关口与产出</span>说清谁在做什么及什么条件改变选路 → 带源行词簇、排除记录、场景词表</td><td><span class="cell-label" aria-hidden="true">回退条件</span>过宽拆对象动作，过窄扩当地别称；纯品名继续挖动作词</td></tr>
+<tr><th scope="row">5　研究查 AI 问句</th><td><span class="cell-label" aria-hidden="true">输入</span>入选场景词、待答问题</td><td><span class="cell-label" aria-hidden="true">核心操作</span>核实入口为 <strong>AI Prompt Research</strong>（非 SEO Topic Research）；每次 1 词 Analyze；分导 Topic 与 Prompt 表</td><td><span class="cell-label" aria-hidden="true">判断关口与产出</span>问句挂回对应主题且关联选择分支 → 主题-问句对应表、待追问清单</td><td><span class="cell-label" aria-hidden="true">回退条件</span>未命中扩同义词；无导出功能时逐页摘录并标部分覆盖</td></tr>
+<tr><th scope="row">6　研究按需监测</th><td><span class="cell-label" aria-hidden="true">输入</span>未答清问题、Peec 权限</td><td><span class="cell-label" aria-hidden="true">核心操作</span>标注题目来源（原句/改写/新增）；<code>Prompts→Add</code> 设国家/主题/角色；<code>Chats</code> 核答；<code>Project</code> 导出后按 <code>promptId</code>+<code>created</code> 筛窗</td><td><span class="cell-label" aria-hidden="true">判断关口与产出</span>观察能改变页面回答，区分配置题与逐次运行 → 问答对照、引用核查单</td><td><span class="cell-label" aria-hidden="true">回退条件</span>仅历史窗口须注明；无权限或不影响决策直接跳过并记因</td></tr></tbody></table>
+<p><strong>工具配置与可替换矩阵</strong></p>
+<table class="matrix" role="table"><colgroup><col><col><col><col><col></colgroup><thead><tr><th id="matrix-4-0" scope="col">步骤</th><th id="matrix-4-1" scope="col">默认工具与入口</th><th id="matrix-4-2" scope="col">必留原始字段</th><th id="matrix-4-3" scope="col">可替换前提</th><th id="matrix-4-4" scope="col">严禁操作</th></tr></thead><tbody><tr><th scope="row">2</th><td><span class="cell-label" aria-hidden="true">默认工具与入口</span>Semrush <strong>Keyword Magic Tool</strong>（目标国家库 → All Keywords）</td><td><span class="cell-label" aria-hidden="true">必留原始字段</span><code>Keyword</code>、<code>Volume</code>、<code>Intent</code> 及全原列</td><td><span class="cell-label" aria-hidden="true">可替换前提</span>同市场同口径词库工具，须登记入口与窗口</td><td><span class="cell-label" aria-hidden="true">严禁操作</span>跨市场混导、丢失源行号或过滤条件</td></tr>
+<tr><th scope="row">5</th><td><span class="cell-label" aria-hidden="true">默认工具与入口</span>Semrush <strong>AI Prompt Research</strong>（Enter a topic → Analyze）</td><td><span class="cell-label" aria-hidden="true">必留原始字段</span>Topic 表：<code>name, prompts_count, volume, volume_trend, intents, topic_id</code><br/>Prompt 表：<code>prompt, llm, topic_id, topic_name, topic_volume</code></td><td><span class="cell-label" aria-hidden="true">可替换前提</span>具有主题与原始问句导出的 AI 问答研究工具</td><td><span class="cell-label" aria-hidden="true">严禁操作</span>误用 SEO Topic Research、缺 ID 时强行错配</td></tr>
+<tr><th scope="row">6</th><td><span class="cell-label" aria-hidden="true">默认工具与入口</span>Peec AI（<strong>Prompts</strong> → <strong>Chats</strong> → <strong>Project</strong> 导出）</td><td><span class="cell-label" aria-hidden="true">必留原始字段</span><code>promptId</code>、<code>model</code>、<code>user</code>、<code>assistant</code>、<code>created</code>、<code>sources</code>、<code>sourceUrls</code>、<code>citations</code>、<code>mentions</code></td><td><span class="cell-label" aria-hidden="true">可替换前提</span>有国家/角色/模型切片且可导出引用的监测工具</td><td><span class="cell-label" aria-hidden="true">严禁操作</span>用全量导出充当当期窗口、把无引用回答当事实</td></tr></tbody></table>
+<p><strong>研究台账读数口径与清洗对账（四层隔离）</strong></p>
+<table class="readouts" role="table"><colgroup><col><col><col><col></colgroup><thead><tr><th id="readouts-6-0" scope="col">记录层级</th><th id="readouts-6-1" scope="col">唯一键构成</th><th id="readouts-6-2" scope="col">数值口径与单位</th><th id="readouts-6-3" scope="col">允许用于何种决策</th></tr></thead><tbody><tr><th scope="row">搜索关键词</th><td><span class="cell-label" aria-hidden="true">唯一键构成</span><code>归一词 + 市场 + 窗口 + 口径</code></td><td><span class="cell-label" aria-hidden="true">数值口径与单位</span>该市场估算月搜索量 <code>Volume</code>（零值照录，空值记未提供）</td><td><span class="cell-label" aria-hidden="true">允许用于何种决策</span>识别用户表达、核心对象/动作及长尾约束</td></tr>
+<tr><th scope="row">AI 主题</th><td><span class="cell-label" aria-hidden="true">唯一键构成</span><code>topic_id/核实名称 + 市场 + 时期 + 来源</code></td><td><span class="cell-label" aria-hidden="true">数值口径与单位</span>主题层级 <code>volume</code>（周期未明示写“主题估值，周期未注明”）</td><td><span class="cell-label" aria-hidden="true">允许用于何种决策</span>筛选需下钻读取原问句的高相关主题</td></tr>
+<tr><th scope="row">AI 原问句</th><td><span class="cell-label" aria-hidden="true">唯一键构成</span><code>prompt + topic_id + llm + 批次</code></td><td><span class="cell-label" aria-hidden="true">数值口径与单位</span><code>topic_volume</code> 标“所附主题/模型估值”，与主题总值分列</td><td><span class="cell-label" aria-hidden="true">允许用于何种决策</span>提取选型比较维度、前置条件与待答问题</td></tr>
+<tr><th scope="row">配置题与回答</th><td><span class="cell-label" aria-hidden="true">唯一键构成</span>题：<code>promptId + 版本 + 角色</code><br/>答：唯一 <code>runId</code> / 运行键</td><td><span class="cell-label" aria-hidden="true">数值口径与单位</span>源无流量估值写“未提供”；题目数与运行次数分别计数</td><td><span class="cell-label" aria-hidden="true">允许用于何种决策</span>核查模型覆盖与回答分歧，把缺口转为资料需求</td></tr></tbody></table>
+<ul class="compact-rules">
+<li><strong>清洗对账公式</strong>：<code>输入行数 = 有效行数 + 本次规则排除行数</code>；有完整键的有效行内 <code>重复附加行数 = 有键行数 − 唯一键数</code>；跨簇复用按 <code>证据ID</code> 核重。</li>
+<li><strong>八维标注维度</strong>：<code>核心词</code> / <code>场景</code> / <code>动作</code> / <code>材料</code> / <code>配件</code> / <code>属性适配</code> / <code>比较选购</code> / <code>用户问题</code>（可多选，另配单选主意图及理由）。</li>
+<li><strong>四类必抽查样本</strong>：头部高频词、低量高约束词、跨簇交叉命中词、边界反例词。</li>
+</ul>
+<h3 id="stage2" tabindex="-1">2. 阶段二：场景归并与路径分流（步骤 7–8）</h3>
+<figure class="flow-card" id="diagram-3">
+    
+    <div class="diagram-bar">
+      <strong class="diagram-title">图 3 · 阶段二：场景归并与分支必要性质检树（步骤 7–8）</strong>
+      <ul class="diagram-legend" aria-hidden="true">
+        <li><span class="dot action"></span>步骤</li>
+        <li><span class="dot decision"></span>判断关口</li>
+        <li><span class="dot hold"></span>待核/暂缓</li>
+        <li><span class="dot end"></span>终点/放行</li>
+        <li><span class="dash"></span>回退补证</li>
+      </ul>
+    </div>
+    <div class="flow-visual" aria-hidden="true">
+      <svg viewBox="0 0 1120 626" xmlns="http://www.w3.org/2000/svg" focusable="false">
+        <defs>
+          <marker id="forward-end-3" viewBox="0 0 10 10" markerWidth="6" markerHeight="6" orient="auto" refX="9" refY="5"><path d="M0 0L10 5 0 10Z" fill="#0f766e" /></marker>
+          <marker id="return-end-3" viewBox="0 0 10 10" markerWidth="6" markerHeight="6" orient="auto" refX="9" refY="5"><path d="M0 0L10 5 0 10Z" fill="#b45309" /></marker>
+        </defs>
+        
+        <g><path data-edge="B1->B2" d="M560 68V94" class="forward" marker-end="url(#forward-end-3)" />
+<path data-edge="B2->DB1" d="M560 140V168" class="forward" marker-end="url(#forward-end-3)" />
+<path data-edge="DB1->BX" d="M340 192H144V256" class="forward" marker-end="url(#forward-end-3)" />
+<path data-edge="DB1->BW" d="M780 192H918V256" class="forward" marker-end="url(#forward-end-3)" />
+<path data-edge="BW->B4R" d="M918 306V336" class="return" marker-end="url(#return-end-3)" />
+<path data-edge="DB1->B3" d="M540 216V334" class="forward" marker-end="url(#forward-end-3)" />
+<path data-edge="BW->B3" d="M740 281H650V334" class="forward" marker-end="url(#forward-end-3)" />
+<path data-edge="B3->DB2" d="M540 384V418" class="forward" marker-end="url(#forward-end-3)" />
+<path data-edge="DB2->BM" d="M340 476V500H184V524" class="forward" marker-end="url(#forward-end-3)" />
+<path data-edge="DB2->BN" d="M540 476V524" class="forward" marker-end="url(#forward-end-3)" />
+<path data-edge="DB2->BP" d="M740 476V500H950V524" class="forward" marker-end="url(#forward-end-3)" /></g>
+        
+        <g data-node="B1">
+      <rect class="node action" x="270" y="22" width="580" height="46" rx="11" />
+      
+      <foreignObject x="282" y="25" width="556" height="40">
+        <div class="node-text small">输入：词簇 + Semrush 原问句 + Peec 核实记录</div>
+      </foreignObject>
+    </g>
+<g data-node="B2">
+      <rect class="node action" x="270" y="94" width="580" height="46" rx="11" />
+      
+      <foreignObject x="282" y="97" width="556" height="40">
+        <div class="node-text small">7. 三层记录分离：原文观察 | 语义推断 | 设计选择</div>
+      </foreignObject>
+    </g>
+<g data-node="DB1">
+      <rect class="node decision" x="340" y="168" width="440" height="48" rx="9" />
+      <path class="decision-icon" d="M357 192l7 -7 7 7 -7 7Z" />
+      <foreignObject x="378" y="171" width="392" height="42">
+        <div class="node-text small">原文可判性检查</div>
+      </foreignObject>
+    </g>
+<g data-node="BX">
+      <rect class="node archive" x="24" y="256" width="240" height="50" rx="11" />
+      
+      <foreignObject x="36" y="259" width="216" height="44">
+        <div class="node-text small">记排除理由，归档</div>
+      </foreignObject>
+    </g>
+<g data-node="BW">
+      <rect class="node hold" x="740" y="256" width="356" height="50" rx="11" />
+      
+      <foreignObject x="752" y="259" width="332" height="44">
+        <div class="node-text small">保留假设，不拆路，仅写有据说明</div>
+      </foreignObject>
+    </g>
+<g data-node="B4R">
+      <rect class="node action" x="804" y="336" width="292" height="44" rx="11" />
+      
+      <foreignObject x="816" y="339" width="268" height="38">
+        <div class="node-text small">回退步骤 4 / 5 / 6 补证</div>
+      </foreignObject>
+    </g>
+<g data-node="B3">
+      <rect class="node action" x="310" y="334" width="460" height="50" rx="11" />
+      
+      <foreignObject x="322" y="337" width="436" height="44">
+        <div class="node-text small">8. 对照指定基线：标保留 / 补深 / 新增 / 纠正</div>
+      </foreignObject>
+    </g>
+<g data-node="DB2">
+      <rect class="node decision" x="200" y="418" width="680" height="58" rx="9" />
+      <path class="decision-icon" d="M217 447l7 -7 7 7 -7 7Z" />
+      <foreignObject x="238" y="421" width="632" height="52">
+        <div class="node-text small">反事实检验：条件变化后，下一动作 / 适用商品 / 操作前提 至少变一项？</div>
+      </foreignObject>
+    </g>
+<g data-node="BM">
+      <rect class="node action" x="24" y="524" width="320" height="68" rx="11" />
+      
+      <foreignObject x="36" y="527" width="296" height="62">
+        <div class="node-text small">不拆分支：同卡合并或模块内参数对比</div>
+      </foreignObject>
+    </g>
+<g data-node="BN">
+      <rect class="node end" x="376" y="524" width="396" height="68" rx="11" />
+      
+      <foreignObject x="388" y="527" width="372" height="62">
+        <div class="node-text small">单立分支 ID：写全 6 要素（入口→判据→动作/跳过→商品角色→未知出口→完成）</div>
+      </foreignObject>
+    </g>
+<g data-node="BP">
+      <rect class="node end" x="804" y="524" width="292" height="68" rx="11" />
+      
+      <foreignObject x="816" y="527" width="268" height="62">
+        <div class="node-text small">评估独立任务页（写明承接缺口）</div>
+      </foreignObject>
+    </g>
+        <g><g class="edge-badge" data-edge-label="噪声或同名错义">
+    <rect class="edge-pill" x="139.4" y="180.5" width="113.2" height="23" rx="11.5" />
+    <text class="edge-label" x="196" y="196.5" text-anchor="middle">噪声或同名错义</text>
+  </g>
+<g class="edge-badge" data-edge-label="弱证据或矛盾">
+    <rect class="edge-pill" x="810.2" y="180.5" width="99.6" height="23" rx="11.5" />
+    <text class="edge-label" x="860" y="196.5" text-anchor="middle">弱证据或矛盾</text>
+  </g>
+<g class="edge-badge" data-edge-label="改变入口且可补证">
+    <rect class="edge-pill return-pill" x="854.6" y="309.5" width="126.8" height="23" rx="11.5" />
+    <text class="edge-label return-label" x="918" y="325.5" text-anchor="middle">改变入口且可补证</text>
+  </g>
+<g class="edge-badge" data-edge-label="证据有效">
+    <rect class="edge-pill" x="503.8" y="262.5" width="72.4" height="23" rx="11.5" />
+    <text class="edge-label" x="540" y="278.5" text-anchor="middle">证据有效</text>
+  </g>
+<g class="edge-badge" data-edge-label="只用已支持部分">
+    <rect class="edge-pill" x="593.4" y="296.5" width="113.2" height="23" rx="11.5" />
+    <text class="edge-label" x="650" y="312.5" text-anchor="middle">只用已支持部分</text>
+  </g>
+<g class="edge-badge" data-edge-label="三项均不变">
+    <rect class="edge-pill" x="141.0" y="488.5" width="86.0" height="23" rx="11.5" />
+    <text class="edge-label" x="184" y="504.5" text-anchor="middle">三项均不变</text>
+  </g>
+<g class="edge-badge" data-edge-label="至少一项变化">
+    <rect class="edge-pill" x="490.2" y="488.5" width="99.6" height="23" rx="11.5" />
+    <text class="edge-label" x="540" y="504.5" text-anchor="middle">至少一项变化</text>
+  </g>
+<g class="edge-badge" data-edge-label="独立起点且既有页无法承接">
+    <rect class="edge-pill" x="859.4" y="488.5" width="181.2" height="23" rx="11.5" />
+    <text class="edge-label" x="950" y="504.5" text-anchor="middle">独立起点且既有页无法承接</text>
+  </g></g>
+      </svg>
+    </div>
+    <details class="flow-text" id="flow-text-3">
+    <summary>按文字展开流程与分支明细（11 个节点）</summary>
+    <div class="flow-text-body"><ol><li data-text-node="B1"><strong>输入：词簇 + Semrush 原问句 + Peec 核实记录</strong><ul><li data-text-edge="B1->B2">接续 → 7. 三层记录分离：原文观察 | 语义推断 | 设计选择</li></ul></li><li data-text-node="B2"><strong>7. 三层记录分离：原文观察 | 语义推断 | 设计选择</strong><ul><li data-text-edge="B2->DB1">接续 → 原文可判性检查</li></ul></li><li data-text-node="DB1"><strong>原文可判性检查</strong><ul><li data-text-edge="DB1->BX">噪声或同名错义 → 记排除理由，归档</li><li data-text-edge="DB1->BW">弱证据或矛盾 → 保留假设，不拆路，仅写有据说明</li><li data-text-edge="DB1->B3">证据有效 → 8. 对照指定基线：标保留 / 补深 / 新增 / 纠正</li></ul></li><li data-text-node="BX"><strong>记排除理由，归档</strong></li><li data-text-node="BW"><strong>保留假设，不拆路，仅写有据说明</strong><ul><li data-text-edge="BW->B4R"><span class="return-tag">回退</span> 改变入口且可补证 → 回退步骤 4 / 5 / 6 补证</li><li data-text-edge="BW->B3">只用已支持部分 → 8. 对照指定基线：标保留 / 补深 / 新增 / 纠正</li></ul></li><li data-text-node="B4R"><strong>回退步骤 4 / 5 / 6 补证</strong></li><li data-text-node="B3"><strong>8. 对照指定基线：标保留 / 补深 / 新增 / 纠正</strong><ul><li data-text-edge="B3->DB2">接续 → 反事实检验：条件变化后，下一动作 / 适用商品 / 操作前提 至少变一项？</li></ul></li><li data-text-node="DB2"><strong>反事实检验：条件变化后，下一动作 / 适用商品 / 操作前提 至少变一项？</strong><ul><li data-text-edge="DB2->BM">三项均不变 → 不拆分支：同卡合并或模块内参数对比</li><li data-text-edge="DB2->BN">至少一项变化 → 单立分支 ID：写全 6 要素（入口→判据→动作/跳过→商品角色→未知出口→完成）</li><li data-text-edge="DB2->BP">独立起点且既有页无法承接 → 评估独立任务页（写明承接缺口）</li></ul></li><li data-text-node="BM"><strong>不拆分支：同卡合并或模块内参数对比</strong></li><li data-text-node="BN"><strong>单立分支 ID：写全 6 要素（入口→判据→动作/跳过→商品角色→未知出口→完成）</strong></li><li data-text-node="BP"><strong>评估独立任务页（写明承接缺口）</strong></li></ol></div>
+  </details>
+  </figure>
+<table class="steps" role="table"><colgroup><col><col><col><col><col></colgroup><thead><tr><th id="steps-10-0" scope="col">步骤与角色</th><th id="steps-10-1" scope="col">输入</th><th id="steps-10-2" scope="col">核心操作</th><th id="steps-10-3" scope="col">判断关口与产出</th><th id="steps-10-4" scope="col">回退条件</th></tr></thead><tbody><tr><th scope="row">7　研究归并证据卡</th><td><span class="cell-label" aria-hidden="true">输入</span>词簇、问句、可用监测、排除记录</td><td><span class="cell-label" aria-hidden="true">核心操作</span>并排读原词与问法，写对象/已有状态/目标/动作/限制；严格分列<strong>原文观察、语义推断、设计选择</strong>及反例</td><td><span class="cell-label" aria-hidden="true">判断关口与产出</span>能指出哪段原文改变下一步，购物/比较/信息/服务分开标记 → 场景证据卡、未决问题、建议入口</td><td><span class="cell-label" aria-hidden="true">回退条件</span>孤立词或仅模型自述留待核假设；不足拆路就地说明；纯臆测搁置</td></tr>
+<tr><th scope="row">8　品运+内容定路径</th><td><span class="cell-label" aria-hidden="true">输入</span>场景证据卡、指定基线版本</td><td><span class="cell-label" aria-hidden="true">核心操作</span>定位旧稿块或表行写差异处置；做<strong>反事实检验</strong>确定分支；画全进入状态、判据、跳过、未知出口与终点</td><td><span class="cell-label" aria-hidden="true">判断关口与产出</span>目标/动作变才独立入口；已有设备跳选购；参数未知给核对+继续阅读 → 路径图、基线差异表</td><td><span class="cell-label" aria-hidden="true">回退条件</span>旧稿冲突退步骤 1 定基线；无旧稿标未能比对；争议能力承诺先撤下</td></tr></tbody></table>
+<p><strong>分支定义六要素（每条 <code>分支ID</code> 必填）</strong>：<code>进入状态</code> → <code>选择题与分流判据</code> → <code>下一动作 / 可跳步骤</code> → <code>适用商品角色</code> → <code>参数未知出口</code> → <code>完成标志</code>。</p>
+<h3 id="stage3" tabindex="-1">3. 阶段三：三关核品与页面搭建（步骤 9–12）</h3>
+<figure class="flow-card" id="diagram-4">
+    
+    <div class="diagram-bar">
+      <strong class="diagram-title">图 4 · 阶段三：商品放行三关与商机判定树（步骤 9–10）</strong>
+      <ul class="diagram-legend" aria-hidden="true">
+        <li><span class="dot action"></span>步骤</li>
+        <li><span class="dot decision"></span>判断关口</li>
+        <li><span class="dot hold"></span>待核/暂缓</li>
+        <li><span class="dot end"></span>终点/放行</li>
+        <li><span class="dash"></span>回退补证</li>
+      </ul>
+    </div>
+    <div class="flow-visual" aria-hidden="true">
+      <svg viewBox="0 0 1120 696" xmlns="http://www.w3.org/2000/svg" focusable="false">
+        <defs>
+          <marker id="forward-end-4" viewBox="0 0 10 10" markerWidth="6" markerHeight="6" orient="auto" refX="9" refY="5"><path d="M0 0L10 5 0 10Z" fill="#0f766e" /></marker>
+          <marker id="return-end-4" viewBox="0 0 10 10" markerWidth="6" markerHeight="6" orient="auto" refX="9" refY="5"><path d="M0 0L10 5 0 10Z" fill="#b45309" /></marker>
+        </defs>
+        
+        <g><path data-edge="G0->G1" d="M560 68V94" class="forward" marker-end="url(#forward-end-4)" />
+<path data-edge="G1->DG1" d="M560 142V170" class="forward" marker-end="url(#forward-end-4)" />
+<path data-edge="DG1->GH1" d="M320 194H162V258" class="forward" marker-end="url(#forward-end-4)" />
+<path data-edge="DG1->GY" d="M800 194H958V258" class="forward" marker-end="url(#forward-end-4)" />
+<path data-edge="DG1->G2" d="M560 218V258" class="forward" marker-end="url(#forward-end-4)" />
+<path data-edge="G2->DG2" d="M560 320V356" class="forward" marker-end="url(#forward-end-4)" />
+<path data-edge="DG2->GH2" d="M336 380H162V442" class="forward" marker-end="url(#forward-end-4)" />
+<path data-edge="DG2->G3" d="M560 404V424H700V442" class="forward" marker-end="url(#forward-end-4)" />
+<path data-edge="G3->DG3" d="M700 498V530" class="forward" marker-end="url(#forward-end-4)" />
+<path data-edge="DG3->GL" d="M560 578V598H285V616" class="forward" marker-end="url(#forward-end-4)" />
+<path data-edge="DG3->GH3" d="M660 578V616" class="forward" marker-end="url(#forward-end-4)" />
+<path data-edge="DG3->GX" d="M840 578H973V616" class="forward" marker-end="url(#forward-end-4)" /></g>
+        
+        <g data-node="G0">
+      <rect class="node action" x="270" y="22" width="580" height="46" rx="11" />
+      
+      <foreignObject x="282" y="25" width="556" height="40">
+        <div class="node-text small">分支所需商品角色 / 必要功能 / 约束条件</div>
+      </foreignObject>
+    </g>
+<g data-node="G1">
+      <rect class="node action" x="220" y="94" width="680" height="48" rx="11" />
+      
+      <foreignObject x="232" y="97" width="656" height="42">
+        <div class="node-text small">9. 目录召回：按角色查 SKU/型号/变体，区分整套含件与独立单件</div>
+      </foreignObject>
+    </g>
+<g data-node="DG1">
+      <rect class="node decision" x="320" y="170" width="480" height="48" rx="9" />
+      <path class="decision-icon" d="M337 194l7 -7 7 7 -7 7Z" />
+      <foreignObject x="358" y="173" width="432" height="42">
+        <div class="node-text small">约定目录范围是否命中？</div>
+      </foreignObject>
+    </g>
+<g data-node="GH1">
+      <rect class="node hold" x="24" y="258" width="276" height="62" rx="11" />
+      
+      <foreignObject x="36" y="261" width="252" height="56">
+        <div class="node-text small">待核清单：记查询范围与扩查方向，页面给自核项</div>
+      </foreignObject>
+    </g>
+<g data-node="GY">
+      <rect class="node end" x="820" y="258" width="276" height="62" rx="11" />
+      
+      <foreignObject x="832" y="261" width="252" height="56">
+        <div class="node-text small">品类商机卡（新类型/备件/规格缺口），页面给无绑定选型说明</div>
+      </foreignObject>
+    </g>
+<g data-node="G2">
+      <rect class="node action" x="336" y="258" width="448" height="62" rx="11" />
+      
+      <foreignObject x="348" y="261" width="424" height="56">
+        <div class="node-text small">10a. 在架确认：核目标市场且目标渠道正式链接与实指型号</div>
+      </foreignObject>
+    </g>
+<g data-node="DG2">
+      <rect class="node decision" x="336" y="356" width="448" height="48" rx="9" />
+      <path class="decision-icon" d="M353 380l7 -7 7 7 -7 7Z" />
+      <foreignObject x="374" y="359" width="400" height="42">
+        <div class="node-text small">目标市场与渠道已确认在架？</div>
+      </foreignObject>
+    </g>
+<g data-node="GH2">
+      <rect class="node hold" x="24" y="442" width="276" height="56" rx="11" />
+      
+      <foreignObject x="36" y="445" width="252" height="50">
+        <div class="node-text small">待核清单：标上架待核，禁止推荐</div>
+      </foreignObject>
+    </g>
+<g data-node="G3">
+      <rect class="node action" x="350" y="442" width="700" height="56" rx="11" />
+      
+      <foreignObject x="362" y="445" width="676" height="50">
+        <div class="node-text small">10b. 适用核验：逐项核尺寸/接口/容量/含件/另需件/排除条件与说明书</div>
+      </foreignObject>
+    </g>
+<g data-node="DG3">
+      <rect class="node decision" x="490" y="530" width="420" height="48" rx="9" />
+      <path class="decision-icon" d="M507 554l7 -7 7 7 -7 7Z" />
+      <foreignObject x="528" y="533" width="372" height="42">
+        <div class="node-text small">场景适用与兼容结论？</div>
+      </foreignObject>
+    </g>
+<g data-node="GL">
+      <rect class="node end" x="140" y="616" width="290" height="56" rx="11" />
+      
+      <foreignObject x="152" y="619" width="266" height="50">
+        <div class="node-text small">可售卖商品表（唯一允许页面推荐）</div>
+      </foreignObject>
+    </g>
+<g data-node="GH3">
+      <rect class="node hold" x="470" y="616" width="344" height="56" rx="11" />
+      
+      <foreignObject x="482" y="619" width="320" height="50">
+        <div class="node-text small">待核清单：列补查人与重判条件，禁写兼容承诺</div>
+      </foreignObject>
+    </g>
+<g data-node="GX">
+      <rect class="node archive" x="850" y="616" width="246" height="56" rx="11" />
+      
+      <foreignObject x="862" y="619" width="222" height="50">
+        <div class="node-text small">记排除理由，换查其他候选</div>
+      </foreignObject>
+    </g>
+        <g><g class="edge-badge" data-edge-label="限域未命中">
+    <rect class="edge-pill" x="163.0" y="182.5" width="86.0" height="23" rx="11.5" />
+    <text class="edge-label" x="206" y="198.5" text-anchor="middle">限域未命中</text>
+  </g>
+<g class="edge-badge" data-edge-label="全量扩查且渠道负责人确认未上架">
+    <rect class="edge-pill" x="847.0" y="182.5" width="222.0" height="23" rx="11.5" />
+    <text class="edge-label" x="958" y="198.5" text-anchor="middle">全量扩查且渠道负责人确认未上架</text>
+  </g>
+<g class="edge-badge" data-edge-label="命中候选">
+    <rect class="edge-pill" x="523.8" y="226.5" width="72.4" height="23" rx="11.5" />
+    <text class="edge-label" x="560" y="242.5" text-anchor="middle">命中候选</text>
+  </g>
+<g class="edge-badge" data-edge-label="仅异市场/异渠道/历史链接/错款/失效">
+    <rect class="edge-pill" x="67.8" y="368.5" width="252.4" height="23" rx="11.5" />
+    <text class="edge-label" x="194" y="384.5" text-anchor="middle">仅异市场/异渠道/历史链接/错款/失效</text>
+  </g>
+<g class="edge-badge" data-edge-label="确认在架">
+    <rect class="edge-pill" x="593.8" y="412.5" width="72.4" height="23" rx="11.5" />
+    <text class="edge-label" x="630" y="428.5" text-anchor="middle">确认在架</text>
+  </g>
+<g class="edge-badge" data-edge-label="适用且资料一致">
+    <rect class="edge-pill" x="303.4" y="586.5" width="113.2" height="23" rx="11.5" />
+    <text class="edge-label" x="360" y="602.5" text-anchor="middle">适用且资料一致</text>
+  </g>
+<g class="edge-badge" data-edge-label="适用未明、相邻候选或资料冲突">
+    <rect class="edge-pill" x="538.8" y="586.5" width="202.4" height="23" rx="11.5" />
+    <text class="edge-label" x="640" y="602.5" text-anchor="middle">适用未明、相邻候选或资料冲突</text>
+  </g>
+<g class="edge-badge" data-edge-label="明确不适用">
+    <rect class="edge-pill" x="930.0" y="586.5" width="86.0" height="23" rx="11.5" />
+    <text class="edge-label" x="973" y="602.5" text-anchor="middle">明确不适用</text>
+  </g></g>
+      </svg>
+    </div>
+    <details class="flow-text" id="flow-text-4">
+    <summary>按文字展开流程与分支明细（13 个节点）</summary>
+    <div class="flow-text-body"><ol><li data-text-node="G0"><strong>分支所需商品角色 / 必要功能 / 约束条件</strong><ul><li data-text-edge="G0->G1">接续 → 9. 目录召回：按角色查 SKU/型号/变体，区分整套含件与独立单件</li></ul></li><li data-text-node="G1"><strong>9. 目录召回：按角色查 SKU/型号/变体，区分整套含件与独立单件</strong><ul><li data-text-edge="G1->DG1">接续 → 约定目录范围是否命中？</li></ul></li><li data-text-node="DG1"><strong>约定目录范围是否命中？</strong><ul><li data-text-edge="DG1->GH1">限域未命中 → 待核清单：记查询范围与扩查方向，页面给自核项</li><li data-text-edge="DG1->GY">全量扩查且渠道负责人确认未上架 → 品类商机卡（新类型/备件/规格缺口），页面给无绑定选型说明</li><li data-text-edge="DG1->G2">命中候选 → 10a. 在架确认：核目标市场且目标渠道正式链接与实指型号</li></ul></li><li data-text-node="GH1"><strong>待核清单：记查询范围与扩查方向，页面给自核项</strong></li><li data-text-node="GY"><strong>品类商机卡（新类型/备件/规格缺口），页面给无绑定选型说明</strong></li><li data-text-node="G2"><strong>10a. 在架确认：核目标市场且目标渠道正式链接与实指型号</strong><ul><li data-text-edge="G2->DG2">接续 → 目标市场与渠道已确认在架？</li></ul></li><li data-text-node="DG2"><strong>目标市场与渠道已确认在架？</strong><ul><li data-text-edge="DG2->GH2">仅异市场/异渠道/历史链接/错款/失效 → 待核清单：标上架待核，禁止推荐</li><li data-text-edge="DG2->G3">确认在架 → 10b. 适用核验：逐项核尺寸/接口/容量/含件/另需件/排除条件与说明书</li></ul></li><li data-text-node="GH2"><strong>待核清单：标上架待核，禁止推荐</strong></li><li data-text-node="G3"><strong>10b. 适用核验：逐项核尺寸/接口/容量/含件/另需件/排除条件与说明书</strong><ul><li data-text-edge="G3->DG3">接续 → 场景适用与兼容结论？</li></ul></li><li data-text-node="DG3"><strong>场景适用与兼容结论？</strong><ul><li data-text-edge="DG3->GL">适用且资料一致 → 可售卖商品表（唯一允许页面推荐）</li><li data-text-edge="DG3->GH3">适用未明、相邻候选或资料冲突 → 待核清单：列补查人与重判条件，禁写兼容承诺</li><li data-text-edge="DG3->GX">明确不适用 → 记排除理由，换查其他候选</li></ul></li><li data-text-node="GL"><strong>可售卖商品表（唯一允许页面推荐）</strong></li><li data-text-node="GH3"><strong>待核清单：列补查人与重判条件，禁写兼容承诺</strong></li><li data-text-node="GX"><strong>记排除理由，换查其他候选</strong></li></ol></div>
+  </details>
+  </figure>
+<figure class="flow-card" id="diagram-5">
+    
+    <div class="diagram-bar">
+      <strong class="diagram-title">图 5 · 阶段三：问题与内容落点路由图（步骤 11–12）</strong>
+      <ul class="diagram-legend" aria-hidden="true">
+        <li><span class="dot action"></span>步骤</li>
+        <li><span class="dot decision"></span>判断关口</li>
+        <li><span class="dot hold"></span>待核/暂缓</li>
+        <li><span class="dot end"></span>终点/放行</li>
+        <li><span class="dash"></span>回退补证</li>
+      </ul>
+    </div>
+    <div class="flow-visual" aria-hidden="true">
+      <svg viewBox="0 0 1120 492" xmlns="http://www.w3.org/2000/svg" focusable="false">
+        <defs>
+          <marker id="forward-end-5" viewBox="0 0 10 10" markerWidth="6" markerHeight="6" orient="auto" refX="9" refY="5"><path d="M0 0L10 5 0 10Z" fill="#0f766e" /></marker>
+          <marker id="return-end-5" viewBox="0 0 10 10" markerWidth="6" markerHeight="6" orient="auto" refX="9" refY="5"><path d="M0 0L10 5 0 10Z" fill="#b45309" /></marker>
+        </defs>
+        
+        <g><path data-edge="C0->DC1" d="M560 70V98" class="forward" marker-end="url(#forward-end-5)" />
+<path data-edge="DC1->CB" d="M340 122H189V184" class="forward" marker-end="url(#forward-end-5)" />
+<path data-edge="DC1->DC2" d="M740 146V184" class="forward" marker-end="url(#forward-end-5)" />
+<path data-edge="DC2->CM" d="M560 242V264H340V286" class="forward" marker-end="url(#forward-end-5)" />
+<path data-edge="DC2->DC3" d="M830 242V286" class="forward" marker-end="url(#forward-end-5)" />
+<path data-edge="DC3->CF" d="M700 344V370H305V396" class="forward" marker-end="url(#forward-end-5)" />
+<path data-edge="DC3->CG" d="M830 344V370H632V396" class="forward" marker-end="url(#forward-end-5)" />
+<path data-edge="DC3->CL" d="M954 344V396" class="forward" marker-end="url(#forward-end-5)" /></g>
+        
+        <g data-node="C0">
+      <rect class="node action" x="240" y="22" width="640" height="48" rx="11" />
+      
+      <foreignObject x="252" y="25" width="616" height="42">
+        <div class="node-text small">11. 汇总问题清单（注明场景共性或分支专属，归并同问法）</div>
+      </foreignObject>
+    </g>
+<g data-node="DC1">
+      <rect class="node decision" x="340" y="98" width="440" height="48" rx="9" />
+      <path class="decision-icon" d="M357 122l7 -7 7 7 -7 7Z" />
+      <foreignObject x="378" y="101" width="392" height="42">
+        <div class="node-text small">证据是否齐备且无冲突？</div>
+      </foreignObject>
+    </g>
+<g data-node="CB">
+      <rect class="node hold" x="24" y="184" width="330" height="58" rx="11" />
+      
+      <foreignObject x="36" y="187" width="306" height="52">
+        <div class="node-text small">待补证 / 核品单（页面只写核对方式，禁写断言）</div>
+      </foreignObject>
+    </g>
+<g data-node="DC2">
+      <rect class="node decision" x="430" y="184" width="620" height="58" rx="9" />
+      <path class="decision-icon" d="M447 213l7 -7 7 7 -7 7Z" />
+      <foreignObject x="468" y="187" width="572" height="52">
+        <div class="node-text small">是否直接改变当前选路、前提或型号适用？</div>
+      </foreignObject>
+    </g>
+<g data-node="CM">
+      <rect class="node end" x="160" y="286" width="360" height="58" rx="11" />
+      
+      <foreignObject x="172" y="289" width="336" height="52">
+        <div class="node-text small">模块旁决策要点（选择项 / 规格表 / 商品入口旁）</div>
+      </foreignObject>
+    </g>
+<g data-node="DC3">
+      <rect class="node decision" x="600" y="286" width="460" height="58" rx="9" />
+      <path class="decision-icon" d="M617 315l7 -7 7 7 -7 7Z" />
+      <foreignObject x="638" y="289" width="412" height="52">
+        <div class="node-text small">是否需要多步操作、图解或深度对比？</div>
+      </foreignObject>
+    </g>
+<g data-node="CF">
+      <rect class="node end" x="160" y="396" width="290" height="72" rx="11" />
+      
+      <foreignObject x="172" y="399" width="266" height="66">
+        <div class="node-text small">场景 / 分支 FAQ（共性问题一处维护，分支链接复用）</div>
+      </foreignObject>
+    </g>
+<g data-node="CG">
+      <rect class="node end" x="484" y="396" width="296" height="72" rx="11" />
+      
+      <foreignObject x="496" y="399" width="272" height="66">
+        <div class="node-text small">独立操作指南（定义起点/步骤/完成，文末链回可继续模块）</div>
+      </foreignObject>
+    </g>
+<g data-node="CL">
+      <rect class="node end" x="812" y="396" width="284" height="72" rx="11" />
+      
+      <foreignObject x="824" y="399" width="260" height="66">
+        <div class="node-text small">博客 / 深度比较文（明确维度与来源，链回相关场景入口）</div>
+      </foreignObject>
+    </g>
+        <g><g class="edge-badge" data-edge-label="缺资料、冲突或未验证推断">
+    <rect class="edge-pill" x="128.4" y="110.5" width="175.2" height="23" rx="11.5" />
+    <text class="edge-label" x="216" y="126.5" text-anchor="middle">缺资料、冲突或未验证推断</text>
+  </g>
+<g class="edge-badge" data-edge-label="证据齐备">
+    <rect class="edge-pill" x="703.8" y="153.5" width="72.4" height="23" rx="11.5" />
+    <text class="edge-label" x="740" y="169.5" text-anchor="middle">证据齐备</text>
+  </g>
+<g class="edge-badge" data-edge-label="是">
+    <rect class="edge-pill" x="400.2" y="252.5" width="31.6" height="23" rx="11.5" />
+    <text class="edge-label" x="416" y="268.5" text-anchor="middle">是</text>
+  </g>
+<g class="edge-badge" data-edge-label="否">
+    <rect class="edge-pill" x="814.2" y="252.5" width="31.6" height="23" rx="11.5" />
+    <text class="edge-label" x="830" y="268.5" text-anchor="middle">否</text>
+  </g>
+<g class="edge-badge" data-edge-label="否，同任务内直答短题">
+    <rect class="edge-pill" x="231.0" y="358.5" width="148.0" height="23" rx="11.5" />
+    <text class="edge-label" x="305" y="374.5" text-anchor="middle">否，同任务内直答短题</text>
+  </g>
+<g class="edge-badge" data-edge-label="需步骤、图解或排障">
+    <rect class="edge-pill" x="564.8" y="358.5" width="134.4" height="23" rx="11.5" />
+    <text class="edge-label" x="632" y="374.5" text-anchor="middle">需步骤、图解或排障</text>
+  </g>
+<g class="edge-badge" data-edge-label="需多维比较或原理取舍">
+    <rect class="edge-pill" x="877.0" y="358.5" width="154.0" height="23" rx="11.5" />
+    <text class="edge-label" x="954" y="374.5" text-anchor="middle">需多维比较或原理取舍</text>
+  </g></g>
+      </svg>
+    </div>
+    <details class="flow-text" id="flow-text-5">
+    <summary>按文字展开流程与分支明细（9 个节点）</summary>
+    <div class="flow-text-body"><ol><li data-text-node="C0"><strong>11. 汇总问题清单（注明场景共性或分支专属，归并同问法）</strong><ul><li data-text-edge="C0->DC1">接续 → 证据是否齐备且无冲突？</li></ul></li><li data-text-node="DC1"><strong>证据是否齐备且无冲突？</strong><ul><li data-text-edge="DC1->CB">缺资料、冲突或未验证推断 → 待补证 / 核品单（页面只写核对方式，禁写断言）</li><li data-text-edge="DC1->DC2">证据齐备 → 是否直接改变当前选路、前提或型号适用？</li></ul></li><li data-text-node="CB"><strong>待补证 / 核品单（页面只写核对方式，禁写断言）</strong></li><li data-text-node="DC2"><strong>是否直接改变当前选路、前提或型号适用？</strong><ul><li data-text-edge="DC2->CM">是 → 模块旁决策要点（选择项 / 规格表 / 商品入口旁）</li><li data-text-edge="DC2->DC3">否 → 是否需要多步操作、图解或深度对比？</li></ul></li><li data-text-node="CM"><strong>模块旁决策要点（选择项 / 规格表 / 商品入口旁）</strong></li><li data-text-node="DC3"><strong>是否需要多步操作、图解或深度对比？</strong><ul><li data-text-edge="DC3->CF">否，同任务内直答短题 → 场景 / 分支 FAQ（共性问题一处维护，分支链接复用）</li><li data-text-edge="DC3->CG">需步骤、图解或排障 → 独立操作指南（定义起点/步骤/完成，文末链回可继续模块）</li><li data-text-edge="DC3->CL">需多维比较或原理取舍 → 博客 / 深度比较文（明确维度与来源，链回相关场景入口）</li></ul></li><li data-text-node="CF"><strong>场景 / 分支 FAQ（共性问题一处维护，分支链接复用）</strong></li><li data-text-node="CG"><strong>独立操作指南（定义起点/步骤/完成，文末链回可继续模块）</strong></li><li data-text-node="CL"><strong>博客 / 深度比较文（明确维度与来源，链回相关场景入口）</strong></li></ol></div>
+  </details>
+  </figure>
+<table class="steps" role="table"><colgroup><col><col><col><col><col></colgroup><thead><tr><th id="steps-15-0" scope="col">步骤与角色</th><th id="steps-15-1" scope="col">输入</th><th id="steps-15-2" scope="col">核心操作</th><th id="steps-15-3" scope="col">判断关口与产出</th><th id="steps-15-4" scope="col">回退条件</th></tr></thead><tbody><tr><th scope="row">9　品类查目录</th><td><span class="cell-label" aria-hidden="true">输入</span>动作、前提、所需功能与约束</td><td><span class="cell-label" aria-hidden="true">核心操作</span>按别名/类目/型号/配件检索约定目录，留查询式、源行、SKU、变体，分开整套含件与独立上架件</td><td><span class="cell-label" aria-hidden="true">判断关口与产出</span>命中可定位型号，用途可逐项比对 → 动作-目录匹配表</td><td><span class="cell-label" aria-hidden="true">回退条件</span>仅有相邻用途转核品；限域未命中写清范围与扩查方向；纯信息路径直入步骤 11</td></tr>
+<tr><th scope="row">10　品类核在架与适用</th><td><span class="cell-label" aria-hidden="true">输入</span>匹配表、商品页、含件清单、说明书</td><td><span class="cell-label" aria-hidden="true">核心操作</span>分步核实<strong>目录身份 → 目标市场渠道在架链接 → 场景适用参数</strong>；行业/安全说法查地域/对象/日期正文</td><td><span class="cell-label" aria-hidden="true">判断关口与产出</span>仅上架且适用进推荐；确认未上架且需求成立建商机 → 可售卖表、商机表、待核清单</td><td><span class="cell-label" aria-hidden="true">回退条件</span>标清四类待核原因（缺用途/相邻/限域未命中/冲突），回填后重判；期间撤下未证实承诺</td></tr>
+<tr><th scope="row">11　内容负责人发任务卡</th><td><span class="cell-label" aria-hidden="true">输入</span>批准证据卡、路径表、可写商品字段与缺口</td><td><span class="cell-label" aria-hidden="true">核心操作</span>指定受众、语言、交付形态、冻结输入、可引用字段、禁写承诺、模块顺序与验收动作</td><td><span class="cell-label" aria-hidden="true">判断关口与产出</span>每条关键判断有 <code>证据ID</code>，条件推荐带边界 → 生成任务卡、模块草表</td><td><span class="cell-label" aria-hidden="true">回退条件</span>缺输入退回对应卡，剔除无据段落；有据模块可先行</td></tr>
+<tr><th scope="row">12　内容+设计搭建</th><td><span class="cell-label" aria-hidden="true">输入</span>生成任务卡、模块草表</td><td><span class="cell-label" aria-hidden="true">核心操作</span>按任务顺序搭建模块；首屏交代起点与结果；选项只问改变选路的条件；校验 5 类起点可达与返回</td><td><span class="cell-label" aria-hidden="true">判断关口与产出</span>主入口/已有条件/信息出口/无匹配/返回均通，文案可反查 → 有序模块表、本地可读稿</td><td><span class="cell-label" aria-hidden="true">回退条件</span>路径错退步骤 8；交互文案留本步；越权推荐型号退步骤 10</td></tr></tbody></table>
+<p><strong>可直接复用的生成任务卡模板（步骤 11）</strong></p>
+<blockquote>
+<p>为〔目标用户、语言〕生成〔页面框架／文案／本地原型〕，帮助用户从〔进入状态〕达到〔任务结果〕。使用基线〔版本〕、证据卡〔ID〕、路径〔ID〕与核品记录〔ID、可写字段〕。先交有序模块表，再按表生成正文。写清进入条件、可跳步骤、选择分支、未知去向和完成标志；内部表关联来源，前端仅呈任务与条件。对〔待核项〕只列核对问题，禁写〔明确禁写承诺〕。按《成品验收单》逐项交付，单列待人工决定事项。</p>
+</blockquote>
+<h3 id="stage4" tabindex="-1">4. 阶段四：验收、交接与授权发布（步骤 13–15）</h3>
+<table class="steps" role="table"><colgroup><col><col><col><col><col></colgroup><thead><tr><th id="steps-19-0" scope="col">步骤与角色</th><th id="steps-19-1" scope="col">输入</th><th id="steps-19-2" scope="col">核心操作</th><th id="steps-19-3" scope="col">判断关口与产出</th><th id="steps-19-4" scope="col">回退条件</th></tr></thead><tbody><tr><th scope="row">13　验收核稿</th><td><span class="cell-label" aria-hidden="true">输入</span>冻结输入、模块表、本地成品、验收单</td><td><span class="cell-label" aria-hidden="true">核心操作</span>回查成品原值、单位与型号；从多起点走通路径；按形态验双格式、离线、窄屏与键盘</td><td><span class="cell-label" aria-hidden="true">判断关口与产出</span>必验项均有实测，原值可追，分支可达，未核已隔离 → 被验版本、实测与复测清单</td><td><span class="cell-label" aria-hidden="true">回退条件</span>按错误类型精准回退步骤 <code>1/3/5/6/7/8/10/12</code>，修后冻结新版复测</td></tr>
+<tr><th scope="row">14　项目负责人交接</th><td><span class="cell-label" aria-hidden="true">输入</span>通过验收版本、待核单、约定复审要求</td><td><span class="cell-label" aria-hidden="true">核心操作</span>分角色移交台账/缺口/任务卡并确认版本；完成约定复审（模型复审记 served 型号、指纹与意见处置）</td><td><span class="cell-label" aria-hidden="true">判断关口与产出</span>文件、接收对象、检查范围与复审状态一致 → 本地交接回执、复审回执</td><td><span class="cell-label" aria-hidden="true">回退条件</span>型号或指纹无法核对标待核，保留本地可审稿待补录或重审</td></tr>
+<tr><th scope="row">15　发布负责人（按授权）</th><td><span class="cell-label" aria-hidden="true">输入</span>指定产物版本、目标位置、发布授权记录</td><td><span class="cell-label" aria-hidden="true">核心操作</span>核可外发范围；按授权发布后从目标位回读版本、文件清单与指纹</td><td><span class="cell-label" aria-hidden="true">判断关口与产出</span>实际目标、版本、文件与批准包完全一致 → 发布回执</td><td><span class="cell-label" aria-hidden="true">回退条件</span>无授权止于本地；结果未知或回读不符暂停对外确认，先查外部状态再处理</td></tr></tbody></table>
+</section>
+<section class="doc-section" aria-labelledby="templates"><div class="section-head"><span class="section-badge">数据表头</span><h2 id="templates" tabindex="-1">三、标准数据表结构（10 张可复制 CSV 表头）</h2></div>
+<figure class="flow-card" id="diagram-6">
+    
+    <div class="diagram-bar">
+      <strong class="diagram-title">图 6 · 十张标准表的主键关联链路</strong>
+      <ul class="diagram-legend" aria-hidden="true">
+        <li><span class="dot action"></span>步骤</li>
+        <li><span class="dot decision"></span>判断关口</li>
+        <li><span class="dot hold"></span>待核/暂缓</li>
+        <li><span class="dot end"></span>终点/放行</li>
+        <li><span class="dash"></span>回退补证</li>
+      </ul>
+    </div>
+    <div class="flow-visual" aria-hidden="true">
+      <svg viewBox="0 0 1120 184" xmlns="http://www.w3.org/2000/svg" focusable="false">
+        <defs>
+          <marker id="forward-end-6" viewBox="0 0 10 10" markerWidth="6" markerHeight="6" orient="auto" refX="9" refY="5"><path d="M0 0L10 5 0 10Z" fill="#0f766e" /></marker>
+          <marker id="return-end-6" viewBox="0 0 10 10" markerWidth="6" markerHeight="6" orient="auto" refX="9" refY="5"><path d="M0 0L10 5 0 10Z" fill="#b45309" /></marker>
+        </defs>
+        
+        <g><path data-edge="I1->I2" d="M268 50H302" class="forward" marker-end="url(#forward-end-6)" />
+<path data-edge="I2->I3" d="M546 50H580" class="forward" marker-end="url(#forward-end-6)" />
+<path data-edge="I3->I4" d="M824 50H858" class="forward" marker-end="url(#forward-end-6)" />
+<path data-edge="I4->I5" d="M977 76V92H190V108" class="forward" marker-end="url(#forward-end-6)" />
+<path data-edge="I5->I6" d="M356 134H396" class="forward" marker-end="url(#forward-end-6)" />
+<path data-edge="I6->I7" d="M728 134H768" class="forward" marker-end="url(#forward-end-6)" /></g>
+        
+        <g data-node="I1">
+      <rect class="node action" x="24" y="24" width="244" height="52" rx="11" />
+      
+      <foreignObject x="36" y="27" width="220" height="46">
+        <div class="node-text small">范围单（项目 / 采集批次ID）</div>
+      </foreignObject>
+    </g>
+<g data-node="I2">
+      <rect class="node action" x="302" y="24" width="244" height="52" rx="11" />
+      
+      <foreignObject x="314" y="27" width="220" height="46">
+        <div class="node-text small">证据台账（证据ID）</div>
+      </foreignObject>
+    </g>
+<g data-node="I3">
+      <rect class="node action" x="580" y="24" width="244" height="52" rx="11" />
+      
+      <foreignObject x="592" y="27" width="220" height="46">
+        <div class="node-text small">场景证据卡（场景ID）</div>
+      </foreignObject>
+    </g>
+<g data-node="I4">
+      <rect class="node action" x="858" y="24" width="238" height="52" rx="11" />
+      
+      <foreignObject x="870" y="27" width="214" height="46">
+        <div class="node-text small">路径与差异（路径ID / 分支ID）</div>
+      </foreignObject>
+    </g>
+<g data-node="I5">
+      <rect class="node action" x="24" y="108" width="332" height="52" rx="11" />
+      
+      <foreignObject x="36" y="111" width="308" height="46">
+        <div class="node-text small">核品ID / 商机ID / 问题ID</div>
+      </foreignObject>
+    </g>
+<g data-node="I6">
+      <rect class="node action" x="396" y="108" width="332" height="52" rx="11" />
+      
+      <foreignObject x="408" y="111" width="308" height="46">
+        <div class="node-text small">页面模块表（模块ID）</div>
+      </foreignObject>
+    </g>
+<g data-node="I7">
+      <rect class="node end" x="768" y="108" width="328" height="52" rx="11" />
+      
+      <foreignObject x="780" y="111" width="304" height="46">
+        <div class="node-text small">验收表（验收项ID）与交接发布回执</div>
+      </foreignObject>
+    </g>
+        <g></g>
+      </svg>
+    </div>
+    <details class="flow-text" id="flow-text-6">
+    <summary>按文字展开流程与分支明细（7 个节点）</summary>
+    <div class="flow-text-body"><ol><li data-text-node="I1"><strong>范围单（项目 / 采集批次ID）</strong><ul><li data-text-edge="I1->I2">接续 → 证据台账（证据ID）</li></ul></li><li data-text-node="I2"><strong>证据台账（证据ID）</strong><ul><li data-text-edge="I2->I3">接续 → 场景证据卡（场景ID）</li></ul></li><li data-text-node="I3"><strong>场景证据卡（场景ID）</strong><ul><li data-text-edge="I3->I4">接续 → 路径与差异（路径ID / 分支ID）</li></ul></li><li data-text-node="I4"><strong>路径与差异（路径ID / 分支ID）</strong><ul><li data-text-edge="I4->I5">接续 → 核品ID / 商机ID / 问题ID</li></ul></li><li data-text-node="I5"><strong>核品ID / 商机ID / 问题ID</strong><ul><li data-text-edge="I5->I6">接续 → 页面模块表（模块ID）</li></ul></li><li data-text-node="I6"><strong>页面模块表（模块ID）</strong><ul><li data-text-edge="I6->I7">接续 → 验收表（验收项ID）与交接发布回执</li></ul></li><li data-text-node="I7"><strong>验收表（验收项ID）与交接发布回执</strong></li></ol></div>
+  </details>
+  </figure>
+<blockquote>
+<p>配套 Skill 调用提示词：读取 <code>./skills/scene-page-workflow/SKILL.md</code>。用我提供的品运初稿、原始导出和现有页面创建或更新流程。按顺序列出每一步输入什么、怎么做、产出什么、交给下一步做什么。缺资料时标清要补哪份。</p>
+</blockquote>
+<p>同项目固定使用上述主键；场景共用内容填 <code>场景ID</code> 且 <code>分支ID</code> 留空；一模块多依据时逐条标明各自支持的判断。</p>
+<div class="template" data-template="1"><div class="template-bar"><div class="template-meta"><h3 id="template-1">范围与来源</h3><span class="col-count">20 列</span></div><button type="button" aria-label="复制表头 范围与来源" data-copy="csv-1" hidden>复制表头</button></div><pre><code id="csv-1" class="language-csv">项目,待决问题,目标品类,目标市场,目标渠道,语言,目标用户,品运初稿版本与段落,初稿范围状态,种子词与选取理由,采集批次ID,可用来源和权限,采集视图与筛选,导出日期,实际窗口与时区,覆盖及截断,指定基线与位置,负责人,接收人,交付范围</code></pre><p class="copy-status" role="status"></p></div>
+<div class="template" data-template="2"><div class="template-bar"><div class="template-meta"><h3 id="template-2">证据台账</h3><span class="col-count">26 列</span></div><button type="button" aria-label="复制表头 证据台账" data-copy="csv-2" hidden>复制表头</button></div><pre><code id="csv-2" class="language-csv">证据ID,来源类型,国家与语言,查询词,采集批次ID,文件或文档,表和行或块或页码,版本与日期,观测起止与时区,原词或问句,原字段,原值,单位与粒度,主题ID和名称,模型,角色,配置题ID和版本,配置题来源类型,关联证据或待查问题ID,运行ID,回答与引用定位,归一键,同义组ID,全部重复源行,冲突与覆盖限制,处置及理由</code></pre><p class="copy-status" role="status"></p></div>
+<div class="template" data-template="3"><div class="template-bar"><div class="template-meta"><h3 id="template-3">意图／场景证据卡</h3><span class="col-count">18 列</span></div><button type="button" aria-label="复制表头 意图／场景证据卡" data-copy="csv-3" hidden>复制表头</button></div><pre><code id="csv-3" class="language-csv">场景ID,词簇与八维标签,支持的证据ID,反例及来源ID,原文观察,意图类型,用户起点与已有条件,目标,下一动作,限制,语义推断,替代解释,设计选择,路径ID,分支ID,待补证据,补证后如何重判,负责人</code></pre><p class="copy-status" role="status"></p></div>
+<div class="template" data-template="4"><div class="template-bar"><div class="template-meta"><h3 id="template-4">已有路径与差异</h3><span class="col-count">20 列</span></div><button type="button" aria-label="复制表头 已有路径与差异" data-copy="csv-4" hidden>复制表头</button></div><pre><code id="csv-4" class="language-csv">路径ID,场景ID,分支ID,旧版及块或表行,原有内容,判据证据ID,保留补深新增或纠正,入口与进入状态,选择题,分流判据,适用边界,下一动作,可跳步骤,适用产品角色,分支问题ID,未知出口,页面或服务去向,完成标志,落点模块ID,争议与裁定人</code></pre><p class="copy-status" role="status"></p></div>
+<div class="template" data-template="5"><div class="template-bar"><div class="template-meta"><h3 id="template-5">目录匹配、上架与核品</h3><span class="col-count">26 列</span></div><button type="button" aria-label="复制表头 目录匹配、上架与核品" data-copy="csv-5" hidden>复制表头</button></div><pre><code id="csv-5" class="language-csv">核品ID,目标市场,渠道,分支ID与动作,证据ID,需要的功能,目录版本范围与检索式,候选及排除源行,SKU与变体,链接实指型号,上架状态与凭据,核验时间,用途,包含,另需,已有可跳,规格单位,兼容及排除条件,技术资料位置,适用状态,处置,可写字段,待补材料,负责人,重判条件,受影响模块ID</code></pre><p class="copy-status" role="status"></p></div>
+<div class="template" data-template="6"><div class="template-bar"><div class="template-meta"><h3 id="template-6">品类商品商机</h3><span class="col-count">15 列</span></div><button type="button" aria-label="复制表头 品类商品商机" data-copy="csv-6" hidden>复制表头</button></div><pre><code id="csv-6" class="language-csv">商机ID,场景与分支ID,动作及目标,证据ID,功能或规格缺口,目标市场,渠道,检索与排除,已确认未上架凭据及日期,现有替代与限制,建议形态,临时页面处置,品类负责人,验证动作,关闭条件</code></pre><p class="copy-status" role="status"></p></div>
+<div class="template" data-template="7"><div class="template-bar"><div class="template-meta"><h3 id="template-7">问题与内容落点</h3><span class="col-count">15 列</span></div><button type="button" aria-label="复制表头 问题与内容落点" data-copy="csv-7" hidden>复制表头</button></div><pre><code id="csv-7" class="language-csv">问题ID,场景ID,分支ID,原问句与证据ID,主题与意图,影响的选择或动作,答案要点,适用条件,来源定位,验证状态,内容形式,模块或文章ID,链接与返回去向,待补材料,负责人</code></pre><p class="copy-status" role="status"></p></div>
+<div class="template" data-template="8"><div class="template-bar"><div class="template-meta"><h3 id="template-8">页面模块表</h3><span class="col-count">21 列</span></div><button type="button" aria-label="复制表头 页面模块表" data-copy="csv-8" hidden>复制表头</button></div><pre><code id="csv-8" class="language-csv">页面ID与标题,场景ID,路径ID,分支ID,模块ID,顺序,用户入口与起点,用户完成结果,直接支持的证据ID,问题ID,模块内容,分流条件,按钮与目标,跳过或未知时去向,商品角色,核品ID,商机ID,禁写项,返回或终点,验收动作与预期,版本与负责人</code></pre><p class="copy-status" role="status"></p></div>
+<div class="template" data-template="9"><div class="template-bar"><div class="template-meta"><h3 id="template-9">验收及本地交接</h3><span class="col-count">13 列</span></div><button type="button" aria-label="复制表头 验收及本地交接" data-copy="csv-9" hidden>复制表头</button></div><pre><code id="csv-9" class="language-csv">验收项ID,被验文件版本及指纹,输入基线,测试环境,操作,预期,实测,证明位置,通过失败或待验,失败回退步骤,修订版本与复测,未决项与接手人,接收确认及时间</code></pre><p class="copy-status" role="status"></p></div>
+<div class="template" data-template="10"><div class="template-bar"><div class="template-meta"><h3 id="template-10">复审与可选发布回执</h3><span class="col-count">15 列</span></div><button type="button" aria-label="复制表头 复审与可选发布回执" data-copy="csv-10" hidden>复制表头</button></div><pre><code id="csv-10" class="language-csv">受审文件与指纹,请求型号,served型号,服务记录定位,意见及处置理由,复核版本与结论,本地交接状态,发布授权与范围,目标与接收对象,批准版本,实际版本,文件清单与回读结果,时间与时区,负责人,异常及处置</code></pre><p class="copy-status" role="status"></p></div>
+</section>
+<section class="doc-section" aria-labelledby="acceptance"><div class="section-head"><span class="section-badge">交付核验</span><h2 id="acceptance" tabindex="-1">四、成品验收单</h2></div>
+<p>执行时先填被验版本和指纹；每行填实测、凭据与复测版本；仅未启用条件项可填“不适用＋理由”。</p>
+<table class="checklist" role="table"><colgroup><col><col><col><col><col></colgroup><thead><tr><th id="checklist-1-0" scope="col">检查项</th><th id="checklist-1-1" scope="col">执行动作</th><th id="checklist-1-2" scope="col">通过预期</th><th id="checklist-1-3" scope="col">实测／凭据</th><th id="checklist-1-4" scope="col">失败回退</th></tr></thead><tbody><tr><th scope="row">研究链贯通</th><td><span class="cell-label" aria-hidden="true">执行动作</span>从页面问题反查 Semrush 原问句、场景词、长尾词与种子词；启用 Peec 时核配置题来由、Chat 行与引用</td><td><span class="cell-label" aria-hidden="true">通过预期</span>输入输出衔接，分清原句、改写与新增，跳过/缺料有记录</td><td><span class="cell-label" aria-hidden="true">实测／凭据</span>待填</td><td><span class="cell-label" aria-hidden="true">失败回退</span>1–6</td></tr>
+<tr><th scope="row">读数与冲突</th><td><span class="cell-label" aria-hidden="true">执行动作</span>按台账回读数字与单位，核归一键、主题/模型切片、配置题/运行数区分及同键异值处理</td><td><span class="cell-label" aria-hidden="true">通过预期</span>原值与来源相符，重复全定位，冲突双留，缺值写未提供</td><td><span class="cell-label" aria-hidden="true">实测／凭据</span>待填</td><td><span class="cell-label" aria-hidden="true">失败回退</span>3、5、6</td></tr>
+<tr><th scope="row">模块反查</th><td><span class="cell-label" aria-hidden="true">执行动作</span>从关键模块沿路径卡追到原词/原问句，遇型号追到精确编码与资料页</td><td><span class="cell-label" aria-hidden="true">通过预期</span>观察、推断与设计选择分列，变更可查基线或标基线不可得</td><td><span class="cell-label" aria-hidden="true">实测／凭据</span>待填</td><td><span class="cell-label" aria-hidden="true">失败回退</span>7–12</td></tr>
+<tr><th scope="row">弱证据与非购意图</th><td><span class="cell-label" aria-hidden="true">执行动作</span>走查弱线索、服务查询、信息查询与同名噪声出口</td><td><span class="cell-label" aria-hidden="true">通过预期</span>弱线索进补证或有限说明，服务/信息有去向，噪声有排除理由</td><td><span class="cell-label" aria-hidden="true">实测／凭据</span>待填</td><td><span class="cell-label" aria-hidden="true">失败回退</span>4、7、8</td></tr>
+<tr><th scope="row">商品放行与商机</th><td><span class="cell-label" aria-hidden="true">执行动作</span>抽查目录候选、异市场/渠道链接、适配未知、双过关型号、限域无命中与确认未上架记录</td><td><span class="cell-label" aria-hidden="true">通过预期</span>仅目标市场渠道在架且适用型号可推荐，待核与商机各有凭据与去向，整套与单件分开</td><td><span class="cell-label" aria-hidden="true">实测／凭据</span>待填</td><td><span class="cell-label" aria-hidden="true">失败回退</span>9、10</td></tr>
+<tr><th scope="row">内容落点</th><td><span class="cell-label" aria-hidden="true">执行动作</span>抽查改路题、短答题、长任务/深比较、缺料题，从原问句走到页面或补证单</td><td><span class="cell-label" aria-hidden="true">通过预期</span>决策要点在模块旁，FAQ 直答，指南/博客可往返，待核有回填条件</td><td><span class="cell-label" aria-hidden="true">实测／凭据</span>待填</td><td><span class="cell-label" aria-hidden="true">失败回退</span>7、8、11、12</td></tr>
+<tr><th scope="row">多起点选路</th><td><span class="cell-label" aria-hidden="true">执行动作</span>从已有装备、已完成前序、未知参数、纯说明起点走到终点并返回</td><td><span class="cell-label" aria-hidden="true">通过预期</span>直达下一动作，跳过与未知出口可用，返回后可继续原任务</td><td><span class="cell-label" aria-hidden="true">实测／凭据</span>待填</td><td><span class="cell-label" aria-hidden="true">失败回退</span>8、12</td></tr>
+<tr><th scope="row">双格式与范围</th><td><span class="cell-label" aria-hidden="true">执行动作</span>双格式项目逐节对照标题、图中分支回退、步骤、字段与验收项，查内嵌数据</td><td><span class="cell-label" aria-hidden="true">通过预期</span>两版逐项一致，图源可编辑，内容符合授权范围</td><td><span class="cell-label" aria-hidden="true">实测／凭据</span>待填</td><td><span class="cell-label" aria-hidden="true">失败回退</span>12</td></tr>
+<tr><th scope="row">离线窄屏键盘</th><td><span class="cell-label" aria-hidden="true">执行动作</span>断网本地打开 HTML；手机宽度读分支与表；仅用 Tab/Shift+Tab/激活键走完交互；核打印/下载</td><td><span class="cell-label" aria-hidden="true">通过预期</span>主图可离线读且有文字版，窄屏表头与回退清晰，焦点可见可逆</td><td><span class="cell-label" aria-hidden="true">实测／凭据</span>待填</td><td><span class="cell-label" aria-hidden="true">失败回退</span>12、13</td></tr>
+<tr><th scope="row">版本权限复审</th><td><span class="cell-label" aria-hidden="true">执行动作</span>核接收人、指纹与无授权状态；核模型复审 served 型号、指纹与意见处置；获授权项目核发布回读</td><td><span class="cell-label" aria-hidden="true">通过预期</span>无授权止于本地交接，复审按记录核实，发布回读与批准包一致</td><td><span class="cell-label" aria-hidden="true">实测／凭据</span>待填</td><td><span class="cell-label" aria-hidden="true">失败回退</span>1、13–15</td></tr></tbody></table>
+<p>方法沉淀源自 GARVEE 业务流程实践与交付验收复盘；切换新品类时，须以该品类的范围单、原始词句导出、在架资料与页面走查结果重新建档验收。</p>
+</section>
+<footer><a href="#top">返回顶部目录 ↑</a></footer>
+</main>
+</div>
+<script>const textFlows = [...document.querySelectorAll('.flow-text')];
+const narrowFlow = matchMedia('(max-width: 920px)');
+const syncFlows = () => {
+  for (const d of textFlows) d.open = narrowFlow.matches;
+};
+syncFlows();
+narrowFlow.addEventListener('change', syncFlows);
+
+for (const button of document.querySelectorAll('[data-copy]')) {
+  button.hidden = false;
+  button.addEventListener('click', async () => {
+    const code = document.getElementById(button.dataset.copy);
+    const status = button.closest('.template').querySelector('[role="status"]');
+    status.textContent = '';
+    try {
+      await navigator.clipboard.writeText(code.textContent);
+      status.textContent = '已复制表头。';
+    } catch {
+      const selection = getSelection();
+      const range = document.createRange();
+      range.selectNodeContents(code);
+      selection.removeAllRanges();
+      selection.addRange(range);
+      if (document.execCommand('copy')) {
+        selection.removeAllRanges();
+        status.textContent = '已复制表头。';
+      } else {
+        status.textContent = '已选中表头，可用系统复制快捷键。';
+      }
+    }
+  });
+}
+
+const navLinks = [...document.querySelectorAll('nav a[href^="#"]')];
+const targets = navLinks.map(a => document.getElementById(a.getAttribute('href').slice(1))).filter(Boolean);
+if ('IntersectionObserver' in window && targets.length) {
+  const obs = new IntersectionObserver(entries => {
+    const visible = entries.filter(e => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+    if (!visible.length) return;
+    const id = visible[0].target.id;
+    for (const a of navLinks) {
+      a.setAttribute('aria-current', a.getAttribute('href') === `#${id}` ? 'true' : 'false');
+    }
+  }, { rootMargin: '-10% 0px -70% 0px' });
+  for (const el of targets) obs.observe(el);
+}
+</script>
+</body>
+</html>

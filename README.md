@@ -1,6 +1,6 @@
 # GARVEE 树木清理与木材利用：场景规划、商品匹配与品类商机
 
-[在线阅读](https://igocc.github.io/garvee-tree-wood-scenario-plan/) · [直接进入商品匹配与商机](https://igocc.github.io/garvee-tree-wood-scenario-plan/#catalog)
+[在线阅读报告](https://igocc.github.io/garvee-tree-wood-scenario-plan/) · [直接进入商品匹配与商机](https://igocc.github.io/garvee-tree-wood-scenario-plan/#catalog) · [通用场景研究与页面搭建 SOP（在线版）](https://igocc.github.io/garvee-tree-wood-scenario-plan/sop/) · [SOP 可编辑源码](sop/场景研究与页面搭建-SOP.md) · [配套 Skill](sop/skills/scene-page-workflow/SKILL.md)
 
 本报告围绕清场、薪柴加工与储存、链锯制材三条任务路径，结合归档关键词/提示词与本机商品目录，为页面搭建、既有商品复用和品类研究提供线索。
 
